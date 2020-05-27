@@ -13,7 +13,7 @@ TonightBnB is an [Airbnb](https://www.airbnb.com/) clone. TonightBnB is an onlin
 3. Spots (2 days)
 - [ ] Listings with main picture and short description on the right side 
 - [ ] Rating and price per night
-4. Bookings 
+4. Bookings (2 days)
 - [ ] Listing page with 4-5 photos in the preview
 - [ ] Sidebar with check-in and checkout, number of guests, and price breakdown on the right side and reverve button
 - [ ] Full description on the left 
