@@ -5,8 +5,9 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
-/.bundle.js.map
+./bundle.js
+./bundle.js.map
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -26,3 +27,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+/public/assets
