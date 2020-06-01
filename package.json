@@ -1,5 +1,41 @@
 {
-  "name": "TonightBnB",
+  "name": "tonight_bnb",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "description": "TonightBnB is an [Airbnb](https://www.airbnb.com/) clone. TonightBnB is an online platform that connects hosts renting out space in their homes with guests seeking lodging generally for a short period of time, couple nights or even hours.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "webpack": "webpack --watch --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omelnykov1/TonightBnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omelnykov1/TonightBnb/issues"
+  },
+  "homepage": "https://github.com/omelnykov1/TonightBnb#readme"
 }
