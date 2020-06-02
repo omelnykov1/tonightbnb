@@ -28,3 +28,7 @@
 /config/master.key
 
 /public/assets
+
+bundle.js 
+bundle.js.map 
+

@@ -9,6 +9,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
@@ -24,8 +25,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "webpack",
-    "webpack": "webpack --watch --mode=development"
+    "webpack": "webpack --mode=development --watch",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -37,5 +38,9 @@
   "bugs": {
     "url": "https://github.com/omelnykov1/TonightBnb/issues"
   },
-  "homepage": "https://github.com/omelnykov1/TonightBnb#readme"
+  "homepage": "https://github.com/omelnykov1/TonightBnb#readme",
+  "engines": {
+    "node": "13.6.0",
+    "npm": "6.13.4"
+  }
 }
