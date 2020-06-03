@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import LoginForm from "./login_form";
-import { login } from "../../../actions/session_actions";
+import { login, clearErrors } from "../../../actions/session_actions";
 import { openModal, closeModal } from "../../../actions/modal_actions";
 
 const mSTP = ({ errors }) => ({
@@ -15,12 +15,11 @@ const mSTP = ({ errors }) => ({
 
 const mDTP = dispatch => ({
     processForm: (user) => dispatch(login(user)),
-    otherForm: (
-        <div onClick={() => dispatch(openModal('Signup'))}>
-            Sign up
-        </div>
+    redirect: (
+        <div onClick={() => dispatch(openModal('signup'))}>Sign up</div>
     ),
     closeModal: () => dispatch(closeModal()),
+    clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP, mDTP)(LoginForm);

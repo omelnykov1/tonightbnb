@@ -1,0 +1,56 @@
+.splash-experinces{
+    display: flex;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.splash-column {
+    margin: 0 15px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background: #fff;
+    border-radius: 10px;
+    flex-basis: 33%; 
+    max-width: 100vw; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.splash-image {
+    border-radius: 10px;
+    flex-basis: 10%; 
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 10px;;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 79%;
+}
+
+.splash-exp-image {
+    border-radius: 10px;
+    width: 360px;
+    height: 240px;
+}
+
+.top {
+    font: 18px solid black;
+    padding: 3px;
+    font-weight: bold;
+    align-items: center;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.bottom {
+    font: 13px solid black;
+    padding: 3px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.parent{
+    text-align: center;
+}

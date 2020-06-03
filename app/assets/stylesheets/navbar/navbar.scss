@@ -56,13 +56,34 @@
   }
 }
 
+
+
 .modal-field {
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
+  display: block;
+  width: 430px;
+  height: 25px;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 12px;
 }
+
+.input-container[data-error] .modal-field {
+  border-color: #c92432;
+  color: #c92432;
+  background: #fffafa;
+}
+
+
+
 
 
 .logo{
   width: 73px;
+}
+
+.profile-img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }

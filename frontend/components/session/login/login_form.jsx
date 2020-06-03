@@ -21,31 +21,66 @@ class LoginForm extends React.Component {
     }
 
     demoLogin() {
-        this.setState(this.props.demo);
-        this.handleSubmit(this.state)
+        this.props.processForm(this.props.demo).then(this.props.closeModal)
     }
 
-    // renderErrors() {
-    //     ???
-    // }
+    renderErrors() {
+        let { errors } = this.props
+        if (errors.length === 0) {
+            return null;
+        } else {
+            return (
+                <div className="errors">
+                    {this.props.errors.map((error, i) => (
+                        <p className="errors-body" key={`error-${i}`}>
+                            {error}
+                        </p>
+                    ))}
+                </div>
+            )
+        }
+    }
 
     render() {
+        let errors = this.renderErrors()
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
+                    <div className="signin-errors">{errors}</div>
                     <header className="modal-header">
                         <div>Log in</div>
                         <div className="modal-close" onClick={this.props.closeModal} >X</div> 
                     </header>
                     <div className="modal-content">
-                        <input className="modal-field" type="text" value={this.state.email} onChange={this.update('email')} placeholder="Email"/>
-                        <br/>
-                        <input className="modal-field" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" />
+                        <div className="input-container" data-error={errors}>
+                            <input 
+                                className="modal-field" 
+                                type="text" 
+                                value={this.state.email} 
+                                onChange={this.update('email')} 
+                                placeholder="Email" 
+                                required/>
+                            <br/>
+                        </div>
+                        <div className="input-container" data-error={errors}>
+                            <input 
+                                className="modal-field" 
+                                type="password" 
+                                value={this.state.password} 
+                                onChange={this.update('password')} 
+                                placeholder="Password" 
+                                required 
+                            />
+                        </div>
                         < br/>    
                         <button className="nav-btn" type="submit">Log in</button>
                         <br/>
-                        <button className="nav-btn" type="submit" onClick={() => this.demoLogin()}>Demo</button>
                     </div>
+                        <button className="nav-btn" type="submit" onClick={() => this.demoLogin()}>Demo</button>
+                    <span className="footer-login">
+                        Don't have an account?
+                        <div className="footer-btn" onClick={() => this.props.clearErrors()}> {this.props.redirect}</div>
+                    </span>
                 </form>
            </div>
         )

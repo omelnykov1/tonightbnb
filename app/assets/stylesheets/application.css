@@ -14,22 +14,14 @@
  *= require_self
  */
 
- main {
 
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0; 
-    min-width: 100%;
-    min-height: 100%;
-}
 
 main {
-    background-image: url(image.jpg);   
-    
-    position: fixed;     
+    background-image: url(white.jpg);  
+    position: absolute;     
     top: 0;     
-    left: 0;     
+    left: 0;  
+    right: 0;   
     opacity : 10;     
     min-width: 100%;     
     min-height: 100%; 

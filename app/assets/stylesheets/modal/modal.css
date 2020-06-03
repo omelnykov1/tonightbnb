@@ -13,8 +13,8 @@
 }
 
 .modal-child {
-  width: 460px;
-  height: 300px;
+  width: fit-content;
+  height: fit-content;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -62,15 +62,13 @@
   margin: 4px auto;
 }
 
-.btn-footer {
-  padding: 13px 20px;
-  vertical-align: middle;
+.footer-btn {
+ padding: 0.01px;
+ text-decoration: underline;
 }
 
-.btn-footer :hover {
-    border-bottom: 2px solid dimgray;
-    padding-bottom: 12px;
-    cursor: pointer;
+.footer-btn :hover {
+  cursor: pointer;
 }
 
 .footer-login {
@@ -82,8 +80,12 @@
   padding-top: 20px;
   display: flex;
   justify-content: space-evenly;
-  font-size: 14px;
+  font-size: 14px; 
   font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.signin-errors{
+  font-size: 13px;
 }
 
 

@@ -9,10 +9,9 @@ const _nullUser = Object.freeze({
 
 const sessionReducer = (state = _nullUser, action) => {
     Object.freeze(state);
-    debugger
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
-            return Object.assign({},state,{ id: action.currentUser.id });
+            return Object.assign({},state, { id: action.currentUser.id });
         case LOGOUT_CURRENT_USER:
             return _nullUser;
         default:

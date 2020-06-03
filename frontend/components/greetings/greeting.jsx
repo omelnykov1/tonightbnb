@@ -16,10 +16,11 @@ class Greeting extends React.Component {
         let { currentUser, logout, openModal } = this.props
 
         const display = currentUser ? (
-            <div>
-                <Link className="nav-content" to="#">Messages</Link>
-                <button className="nav-content" onClick={this.handleClick}>Log Out</button>
-            </div>
+            <nav className="navbar">
+                <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
+                <div className="nav-signin">Welcome, {this.props.currentUser.name}</div>
+                <img className="profile-img" src={window.profile_pic} />
+            </nav>
         ) : (
                 <nav className="navbar">
                     <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
