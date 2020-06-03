@@ -3,15 +3,19 @@ import { Link } from 'react-router-dom';
 
 
 const Splash = props => {
+    const left = window.left;
+    const airbnb = window.airbnb;
+    const middle = window.middle;
+    const right = widnow.right;
     return (
         <div className="splash">
 
             <div className="splash-background-image">
-                <img className="splash-image" src={window.airbnb} />
+                <img className="splash-image" src={airbnb} />
             </div>
             <div className="splash-experinces">
                 <div className="splash-column">
-                    <img className="splash-exp-image" src={window.left} />
+                    <img className="splash-exp-image" src={left} />
                     <span className="top">Online Experiences</span>
                     <br/>
                     <div className="parent">
@@ -20,7 +24,7 @@ const Splash = props => {
                 </div>
 
                 <div className="splash-column">
-                    <img className="splash-exp-image" src={window.middle} />
+                    <img className="splash-exp-image" src={middle} />
                     <span className="top">Monthly stays</span>
                     <br/>
                     <div className="parent">
@@ -29,7 +33,7 @@ const Splash = props => {
                 </div>
 
                 <div className="splash-column">
-                    <img className="splash-exp-image" src={window.right} />
+                    <img className="splash-exp-image" src={right} />
                     <span className="top">Getaway experience</span>
                     <br/>
                     <div className="parent">
