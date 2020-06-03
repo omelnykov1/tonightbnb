@@ -1,0 +1,93 @@
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  transition: top 0.4s;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+}
+
+.modal-child {
+  width: 460px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  z-index: 3;
+  text-align: center;
+  box-shadow: 0 5px 8px 9 rgba(0, 0, 0, 0.7), 0 7px 20px;
+}
+
+.modal-header {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  margin: 0;
+}
+
+.modal-close {
+  float: left;
+  font-size: 14px;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 300;
+  top: 0;
+  left: 0;
+  position: absolute;
+
+}
+
+.modal-close:hover {
+  cursor: pointer;
+  color: rgb(34, 34, 34) !important;
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+#input {
+  width: 50%;
+  display: block;
+  margin: 4px auto;
+}
+
+.btn-footer {
+  padding: 13px 20px;
+  vertical-align: middle;
+}
+
+.btn-footer :hover {
+    border-bottom: 2px solid dimgray;
+    padding-bottom: 12px;
+    cursor: pointer;
+}
+
+.footer-login {
+  display: flex;
+  align-items: left;
+}
+
+.navbar {
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 14px;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+
+
+
+
+

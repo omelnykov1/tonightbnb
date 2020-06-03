@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 
 class SessionForm extends React.Component {
     constructor(props) {
+        debugger
         super(props);
         this.state = {
             email: "",
@@ -29,49 +30,62 @@ class SessionForm extends React.Component {
         return e => this.setState({ [field]: e.target.value })
     }
 
-    
+    renderErrors() { 
+        if (this.props.errors.length > 0) {
+            return (
+                <div className="session-errors">
+                    {this.props.errors.map((error, idx) => (
+                        <p className="session-errors-content" key={`error-${idx}`}>
+                            {error}
+                        </p>
+                    ))}
+                </div>
+            )
+        } else {
+            return null;
+        }
+    }
 
 
     render() {
-        const sessionForm = this.props.formType = 'Login' ? (
+        let errors = this.renderErrors() ? "errors" : ""
+        const sessionForm = this.props.formType === 'Login' ? (
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        email:
-                        <input type="text" onChange={this.handleChange('email')} value={this.state.email} />
-                    </label>
+                    <form className="login" onSubmit={this.handleSubmit}>
+                        <input 
+                            type="text" 
+                            onChange={this.handleChange('email')} 
+                            value={this.state.email} 
+                            placeholder="Email"
+                        />
                     <br />
-                    <label>
-                        name:
-                        <input type="text" onChange={this.handleChange('name')} value={this.state.name} />
-                    </label>
-                    <br />
-                    <label>
-                        Password:
-                        <input type="password" onChange={this.handleChange('password')} value={this.state.password} />
-                    </label>
-                    <button type="submit">Log in</button>
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            onChange={this.handleChange('password')} 
+                            value={this.state.password} 
+                        />
+                    <button id="nav-btn"type="submit">Log in</button>
                 </form>
             </div>
-        ) : <div>
-                <form onSubmit={this.handleSubmit}>
-                    <label>
-                        email:
-                        <input type="text" onChange={this.handleChange('email')} value={this.state.email} />
-                    </label>
+        ) : (<div>
+                <form className="login" onSubmit={this.handleSubmit}>
+                        <input 
+                            type="text" 
+                            onChange={this.handleChange('email')} 
+                            value={this.state.email}
+                            placeholder="Email"
+                        />
                     <br />
-                    <label>
-                        name:
-                        <input type="text" onChange={this.handleChange('name')} value={this.state.name} />
-                    </label>
-                    <br />
-                    <label>
-                        Password:
-                        <input type="password" onChange={this.handleChange('password')} value={this.state.password} />
-                    </label>
-                    <button type="submit">Sign Up</button>
+                        <input 
+                            type="password" 
+                            placeholder="Password" 
+                            onChange={this.handleChange('password')} 
+                            value={this.state.password} 
+                        />
+                    <button id="nav-btn"type="submit">Sign Up</button>
                 </form>
-            </div>
+            </div> )
         return (
             <div>
                 {sessionForm}
