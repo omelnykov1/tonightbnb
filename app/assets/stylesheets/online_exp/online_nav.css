@@ -34,6 +34,7 @@
 .grid-container img{
     width: 100%;
 }
+
 .splash-destinations p {
     width: 30%;
     color: #ffffff;
@@ -54,7 +55,6 @@
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
 }
 
-
 .splash-online-image {
     border-radius: 10px;
     width: 100%;
@@ -72,14 +72,12 @@
 }
 
 .explore-btn {
-
     width: 70px;
     justify-content: space-between;
     cursor: pointer !important;
     display: inline-block !important;
     position: relative !important;
     text-align: center !important;
-    /* width: auto !important; */
     font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
     font-size: 14px !important;
     line-height: 18px !important;
