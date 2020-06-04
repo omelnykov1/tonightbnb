@@ -58,24 +58,36 @@ const Splash = props => {
                 <div className="grid-container">
                     <div className="left-online">
                         <div className="online-exp">
-                            <img className="splash-online-image" src={guy} />
+                            <img id="guy" className="splash-online-image" src={guy} />
+                            <div className="paren-text-container">
+                                <span className="under-online-exp">Learn top ropagate with Baltimore's "Plant Doctor"</span>
+                            </div>
                         </div>
                     </div>
                     <div className="right-online">
                         <div className="grid-top1">
                             <div className="online-exp">
                                 <img className="splash-online-image" src={yoga} />
+                                <div className="paren-text-container">
+                                    <span className="under-online-exp">Stretch. Breathe. Relax. Youga class with friends.</span>
+                                </div>
                             </div>
                         </div>
                         <div classNmae="grid-top2">
                             <div id="peng" className="online-exp">
                                 <img className="splash-online-image" src={peng} />
+                                <div className="paren-text-container">
+                                    <span className="under-online-exp">Support African penguins by drawing with Jon</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                         <div className="grid-bottom">
                             <div className="online-exp">
                                 <img className="splash-online-image" src={musician} />
+                            <div className="paren-text-container">
+                                <span className="under-online-exp">Meditate to music with Janice from Amsterdam</span>
+                            </div>
                             </div>
                         </div>
                 </div>
