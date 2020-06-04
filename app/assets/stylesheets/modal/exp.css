@@ -3,6 +3,7 @@
     max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+    margin-top: 100px;
 }
 
 .splash-column {
@@ -54,3 +55,27 @@
 .parent{
     text-align: center;
 }
+
+.splash-spot {
+    margin-top: 100px;
+    border-radius: 10px;
+    flex-basis: 10%; 
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 10px;;
+    display: block;
+    margin-bottom: 50px;
+    width: 140%;
+    z-index: 0;
+} 
+
+
+
+
+
+
+
+
+
+
+

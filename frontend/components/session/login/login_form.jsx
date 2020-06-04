@@ -24,6 +24,10 @@ class LoginForm extends React.Component {
         this.props.processForm(this.props.demo).then(this.props.closeModal)
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     renderErrors() {
         let { errors } = this.props
         if (errors.length === 0) {
@@ -46,7 +50,6 @@ class LoginForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    <div className="signin-errors">{errors}</div>
                     <header className="modal-header">
                         <div>Log in</div>
                         <div className="modal-close" onClick={this.props.closeModal} >X</div> 
@@ -72,6 +75,7 @@ class LoginForm extends React.Component {
                                 required 
                             />
                         </div>
+                        <div className="signin-errors">{errors}</div>
                         < br/>    
                         <button className="nav-btn" type="submit">Log in</button>
                         <br/>
@@ -79,7 +83,7 @@ class LoginForm extends React.Component {
                         <button className="nav-btn" type="submit" onClick={() => this.demoLogin()}>Demo</button>
                     <span className="footer-login">
                         Don't have an account?
-                        <div className="footer-btn" onClick={() => this.props.clearErrors()}> {this.props.redirect}</div>
+                        <div className="footer-btn"> {this.props.redirect}</div>
                     </span>
                 </form>
            </div>

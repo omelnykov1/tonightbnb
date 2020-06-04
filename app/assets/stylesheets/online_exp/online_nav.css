@@ -1,0 +1,108 @@
+.splash-destinations {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    height: 1100px;
+    background-image: url(black.jpg); 
+    z-index: 0;
+    margin-top: 100px;
+}
+
+.online-exp {
+    margin: 0 15px 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background: #fff;
+    border-radius: 10px;
+    flex-basis: 33%; 
+    max-width: 100vw; 
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid-container {
+  margin-top: 50px;
+  margin-bottom: 200px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-container img{
+    width: 100%;
+}
+.splash-destinations p {
+    width: 30%;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+.splash-destinations h2{
+    width: 50%;
+    color: #ffffff;
+    font-size: 35px;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+
+.splash-online-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+#peng {
+    width: 192%;
+    height: 330px;
+}
+
+.online-exp-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.explore-btn {
+
+    width: 70px;
+    justify-content: space-between;
+    cursor: pointer !important;
+    display: inline-block !important;
+    position: relative !important;
+    text-align: center !important;
+    /* width: auto !important; */
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    font-weight: 600 !important;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    color: rgb(255, 255, 255) !important;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 20px;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    outline: none !important;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
+    border-color: rgb(255, 255, 255) !important;
+    background: transparent !important;
+}
+
+.explore-btn:hover {
+    background: lightslategrey;
+}
+

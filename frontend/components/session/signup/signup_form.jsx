@@ -24,6 +24,10 @@ class SignupForm extends React.Component {
         return e => this.setState({[field]: e.target.value})
     }
 
+    componentWillUnmount() {
+        this.props.clearErrors()
+    }
+
     renderErrors() {
         let {errors} = this.props
         if (errors.length === 0) {
@@ -47,7 +51,6 @@ class SignupForm extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    {errors}
                     <header className="modal-header">
                         <div className="login-header">Sign up</div>
                         <div className="modal-close" onClick={this.props.closeModal} >X</div>
@@ -64,6 +67,7 @@ class SignupForm extends React.Component {
                         <div className="input-container" data-error={errors}>
                             <input className="modal-field" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" required />
                         </div>
+                        {errors}
                         <br/>
                         <button className="nav-btn" type="submit">Sign up</button>
                     </div>
