@@ -53,7 +53,7 @@ const Splash = props => {
                     trying something new. Join live, interactive video sessions
                     led by expert hosts—all without leaving home.
                     </p>
-                    <div className="explore-btn">Explore all</div>
+                    <button className="explore-btn">Explore all</button>
                 </div>
                 <div className="grid-container">
                     <div className="left-online">

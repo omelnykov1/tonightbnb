@@ -91,19 +91,20 @@
     color: rgb(255, 255, 255) !important;
     margin-left: 50px;
     margin-right: 50px;
-    height: 20px;
+    height: 33px;
+    width: 110px;
     text-decoration: none !important;
     border-radius: 8px !important;
     border-width: 1px !important;
     border-style: solid !important;
     outline: none !important;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
-    border-color: rgb(255, 255, 255) !important;
-    background: transparent !important;
+    border-color: rgb(255, 255, 255);
+    background: transparent;
 }
 
 .explore-btn:hover {
-    background: lightslategrey;
+    background-color: #606060	;
 }
 
 .online-exp {
