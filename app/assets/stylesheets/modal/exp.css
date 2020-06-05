@@ -33,17 +33,13 @@
 }
 
 .header-content {
-    /* display: flex; */
     position: static;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Palatino, URW Palladio L, serif;
     color: black;
     top: 150px;
     z-index: 4;
 }
-
-
-
 
 
 .splash-exp-image {
@@ -57,7 +53,7 @@
     padding: 3px;
     font-weight: bold;
     align-items: center;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-family: Palatino, URW Palladio L, serif;;
 }
 
 .bottom {
@@ -65,10 +61,10 @@
     padding: 3px;
     padding-bottom: 5px;
     text-align: center;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-family: Palatino, URW Palladio L, serif;;
 }
 
-.parent{
+.parent {
     text-align: center;
 }
 
@@ -84,12 +80,130 @@
     width: 140%;
     z-index: 0;
 } 
+/* 
+.v-header-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.v-header-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+} 
+
+.v-header-container .header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.v-header-container .header-content h1{
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+} */
 
 
+.section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.section h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Palatino, URW Palladio L, serif;
+  padding: 20px;
+  margin: 15px;
+  z-index: 1;
+  opacity: 0.7;
+}
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+}
 
+.explore-btn1 {
+    border: transparent;
+    background: transparent;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-family: Palatino, URW Palladio L, serif;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+    --accent-color: #0AF;
+}
+
+.explore-btn1:hover {
+    color: #fff;
+}
+
+.explore-btn1:focus {
+    outline: 0;
+}
+
+.explore-btn1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #0AF;
+    transform: scaleX(0);
+    transition: transform 300ms ease-in-out ;
+    border-radius: 10px;
+    /* transform-origin: left; */
+}
+.explore-btn1:hover::before,
+.explore-btn1:focus::before {
+    transform: scaleX(1);
+}
+
+.explore-btn1 {
+    transition: transform 300ms ease-in-out;
+    z-index: 1;
+}
+
+.explore-btn1:hover::before,
+.explore-btn1:focus::before {
+    color: white;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+}
 
 
 

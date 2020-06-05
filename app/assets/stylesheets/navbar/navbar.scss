@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-evenly;
   font-size: 14px;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+  font-family: Palatino, URW Palladio L, serif;
 }
 
 .nav-signin {
@@ -106,39 +106,37 @@
   border-radius: 50%;
 }
 
+.modal-field {
+    padding: 15px 10px 0px 10px;
+    border: none;
+    position: relative;
+    width: 95%;
+    height: 85%;
+    color: lighten(black, 22%);
+    background-color: transparent;
+    outline: none;
 
-
-// .modal-field {
-//     padding: 15px 10px 0px 10px;
-//     border: none;
-//     position: relative;
-//     width: 95%;
-//     height: 85%;
-//     color: lighten(black, 22%);
-//     background-color: transparent;
-//     outline: none;
-
-//     & + label{
-//     color: lighten(black, 60%);
-//     position:absolute;
-//     top: 19px;
-//     left: 14px;
-//     transition: all .2s ease-out;
-//     z-index: 5000;
-//   } 
-//   &:focus{
-//     outline: none;
-//     transition: all .2s ease-out;  
-//   }
-//    &:focus + label {
-//     display: inline;
-//     top: 9px;
-//     color: gray;
-//     font-size: 12px;
-//     transition: top 0.2s;
-//   }
-//    &:valid + label {
-//     top: 9px;
-//     font-size: 12px;
-//   }
-// }
+    & + label{
+    color: lighten(black, 60%);
+    position:absolute;
+    top: 19px;
+    left: 14px;
+    transition: all .2s ease-out;
+    z-index: 5000;
+  } 
+  &:focus{
+    outline: none;
+    transition: all .2s ease-out;  
+  }
+   &:focus + label {
+    display: inline;
+    top: 9px;
+    color: gray;
+    font-size: 12px;
+    transition: top 0.2s;
+  }
+   &:valid + label {
+    top: 9px;
+    font-size: 12px;
+  }
+}

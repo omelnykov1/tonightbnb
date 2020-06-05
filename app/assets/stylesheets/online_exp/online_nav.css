@@ -42,7 +42,7 @@
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-family: Palatino, URW Palladio L, serif;
 }
 
 .splash-destinations h2{
@@ -53,7 +53,7 @@
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-family: Palatino, URW Palladio L, serif !important;
 }
 
 .splash-online-image {
@@ -84,7 +84,7 @@
     display: inline-block !important;
     position: relative !important;
     text-align: center !important;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-family: Palatino, URW Palladio L, serif !important;
     font-size: 14px !important;
     line-height: 18px !important;
     font-weight: 600 !important;
@@ -121,7 +121,7 @@
     text-align: left;
     cursor: pointer;
     color: #ffffff;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-family: Palatino, URW Palladio L, serif !important;
     font-size: 16px;
 }
 
@@ -137,3 +137,4 @@
     width: 1000px;
     height: 245px;
 }
+

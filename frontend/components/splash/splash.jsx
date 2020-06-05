@@ -11,20 +11,22 @@ const Splash = props => {
     const yoga = window.yoga;
     const peng = window.peng;
     const musician = window.musician;
-    const vid = window.vid
     const vid1 = window.vid1
     return (
         <div className="splash">
-            <section className="v-header container">
-                <div className="splash-background-image">
-                    <video autoPlay muted loop="true" className="splash-image" src={vid1} ></video>
+            <div className="section">
+                <h1>Welcome to tonight-bnb</h1>
+                <div className="video-container">
+                    <div className="color-overlay"></div>
+                    <video autoPlay muted loop className="splash-image" src={vid1}></video>
                 </div>
-                <div className="header-content">
-                    <h1>Welcome to tonight-bnb</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo, voluptate labore consequuntur dolorum error vero maiores ipsum similique aliquid.</p>
-                    <Link to="/spots" className="btn">Explore stays</Link>
+                <div className="header-content" >
+                    {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nemo, voluptate labore consequuntur dolorum error vero maiores ipsum similique aliquid.</p> */}
+                    <div className="btn1">
+                        <Link to="/spots"><button className="explore-btn1">Explore stays</button></Link>
+                    </div>
                 </div>
-            </section>
+            </div>
             <div className="splash-experinces">
                 <div className="splash-column">
                     <img className="splash-exp-image" src={left} />
