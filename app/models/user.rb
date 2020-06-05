@@ -7,7 +7,10 @@ class User < ApplicationRecord
     attr_reader :password 
     after_initialize :ensure_session_token
 
-    #has_many :spots
+    has_many :spots,
+    class_name: :Spot,
+    foreign_key: :host_id
+    
     #has_many :bookings
     #has_many :reviews
 

@@ -6,6 +6,7 @@ import { AuthRoute } from '../util/route_util';
 import GreetingContainer from "./greetings/greeting_container";
 import SessionModal from './modal/session_modal';
 import Splash from './splash/splash';
+import SpotIndexContainer from './spots/spot_index_container';
 
 
 
@@ -15,8 +16,7 @@ const App = () => (
         <GreetingContainer />
         <Switch>
             <Route exact path="/" component={Splash} />
-            <AuthRoute exact path="/login" component={LoginFormContainer} />
-            <AuthRoute exact path="/signup" component={SignupFormContainer} />
+            <Route exact path="/spots" component={SpotIndexContainer}/>
         </Switch>
     </div>
 )

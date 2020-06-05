@@ -73,7 +73,7 @@ const Splash = props => {
                                 </div>
                             </div>
                         </div>
-                        <div classNmae="grid-top2">
+                        <div className="grid-top2">
                             <div id="peng" className="online-exp">
                                 <img className="splash-online-image" src={peng} />
                                 <div className="paren-text-container">

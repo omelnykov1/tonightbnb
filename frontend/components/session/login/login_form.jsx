@@ -58,9 +58,10 @@ class LoginForm extends React.Component {
                         <div className="input-container" data-error={errors}>
                             <input 
                                 className="modal-field" 
-                                type="text" 
+                                type="email" 
                                 value={this.state.email} 
                                 onChange={this.update('email')} 
+                                id="email"
                                 placeholder="Email" 
                                 required/>
                             <br/>
@@ -70,7 +71,8 @@ class LoginForm extends React.Component {
                                 className="modal-field" 
                                 type="password" 
                                 value={this.state.password} 
-                                onChange={this.update('password')} 
+                                onChange={this.update('password')}
+                                id="password" 
                                 placeholder="Password" 
                                 required 
                             />
