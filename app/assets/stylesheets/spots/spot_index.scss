@@ -3,7 +3,7 @@
     flex-direction: row;
     // border: 1px solid black;
     width: 83%;
-    
+    margin-bottom: 15px;
 }
 
 .spot-price {
@@ -20,18 +20,11 @@
 
 .spot-details{
     padding-left: 7px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 }
 
 .spot-price span {
     font-weight: bold !important;
     font-size: 20px;
-}
-
-.rating-star {
-    width: 20px;
-    height: 20px;
-    margin-bottom: 70%;
 }
 
 
@@ -42,5 +35,32 @@
 }
 
 .spot-info {
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
+
+.spots-content {
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.left-side {
+    width: 60%;
+}
+.right-side {
+    width: 40%;
+    position: fixed;
+    right: 0;
+    border-radius: 10px;
+}
+
+.spot-rating {
+    margin: 0 auto;
+}
+
+.rating-spot {
+    list-style-image: url('star.png');
+}
+
