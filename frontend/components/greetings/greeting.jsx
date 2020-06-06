@@ -13,16 +13,34 @@ class Greeting extends React.Component {
     }
 
     render() {
+        const logo1 = window.logo1
+        const logo2 = window.logo2
         let { currentUser, logout, openModal } = this.props
 
         const display = currentUser ? (
             <nav className="navbar">
+                <div className-="social-media">
+                    <a className="git" href="https://github.com/omelnykov1">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
                 <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
                 <div className="nav-signin">Welcome, {this.props.currentUser.name}</div>
-                <img className="profile-img" src={window.profile_pic} />
+                {/* <img className="profile-img" src={window.profile_pic} /> */}
             </nav>
         ) : (
                 <nav className="navbar">
+                    <div className-="social-media">
+                        <a className="git" href="https://github.com/omelnykov1">
+                            <i class="fab fa-github"></i>
+                        </a> 
+                        <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
                     <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
                     <div className="nav-signin"onClick={() => openModal('login')}>Log In</div>
                 </nav>
@@ -33,8 +51,8 @@ class Greeting extends React.Component {
                 <div className="navbar">
                     <div className="nav">
                         <div className="nav-1">
-                            <Link to="/"><img className="logo" src={window.logo} /></Link>
-                            <a href="/"><img src="https://fontmeme.com/permalink/200603/be1991fbd18af4d63ba11a9437ca05c8.png" alt="famous-fonts" border="0"/></a>
+                            <Link to="/"><img className="logo" src={logo} /></Link>
+                            {/* <a href="/"><img src="https://fontmeme.com/permalink/200603/be1991fbd18af4d63ba11a9437ca05c8.png" alt="famous-fonts" border="0"/></a> */}
                         </div>
                         <div className="nav-2">
                             {display}

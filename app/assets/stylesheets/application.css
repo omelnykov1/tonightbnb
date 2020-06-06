@@ -28,5 +28,9 @@ main {
 } 
 
 .logo {
-    float: left
+    float: left;
+    z-index: 1;
+}
+*{
+    list-style: none;
 }

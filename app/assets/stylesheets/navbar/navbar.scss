@@ -6,15 +6,20 @@
 .nav-1 {
   width: 100%;
   display: flex;
+  margin-top: 0px;
+  z-index: 1;
 }
 .nav-2 {
   width: 500px;
+  padding-top: -14px;
+  margin-top: -10px;
 }
 
 .nav {
   width: 100%;
   display: flex;
   position: fixed;
+  flex-direction: row;
   top: 0;
   background-color: white;
   justify-content: space-between;
@@ -47,7 +52,8 @@
 .nav-signin {
   display: flex;
   justify-content: center;
-  padding: 13px 20px;
+  margin-top: 12px;
+  padding: 12px 22px;
   vertical-align: middle;
   &:hover {
     border-bottom: 2px solid dimgray;
@@ -64,6 +70,119 @@
   border: 1px solid #dddddd;
   border-radius: 6px;
   padding: 12px;
+}
+
+.social-media {
+  margin: auto 0;
+  position: absolute;
+  top: 5%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding-top: -50px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.personal-social {
+  padding-top: -50px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+
+.personal-social i {
+  padding-bottom: 50px;
+  line-height: 40px;
+  font-size: 35px;
+  transition: 0.2s linear;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.personal-social i:hover {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.personal-social:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.personal-social:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+.git {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #202020;
+  overflow: hidden;
+  position: relative;
+}
+
+.git i {
+  line-height: 40px;
+  font-size: 35px;
+  transition: 0.2s linear;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.git i:hover {
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+
+.git:before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #202020;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.git:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
 }
 
 
@@ -96,7 +215,9 @@
 }
 
 .logo{
-  width: 73px;
+  width: 96px;
+  position: relative;
+  margin-top: -19px;
 }
 
 .profile-img {
@@ -104,39 +225,40 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin-right: 7px;
 }
 
-.modal-field {
-    padding: 15px 10px 0px 10px;
-    border: none;
-    position: relative;
-    width: 95%;
-    height: 85%;
-    color: lighten(black, 22%);
-    background-color: transparent;
-    outline: none;
+// .modal-field {
+//     padding: 15px 10px 0px 10px;
+//     border: none;
+//     position: relative;
+//     width: 95%;
+//     height: 85%;
+//     color: lighten(black, 22%);
+//     background-color: transparent;
+//     outline: none;
 
-    & + label{
-    color: lighten(black, 60%);
-    position:absolute;
-    top: 19px;
-    left: 14px;
-    transition: all .2s ease-out;
-    z-index: 5000;
-  } 
-  &:focus{
-    outline: none;
-    transition: all .2s ease-out;  
-  }
-   &:focus + label {
-    display: inline;
-    top: 9px;
-    color: gray;
-    font-size: 12px;
-    transition: top 0.2s;
-  }
-   &:valid + label {
-    top: 9px;
-    font-size: 12px;
-  }
-}
+//     & + label{
+//     color: lighten(black, 60%);
+//     position:absolute;
+//     top: 19px;
+//     left: 14px;
+//     transition: all .2s ease-out;
+//     z-index: 5000;
+//   } 
+//   &:focus{
+//     outline: none;
+//     transition: all .2s ease-out;  
+//   }
+//    &:focus + label {
+//     display: inline;
+//     top: 9px;
+//     color: gray;
+//     font-size: 12px;
+//     transition: top 0.2s;
+//   }
+//    &:valid + label {
+//     top: 9px;
+//     font-size: 12px;
+//   }
+// }

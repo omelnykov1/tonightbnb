@@ -5,7 +5,7 @@
   right: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 2;
+  z-index: 500;
   transition: top 0.4s;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 1000;
   text-align: center;
   box-shadow: 0 5px 8px 9 rgba(0, 0, 0, 0.7), 0 7px 20px;
 }

@@ -10,6 +10,7 @@ import SpotIndexContainer from './spots/spot_index_container';
 
 
 
+
 const App = () => (
     <div>
         <SessionModal/>

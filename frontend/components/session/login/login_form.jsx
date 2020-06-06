@@ -64,7 +64,7 @@ class LoginForm extends React.Component {
                                 id="email"
                                 placeholder="Email" 
                                 required/>
-                            <label className="modal-label">Email</label>
+                            {/* <label className="modal-label">Email</label> */}
                             <br/>
                         </div>
                         <div className="input-container" data-error={errors}>
