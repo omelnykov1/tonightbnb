@@ -10,4 +10,4 @@
 Spot.delete_all
 
 Spot.create!({spot_name: 'spot 1', price: 200, description: "We want everyone to have a comfortable place to stay. Our digital check-in and the ability to manage your stay from our app, means you won't need to interact with anyone in person.", city: 'New York',
-    country: 'USA', title: "Entire apartment in the center of Midtown", ltd: 40.764361, lng: -73.987779, spot_type: 'Entire apartment', host_id: 1, address: '101 %th avenue'})
+    country: 'USA', title: "Entire apartment in the center of Midtown", lat: 40.764361, lng: -73.987779, spot_type: 'Entire apartment', host_id: 1, address: '101 %th avenue'})

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_05_000811) do
+ActiveRecord::Schema.define(version: 2020_06_06_205850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,28 @@ ActiveRecord::Schema.define(version: 2020_06_05_000811) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "start_date", null: false
+    t.datetime "end_date", null: false
+    t.integer "num_guests", null: false
+    t.integer "spot_id", null: false
+    t.integer "guest_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["guest_id"], name: "index_bookings_on_guest_id", unique: true
+    t.index ["spot_id"], name: "index_bookings_on_spot_id", unique: true
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "body", null: false
+    t.float "rating", null: false
+    t.integer "guest_id", null: false
+    t.integer "spot_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_reviews_on_spot_id"
+  end
+
   create_table "spots", force: :cascade do |t|
     t.string "spot_name", null: false
     t.float "price", null: false
@@ -44,7 +66,7 @@ ActiveRecord::Schema.define(version: 2020_06_05_000811) do
     t.string "city", null: false
     t.string "country", null: false
     t.float "lng", null: false
-    t.float "ltd", null: false
+    t.float "lat", null: false
     t.integer "host_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
