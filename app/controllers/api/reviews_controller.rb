@@ -6,13 +6,13 @@ class Ali::ReviewsController < ApplicationController
         if @review.save
             render :show
         else
-            render json: @review, status: 422 
+            render json: @review, status: :unprocessable_entity
         end
     end
 
     private
     
     def review_params
-        params.require(:review).pernit(:body, :rating, :guest_id, :spot_id)
+        params.require(:review).permit(:body, :rating, :guest_id, :spot_id)
     end
 end

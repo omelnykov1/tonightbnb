@@ -7,6 +7,7 @@ import GreetingContainer from "./greetings/greeting_container";
 import SessionModal from './modal/session_modal';
 import Splash from './splash/splash';
 import SpotIndexContainer from './spots/spot_index_container';
+import SpotContainer from "./spots/spot_page/spot_container"
 
 
 
@@ -18,6 +19,7 @@ const App = () => (
         <Switch>
             <Route exact path="/" component={Splash} />
             <Route exact path="/spots" component={SpotIndexContainer}/>
+            <Route path={`/spots/:spotId`} component={SpotContainer} />
         </Switch>
     </div>
 )

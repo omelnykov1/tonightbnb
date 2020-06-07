@@ -15,6 +15,11 @@
   margin-top: -10px;
 }
 
+.logo5 {
+  font-size: 50px;
+  font-family: 'Crimson Text';
+}
+
 .nav {
   width: 100%;
   display: flex;
@@ -217,7 +222,7 @@
 .logo{
   width: 96px;
   position: relative;
-  margin-top: -19px;
+  margin-top: -18px;
 }
 
 .profile-img {
@@ -262,3 +267,20 @@
 //     font-size: 12px;
 //   }
 // }
+
+
+.marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  &:hover {
+    z-index: 1;
+  }
+}

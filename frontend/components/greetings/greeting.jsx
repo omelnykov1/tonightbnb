@@ -13,8 +13,6 @@ class Greeting extends React.Component {
     }
 
     render() {
-        const logo1 = window.logo1
-        const logo2 = window.logo2
         let { currentUser, logout, openModal } = this.props
 
         const display = currentUser ? (
@@ -36,7 +34,7 @@ class Greeting extends React.Component {
                     <div className-="social-media">
                         <a className="git" href="https://github.com/omelnykov1">
                             <i class="fab fa-github"></i>
-                        </a> 
+                        </a>
                         <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
                             <i class="fab fa-linkedin"></i>
                         </a>
@@ -51,8 +49,8 @@ class Greeting extends React.Component {
                 <div className="navbar">
                     <div className="nav">
                         <div className="nav-1">
-                            <Link to="/"><img className="logo" src={logo} /></Link>
-                            {/* <a href="/"><img src="https://fontmeme.com/permalink/200603/be1991fbd18af4d63ba11a9437ca05c8.png" alt="famous-fonts" border="0"/></a> */}
+                            <Link to="/"><img className="logo" src={window.logo} /></Link>
+                            <div className="logo5">tonightbnb</div>
                         </div>
                         <div className="nav-2">
                             {display}

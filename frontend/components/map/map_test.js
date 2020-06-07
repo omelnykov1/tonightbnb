@@ -1,18 +1,27 @@
-import React, { Component } from 'react';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
-class Map extends Component {
+import React from 'react';
+import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+
+class Map extends React.Component {
+    constructor(props) {
+        // debugger
+        super(props)
+        // debugger
+    }
     render() {
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
                 defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
                 defaultZoom={13}
             >
+                {/* {this.props.spots.map(spot => (
+                    <Marker key={spot.id} position={{ lat: spot.lat, lng: spot.lng }} />
+                ))} */}
             </GoogleMap>
         ));
         return (
             <div>
                 <GoogleMapExample
-                    containerElement={<div style={{ height: `700px`, width: '500px' }} />}
+                    containerElement={<div className="google" style={{ height: `100vh`, width: '700px' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>

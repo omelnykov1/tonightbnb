@@ -1,7 +1,7 @@
 import React from 'react';
 import SpotIndexItem from './spot_index_item'
 import Map from '../map/map_test'
-import WrappedMap from '../map/map'
+
 
 class SpotIndex extends React.Component {
     constructor(props) {

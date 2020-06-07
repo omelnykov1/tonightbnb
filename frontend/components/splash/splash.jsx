@@ -15,7 +15,7 @@ const Splash = props => {
     return (
         <div className="splash">
             <div className="section">
-                <h1>Welcome to tonight-bnb</h1>
+                <h1>Welcome to tonight bnb</h1>
                 <div className="video-container">
                     <div className="color-overlay"></div>
                     <video autoPlay muted loop className="splash-image" src={vid1}></video>

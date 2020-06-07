@@ -30,7 +30,11 @@ class Api::SpotsController < ApplicationController
     private
 
     def spot_params 
-        params.require(:spot).permit(:price, :city, :lat, :lng, :description, :title, :spot_type)
+        params.require(:spot).permit(:price, :city, :lat, :lng, :description, :title, :spot_type, photos: [])
+    end
+
+    def bounds
+        params[:bounds]
     end
 
 end
