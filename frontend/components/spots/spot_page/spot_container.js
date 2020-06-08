@@ -4,9 +4,7 @@ import { fetchSpot, createSpot, updateSpot } from '../../../actions/spot_actions
 import Spot from './spot';
 
 const mSTP = (state, ownProps) => ({
-        spot: state.entities.spots[ownProps.match.params.spotId],
-        // reviews: Object.values(state.entities.reviews),
-        guests: state.entities.users,
+    spot: state.entities.spots[ownProps.match.params.spotId]
 })
 
 const mDTP = dispatch => ({

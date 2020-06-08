@@ -14,7 +14,6 @@
 .spot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em 2em;
     margin: 0 auto;
 }
 
@@ -24,6 +23,11 @@
 
 .main-photo {
     width: 93% !important;
+}
+
+.reviews-container {
+    width: 50%;
+    height: 200px;
 }
 
 .spot-rating {
@@ -70,7 +74,7 @@
 .reviews-header {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     width: 200px;
 }
 
@@ -78,12 +82,38 @@
     display: flex;
     flex-direction: row;
     margin-top: 20px;
+    font-size: 18px;
+}
+
+.review-head {
+    margin-top: 19.5px;
+    margin-left: 5px;
 }
 
 .spot-details {
     width: 50%;
     padding: 10px;
     /* border-bottom: 0.5px solid rgb(180, 180, 180); */
+}
+
+.spot-title {
+    cursor: pointer;
+}
+
+.main-spot-photo {
+    cursor: pointer;
+}
+
+.spot-details h2 {
+    font-size: 25px !important;
+}
+
+.additional-spot-info h2 {
+    font-size: 25px !important;
+}
+
+.spot-amenities .h2 {
+    font-size: 25px;
 }
 
 .spot-city {
@@ -97,7 +127,8 @@ hr.style-four {
 }
 .additional-spot-info {
     height: 300px;
-    width: 600px;
+    width: 50%;
+    margin-top: 55px;
 }
 .spot-info-containers {
     height: 100%;
@@ -146,16 +177,30 @@ hr.style-four {
     margin-top: 10px;
 }
 
+
 .spot-amenities {
-    width: 300px;
+    margin-top: -37px;
+    width: 570px;
     height: 300px;
     border: 1px black;
+  
+}
+
+.spot-amenities-columns {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .spot-amenities-col1 {
     display: flex;
     flex-direction: column;
-   
+}
+
+.spot-amenities-col2 {
+    display: flex;
+    flex-direction: column;
 }
 
 .spot-amenity {
@@ -200,6 +245,29 @@ hr.style-seven:before { /* Not really supposed to work, but does */
     border-color: black;
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+.review-rating {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: left;
+    margin-bottom: 15px;
+}
+
+.review-rating1 {
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+
+
+.review-guest {
+    margin-top: 21px;
+    font-weight: bolder;
 }
 
 

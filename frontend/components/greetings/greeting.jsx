@@ -19,10 +19,10 @@ class Greeting extends React.Component {
             <nav className="navbar">
                 <div className="social-media">
                     <a className="git" href="https://github.com/omelnykov1">
-                        <i class="fab fa-github"></i>
+                        <i className="fab fa-github"></i>
                     </a>
                     <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
-                        <i class="fab fa-linkedin"></i>
+                        <i className="fab fa-linkedin"></i>
                     </a>
                 </div>
                 <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
@@ -33,10 +33,10 @@ class Greeting extends React.Component {
                 <nav className="navbar">
                     <div className="social-media">
                         <a className="git" href="https://github.com/omelnykov1">
-                            <i class="fab fa-github"></i>
+                            <i className="fab fa-github"></i>
                         </a>
                         <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
-                            <i class="fab fa-linkedin"></i>
+                            <i className="fab fa-linkedin"></i>
                         </a>
                     </div>
                     <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
@@ -59,7 +59,7 @@ class Greeting extends React.Component {
                                             <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
                                             <label>CHECK IN/CHECK OUT</label>
                                         </div>
-                                        <button className="search-button"><i class="fas fa-search"></i>Search</button>
+                                    <button className="search-button"><i className="fas fa-search"></i>Search</button>
                                 </div>
                             </div>
                         </div>

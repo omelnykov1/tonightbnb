@@ -1,17 +1,19 @@
 import React from 'react';
 
 const SpotReview = props => {
-    const { body, rating } = this.props.review;
-    const { authors } = this.props;
-    const guest = authors[this.props.review.guest_id]
+    const { guests } = props;
+    const guest = guests[props.review.guest_id]
     return (
-        <div className="review-container">
-            <div className="review-rating">
-                <div className="review">{guest.name}</div>
+        <div className="review-item-container">
+             <div className="review-rating1">
+                <div className="spot-rating-review">
+                    <div className="star"><i className="fas fa-star"></i></div>{props.review.rating}
+                </div>
+                <div className="review-guest">{guest.name}</div>
             </div>
-            <div className="review-body">{body}</div>
-        </div>
+            <div className="review-body">{props.review.body}</div>
+        </div> 
     )
 }
 
-export default SpotReviewItem;
+export default SpotReview;

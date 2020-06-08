@@ -3,9 +3,7 @@ import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 class Map extends React.Component {
     constructor(props) {
-        // debugger
         super(props)
-        // debugger
     }
     render() {
         const GoogleMapExample = withGoogleMap(props => (

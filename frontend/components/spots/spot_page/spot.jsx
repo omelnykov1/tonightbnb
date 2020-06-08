@@ -1,7 +1,7 @@
 import React from 'react';
 import SpotMap from '../../map/spot_map';
-// import DayPicker from 'react-day-picker';
-// import 'react-day-picker/lib/style.css';
+import SpotReview from './spot_review';
+import BookingForm from '../../booking/booking_form'
 
 class Spot extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class Spot extends React.Component {
 
     render() {
         if (this.props.spot) {
-            const { title, description, address, price, city, lat, lng } = this.props.spot;
-            const { openModal,reviews, guests } = this.props;
+            const { reviews, title, description, address, price, city, lat, lng, guests } = this.props.spot;
+            const { openModal} = this.props;
             const rating = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)]
             return (
                 <div className="spot-container">
@@ -26,7 +26,7 @@ class Spot extends React.Component {
                         </span>
                         <span className="spot-rating">
                             <div className="rating-container">
-                                <div className="star"><i class="fas fa-star"></i></div>{rating}
+                                <div className="star"><i className="fas fa-star"></i></div>{rating}
                             </div>
                             <br/>
                             <div className="spot-city">{city}</div>
@@ -52,12 +52,12 @@ class Spot extends React.Component {
                             {description}
                         </div>
                     </div>
-                    {/* < DayPicker/> */}
+                    < BookingForm />
                     <div className="additional-spot-info">
                         <h2>Sleeping arrangements</h2>
                         <div className="spot-info-containers">
                             <div className="spot-bedroom">
-                                <i class="fas fa-bed"></i>
+                                <i className="fas fa-bed"></i>
                                 <br />
                                 <span>Bedroom 1</span>
                                 <br/>
@@ -65,7 +65,7 @@ class Spot extends React.Component {
                                 <p>1 queen bed</p>
                             </div>
                             <div className="spot-common-spaces">
-                                <i class="fas fa-couch"></i>
+                                <i className="fas fa-couch"></i>
                                 <br/>
                                 <span>Common spaces</span>
                                 <br />
@@ -75,37 +75,44 @@ class Spot extends React.Component {
                     </div>
                     <div className="spot-amenities">
                         <h2>Amenities</h2>
-                        <div className="spot-amenities-col1">
-                            <div className="spot-amenity"><i class="fas fa-wifi"></i>WiFi</div>
-                            <div className="spot-amenity"><i class="fas fa-tv"></i>TV</div>
-                            <div className="spot-amenity"><i class="fas fa-laptop"></i>Laptop-friendly workspace</div>
-                            <div className="spot-amenity"><i class="fas fa-charging-station"></i>Chargin Station</div>
-                            <div className="spot-amenity"><i class="fas fa-parking"></i>Parking</div>
+                        <div className="spot-amenities-columns">
+                            <div className="spot-amenities-col1">
+                                <div className="spot-amenity"><i className="fas fa-wifi"></i>WiFi</div>
+                                <div className="spot-amenity"><i className="fas fa-tv"></i>TV</div>
+                                <div className="spot-amenity"><i className="fab fa-accessible-icon"></i>Wheelchair Accessible</div>
+                                <div className="spot-amenity"><i className="fas fa-charging-station"></i>Charging Station</div>
+                                <div className="spot-amenity"><i className="fas fa-parking"></i>Parking</div>
+                            </div>
+                            <div className="spot-amenities-col2">
+                                <div className="spot-amenity"><i className="fab fa-amazon"></i>Amazon TV</div>
+                                <div className="spot-amenity"><i className="fas fa-allergies"></i>Sanitizing Equipment</div>
+                                <div className="spot-amenity"><i className="fas fa-box-open"></i>Storage</div>
+                                <div className="spot-amenity"><i className="fas fa-glass-cheers"></i>Bar</div>
+                                <div className="spot-amenity"><i className="fas fa-laptop"></i>Laptop-friendly Workspace</div>
+                            </div>
                         </div>
                     </div>
-                    <SpotMap 
+                    {/* <SpotMap 
                         lat={lat} 
                         lng={lng} 
                         address={address} 
-                    />
+                    /> */}
                     <div className="spot-reviews">
                         <div className="reviews-header">
                             <div className="spot-rating-review">
-                                <div className="star"><i class="fas fa-star"></i></div>{rating}
+                                <div className="star"><i className="fas fa-star"></i></div>{rating}
                             </div>
-                            <h3 className="review-head">Reviews</h3>
+                            <h3 className="review-head">({Object.values(reviews).length} reviews)</h3>
                         </div>
-                        {/* <div className="num-reviews">
-                            <div className="num">{reviews.length}</div>
-                            <div>reviews</div>
-                        </div> */}
-                        {/* {reviews.map(review => (
-                            <SpotReview
-                                key={review.id}
-                                guests={guests}
-                                review={review}
-                            />
-                        ))} */}
+                        <div className="reviews-container">
+                            {Object.values(reviews).map(review => (
+                                < SpotReview 
+                                    review={review}
+                                    key={review.id}
+                                    guests={(guests)}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             )

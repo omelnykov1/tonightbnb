@@ -394,6 +394,7 @@
 .nav-search {
   display: flex;
   flex-direction: row;
+  height: 74px;
 }
 
 .nav-search2 {
@@ -469,10 +470,10 @@
   width: 260px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  height: 51px;
+  height: 50px;
   border: 1px solid #f9f0f0;
   border-radius: 6px;
-   outline: none;
+  outline: none;
   padding: 12px;
   text-align: left;
   margin-top: 1px;
@@ -506,7 +507,7 @@
   -moz-border-radius: 25px;
   height: 100%;
   border-radius: 6px;
-  margin-top:-4px;
+  margin-top:px;
   margin-left: 1px;
   outline: none;
   border: none;
@@ -535,7 +536,7 @@
   border-radius: 9px;
   width: 110px;
   height: 45px;
-  margin-left: 2px;
+  margin-left: 5px;
   cursor: pointer;
   text-align: center;
   outline: none;

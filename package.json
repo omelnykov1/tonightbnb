@@ -8,9 +8,12 @@
     "@react-google-maps/api": "^1.9.5",
     "@types/google-map-react": "^1.1.8",
     "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.0",
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
+    "react-calendar": "^3.1.0",
+    "react-datepicker": "^3.0.0",
     "react-dates": "^21.8.0",
     "react-day-picker": "^7.4.8",
     "react-dom": "^16.13.1",
@@ -50,5 +53,9 @@
   "engines": {
     "node": "13.6.0",
     "npm": "6.13.4"
+  },
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "style-loader": "^1.2.1"
   }
 }
