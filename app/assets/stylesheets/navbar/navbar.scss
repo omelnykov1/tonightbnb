@@ -400,12 +400,14 @@
   width: 400px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  height: 80%;
-  border: 1px solid #f1e8e8;
+  height: 74px;
+  border: 1px solid #f9f0f0;
   border-radius: 6px;
-  margin-top: 13px;
+  margin-top: 1px;
   margin-left: -2px;
    box-shadow: 0 5px 10px -5px #dad8d870;
+   display: flex;
+  justify-content: space-between;
 }
 
 
@@ -467,12 +469,13 @@
   width: 260px;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  height: 50%;
-  border: 1px solid #f1e8e8;
+  height: 51px;
+  border: 1px solid #f9f0f0;
   border-radius: 6px;
+   outline: none;
   padding: 12px;
   text-align: left;
-  margin-top: 13px;
+  margin-top: 1px;
   margin-left: 5px;
   box-shadow: 0 5px 10px -5px #dad8d870;
     & + label{
@@ -503,7 +506,7 @@
   -moz-border-radius: 25px;
   height: 100%;
   border-radius: 6px;
-  margin-top:-1px;
+  margin-top:-4px;
   margin-left: 1px;
   outline: none;
   border: none;
@@ -537,8 +540,12 @@
   text-align: center;
   outline: none;
   border: none;
+  margin-top: 15px;
 }
 
 .search-button:hover {
   background-color: #ee2777;
+  transform: scale(1.001);
+  box-shadow: 0 4px 3px darkgray;
 }
+

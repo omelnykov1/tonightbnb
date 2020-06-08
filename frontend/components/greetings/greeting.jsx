@@ -51,13 +51,15 @@ class Greeting extends React.Component {
                         <div className="nav-1">
                             <Link to="/"><img className="logo" src={window.logo} /></Link>
                             {/* <div className="logo5">tonightbnb</div> */}
-                            <div className="nav-search">
-                                <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
-                                <label>LOCATION</label>
-                                <div className="nav-search2">
-                                    <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
-                                    <label>CHECK IN/CHECK OUT</label>
-                                    <button className="search-button"><i class="fas fa-search"></i>Search</button>
+                            <div className="search-box">
+                                <div className="nav-search">
+                                    <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
+                                    <label>LOCATION</label>
+                                        <div className="checkin-nav">
+                                            <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
+                                            <label>CHECK IN/CHECK OUT</label>
+                                        </div>
+                                        <button className="search-button"><i class="fas fa-search"></i>Search</button>
                                 </div>
                             </div>
                         </div>
