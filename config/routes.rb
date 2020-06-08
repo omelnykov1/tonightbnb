@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :spots, only: [:index, :show, :create, :update]
     resources :bookings, only: [:create, :show, :update, :destroy]
     resource :reviews, only: [:create]
+    get '/search', to: 'spots#search'
   end
 end

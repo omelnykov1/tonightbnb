@@ -1,4 +1,15 @@
 class Api::BookingsController < ApplicationController
+
+    def index
+        @bookings = if params[:user_id]
+        Booking.includes(:spot).where(guest_id: params[:user_id])
+        
+        else
+            Booking.includes(:spot).all
+        end
+        render :index
+    end
+
     def show
         @booking = Booking.find(params[:id])
         if @booking

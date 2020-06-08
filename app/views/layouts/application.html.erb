@@ -7,8 +7,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyDo3Hf5ulPHj2eofHS4rgJm6KtvpkADsBo" %>
+   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['REACT_APP_GOOGLE_KEY']}" %>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/react-day-picker/lib/daypicker.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css">
   
   </head>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Crimson+Text|Archivo|Cardo|Quicksand|Roboto|Sarabun|Dancing+Script|Asap|Lato|Montserrat|Great+Vibes|Pacifico|Sacramento&display=swap" rel="stylesheet">

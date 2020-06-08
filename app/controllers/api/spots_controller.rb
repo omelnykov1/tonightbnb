@@ -17,6 +17,16 @@ class Api::SpotsController < ApplicationController
             render json: @spot.errors.full_messages, status: 422
         end
     end
+    
+    def search
+        result = Spot.search_by_keyword(params[:keyword])
+        if result
+            @spots = result
+            render :index
+        else 
+            render json: ["No result"], status: 404
+        end
+    end
 
     def update 
         @spot = Spot.find(params[:id])
