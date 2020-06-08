@@ -1,4 +1,4 @@
-class Ali::ReviewsController < ApplicationController 
+class Api::ReviewsController < ApplicationController 
     before_action :ensure_logged_in!
 
     def create
