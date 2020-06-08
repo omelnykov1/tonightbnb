@@ -11,9 +11,9 @@ class Map extends React.Component {
                 defaultCenter={{ lat: 40.756795, lng: -73.954298 }}
                 defaultZoom={13}
             >
-                {/* {this.props.spots.map(spot => (
+                {this.props.spots.map(spot => (
                     <Marker key={spot.id} position={{ lat: spot.lat, lng: spot.lng }} />
-                ))} */}
+                ))}
             </GoogleMap>
         ));
         return (
