@@ -14,6 +14,7 @@ import BookingIndex from './booking/booking_index';
 
 
 const App = () => (
+    
     <div>
         <SessionModal/>
         <GreetingContainer />
