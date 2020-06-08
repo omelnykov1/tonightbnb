@@ -57,18 +57,18 @@ class SignupForm extends React.Component {
                     </header>
                     <div className="modal-content">
                         <div className="input-container" data-error={errors}>
-                        <input className="modal-field" type="text" value={this.state.email} onChange={this.update('email')} placeholder="Email" required/>
-                        {/* <label>Email</label> */}
+                        <input className="modal-field4" type="text" value={this.state.email} onChange={this.update('email')} required/>
+                            <label className="modal-label">Email</label>
                         </div>
                         <br />
                         <div className="input-container" data-error={errors}>
-                            <input className="modal-field" type="text" value={this.state.name} onChange={this.update('name')} placeholder="Name"  required/>
-                            {/* <label>Name</label> */}
+                            <input className="modal-field2" type="text" value={this.state.name} onChange={this.update('name')} required/>
+                            <label className="modal-label">Name</label>
                         </div>
                         <br />
                         <div className="input-container" data-error={errors}>
-                            <input className="modal-field" type="password" value={this.state.password} onChange={this.update('password')} placeholder="Password" required />
-                            {/* <label>Password</label> */}
+                            <input className="modal-field3" type="password" value={this.state.password} onChange={this.update('password')} required />
+                            <label className="modal-label">Password</label>
                         </div>
                         {errors}
                         <br/>

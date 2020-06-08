@@ -11,6 +11,8 @@
     "google-map-react": "^1.1.7",
     "google-maps-react": "^2.0.6",
     "react": "^16.13.1",
+    "react-dates": "^21.8.0",
+    "react-day-picker": "^7.4.8",
     "react-dom": "^16.13.1",
     "react-google-maps": "^9.4.5",
     "react-redux": "^7.2.0",

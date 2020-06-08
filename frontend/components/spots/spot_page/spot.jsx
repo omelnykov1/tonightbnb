@@ -1,5 +1,8 @@
 import React from 'react';
 import SpotMap from '../../map/spot_map';
+// import DayPicker from 'react-day-picker';
+// import 'react-day-picker/lib/style.css';
+
 class Spot extends React.Component {
     constructor(props) {
         super(props)
@@ -26,7 +29,7 @@ class Spot extends React.Component {
                                 <div className="star"><i class="fas fa-star"></i></div>{rating}
                             </div>
                             <br/>
-                            <div>{city}</div>
+                            <div className="spot-city">{city}</div>
                         </span>
                     </div>
                     <div className="spot-photos-container">
@@ -48,8 +51,8 @@ class Spot extends React.Component {
                         <div className="spot-description">
                             {description}
                         </div>
-                    <hr />
                     </div>
+                    {/* < DayPicker/> */}
                     <div className="additional-spot-info">
                         <h2>Sleeping arrangements</h2>
                         <div className="spot-info-containers">

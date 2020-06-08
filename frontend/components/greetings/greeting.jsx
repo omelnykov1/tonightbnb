@@ -26,7 +26,7 @@ class Greeting extends React.Component {
                     </a>
                 </div>
                 <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
-                <div className="nav-signin">Welcome, {this.props.currentUser.name}</div>
+                <div className="nav-signin1">Welcome, {this.props.currentUser.name}</div>
                 {/* <img className="profile-img" src={window.profile_pic} /> */}
             </nav>
         ) : (
@@ -51,6 +51,15 @@ class Greeting extends React.Component {
                         <div className="nav-1">
                             <Link to="/"><img className="logo" src={window.logo} /></Link>
                             <div className="logo5">tonightbnb</div>
+                            <div className="nav-search">
+                                <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
+                                <label for="search">LOCATION</label>
+                                <div className="nav-search2">
+                                    <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
+                                    <label for="checkin">CHECK IN/CHECK OUT</label>
+                                    <button className="search-button"><i class="fas fa-search"></i>Search</button>
+                                </div>
+                            </div>
                         </div>
                         <div className="nav-2">
                             {display}
