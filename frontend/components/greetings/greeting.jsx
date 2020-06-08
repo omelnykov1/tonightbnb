@@ -50,7 +50,7 @@ class Greeting extends React.Component {
                     <div className="nav">
                         <div className="nav-1">
                             <Link to="/"><img className="logo" src={window.logo} /></Link>
-                            <div className="logo5">tonightbnb</div>
+                            {/* <div className="logo5">tonightbnb</div> */}
                             <div className="nav-search">
                                 <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
                                 <label>LOCATION</label>
