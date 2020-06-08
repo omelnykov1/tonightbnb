@@ -17,7 +17,7 @@ class Greeting extends React.Component {
 
         const display = currentUser ? (
             <nav className="navbar">
-                <div className-="social-media">
+                <div className="social-media">
                     <a className="git" href="https://github.com/omelnykov1">
                         <i class="fab fa-github"></i>
                     </a>
@@ -31,7 +31,7 @@ class Greeting extends React.Component {
             </nav>
         ) : (
                 <nav className="navbar">
-                    <div className-="social-media">
+                    <div className="social-media">
                         <a className="git" href="https://github.com/omelnykov1">
                             <i class="fab fa-github"></i>
                         </a>
@@ -53,10 +53,10 @@ class Greeting extends React.Component {
                             <div className="logo5">tonightbnb</div>
                             <div className="nav-search">
                                 <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
-                                <label for="search">LOCATION</label>
+                                <label>LOCATION</label>
                                 <div className="nav-search2">
                                     <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
-                                    <label for="checkin">CHECK IN/CHECK OUT</label>
+                                    <label>CHECK IN/CHECK OUT</label>
                                     <button className="search-button"><i class="fas fa-search"></i>Search</button>
                                 </div>
                             </div>
