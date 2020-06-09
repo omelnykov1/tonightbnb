@@ -11,6 +11,12 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.spot-map {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 200px;
+}
+
 .spot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -35,7 +41,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 150px;
+    width: 180px;
 }
 
 .spot-nav {

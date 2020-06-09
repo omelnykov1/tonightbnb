@@ -550,3 +550,63 @@
   box-shadow: 0 4px 3px darkgray;
 }
 
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+// .nav-search {
+// 	// position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform:  translate(-50%,50%);
+//   background: transparent;
+//   height: 40px;
+//   border-radius: 40px;
+//   padding: 10px;
+//   margin-top: -46px;
+//   margin-left: 55px;
+// }
+
+// .nav-search:hover > #search {
+//     width: 240px;
+//     padding: 0 6px;
+// }
+
+// .search-button {
+//     color: white;
+//     float: right;
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     background: #ee2777;
+//     display: flex;
+//     // position: absolute;
+//     justify-content: center;
+//     align-items: center;
+//     transition: 0.4s;
+//     margin-left: 120px;
+// }
+
+// #search {
+//     margin-top: 20px;
+//     border:none;
+//     background: none;
+//     outline:none;
+//     float:left;
+//     padding: 0;
+//     color: white;
+//     font-size: 16px;
+//     transition: 0.4s;
+//     line-height: 40px;
+//     width: 0px;
+//     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+// }
+
+// @media screen and (max-width: 620px) {
+// .nav-search:hover > #search {
+//     width: 150px;
+//     padding: 0 6px;
+//     transition: right, 300ms ease-in-out;
+//     transform: scaleX(0);
+//     transform-origin: left;
+// }
+// }
+

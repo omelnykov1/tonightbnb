@@ -3,11 +3,17 @@ import * as APIUtil from '../util/spot_api_util'
 export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_SEARCH_RESULT = 'RECEIVE_SEARCH_RESULT';
 
 const receiveAllSpots = spots => ({
     type: RECEIVE_ALL_SPOTS,
     spots
 })
+
+const receiveSearchResult = result => ({
+    type: RECEIVE_SEARCH_RESULT,
+    result
+});
 
 const receiveSpot = spot => ({
     type: RECEIVE_SPOT,
@@ -40,3 +46,7 @@ export const updateSpot = spot => dispatch => (
 export const createReview = review => dispatch => (
     APIUtil.createReview(review).then(review => (dispatch(receiveReview(review))))
 );
+
+export const fetchSearchResult = keyword => dispatch => {
+    return APIUtil.fetchSearchResult(keyword).then(result => dispatch(receiveSearchResult(result)))
+};

@@ -2,6 +2,7 @@ import React from 'react';
 
 class BookingIndex extends React.Component {
     constructor(props) {
+        // debugger
         super(props)
     }
 

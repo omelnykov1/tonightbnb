@@ -4,12 +4,18 @@ import { withRouter } from 'react-router';
 
 class Greeting extends React.Component {
     constructor(props) {
+        debugger
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        this.handleTripsClick = this.handleTripsClick.bind(this)
     }
 
     handleClick() {
         this.props.logout()
+    }
+
+    handleTripsClick() {
+        this.props.history.push(`/${this.props.currentUser.id}/bookings`)
     }
 
     render() {
@@ -26,7 +32,8 @@ class Greeting extends React.Component {
                     </a>
                 </div>
                 <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
-                <div className="nav-signin1">Welcome, {this.props.currentUser.name}</div>
+                <div className="nav-signin" onClick={this.handleTripsClick}>Trips</div>
+                {/* <div className="nav-signin1">Welcome, {this.props.currentUser.name}</div> */}
                 {/* <img className="profile-img" src={window.profile_pic} /> */}
             </nav>
         ) : (

@@ -92,11 +92,6 @@ class Spot extends React.Component {
                             </div>
                         </div>
                     </div>
-                    {/* <SpotMap 
-                        lat={lat} 
-                        lng={lng} 
-                        address={address} 
-                    /> */}
                     <div className="spot-reviews">
                         <div className="reviews-header">
                             <div className="spot-rating-review">
@@ -113,6 +108,14 @@ class Spot extends React.Component {
                                 />
                             ))}
                         </div>
+                    </div>
+                    <div className="spot-map">
+                        <h2>Location</h2>
+                        <SpotMap
+                            lat={lat}
+                            lng={lng}
+                        // address={address} 
+                        />
                     </div>
                 </div>
             )
