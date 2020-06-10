@@ -19,10 +19,8 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
-        # debugger
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
-        # debugger
         if @booking.save
             render :show
         else
@@ -42,7 +40,12 @@ class Api::BookingsController < ApplicationController
     def destroy 
         @booking = Booking.find(params[:id])
         if @booking.destroy 
-            redirect_to bookings_url
+             @bookings = if params[:user_id]
+                Booking.includes(:spot).where(guest_id: params[:user_id])
+              else
+               Booking.includes(:spot).all
+              end
+            render :index
         else 
             render json: ["Booking doesn't exist"], status: 401
         end

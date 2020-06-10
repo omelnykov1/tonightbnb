@@ -4,26 +4,43 @@ import BookingItem from './booking_item'
 class BookingIndex extends React.Component {
     constructor(props) {
         super(props)
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchBookings(this.props.match.params.userId);
+        componentDidMount() {
+            this.props.fetchBookings(this.props.match.params.userId);
+        }
+
+    handleClick() {
+        this.props.history.push('/spots')
     }
 
     render() {
-        console.log(this.props)
+        const b1 = window.booking
+        const b2 = window.booking1
+        const b3 = window.trips
         if (this.props.user === undefined) {
             return <></>
         } else {
         
         const {bookings, user, spots, destroyBooking} = this.props;
-        const upcomingBookings = bookings.length === 0 ? (
-            <div>
-                <p>When you’re ready to start planning your next trip, we’re here to help.</p>
+        const upcomingBookings = bookings.length === 0 ? 
+            (
+            <div className="no-bookings">
+                <div className="booking-par">
+                    <p>When you’re ready to start planning your next trip, we’re here to help.</p>
+                </div>
+                <div className="background-picture">
+                    <img className="booking-picture" src={b3} />
+                </div>
             </div>
         ) : (
             <div>
-                {bookings.map(booking => (
+            <div className="background-picture">
+                <img className="booking-picture1" src={b3} />
+            </div>
+            <div className="bookings-item-columns">
+                {bookings.reverse().map(booking => (
                     < BookingItem 
                         booking={booking}
                         user={user}
@@ -33,10 +50,8 @@ class BookingIndex extends React.Component {
                     />
                 ))}
             </div>
+                </div>
         )
-        const b1 = window.booking
-        const b2 = window.booking1
-        const b3 = window.trips
         return (
             <div className="booking-index-container">
                 <h1>Trips</h1>
@@ -51,12 +66,7 @@ class BookingIndex extends React.Component {
                 </div>
                     <hr className="underline"/>
                 {upcomingBookings}
-                <div className="background-picture">
-                    <img className="booking-picture" src={b3} />
-                </div>
-                <div className="booking-button">
-                     <button className="booking-index-button">Explore Tonightbnb</button>
-                </div>
+                <button className="booking-index-button" onClick={this.handleClick}>Explore Tonightbnb</button>
             </div>
         )
         }

@@ -39,7 +39,7 @@ class NewBookingForm extends React.Component {
             num_guests: num_guests,
             start_date: startDate._d,
             end_date: endDate._d, 
-        }).then(() => this.props.history.push(`/users/${this.state.guest_id}/bookings`))
+        }).then(() => this.props.history.push(`/${this.state.guest_id}/bookings`))
     }
 
     renderError() {
@@ -96,10 +96,10 @@ class NewBookingForm extends React.Component {
         }
         const condition = this.state.condition
         let total = (this.handleDate(this.state.endDate).split('/')[1] - this.handleDate(this.state.startDate).split('/')[1]) * this.props.spot.price;
-       
+        const toggleClass = this.props.scroll;
         if (this.props.spot) {
         return (
-            <div className="booking-container">   
+            <div className={toggleClass}>   
                 <div className="booking-header">
                     <div className="spot-price-booking">
                         <span>{this.props.spot.price}</span>/night

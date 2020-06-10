@@ -4,14 +4,11 @@ import { fetchSpots } from '../../actions/spot_actions';
 import BookingIndex from './booking_index';
 
 
-const mSTP = (state) => {
-    console.log(state)
-    debugger
-    return{
+const mSTP = (state) => ({
     user: state.entities.users[state.session.id],
     spots: state.entities.spots,
     bookings: Object.values(state.entities.bookings),
-}}
+})
 
 const mDTP = dispatch => ({
     fetchBookings: (userId) => dispatch(fetchBookings(userId)),

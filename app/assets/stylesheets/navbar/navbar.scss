@@ -17,7 +17,7 @@
 
 .logo5 {
   font-size: 50px;
-  font-family: 'Crimson Text';
+  font-family: 'Metropolis';
   margin-top: 5px;
   margin-left: -2px;
 }
@@ -53,11 +53,12 @@
   padding-top: 20px;
   display: flex;
   justify-content: space-evenly;
-  font-size: 14px;
-  font-family: Palatino, URW Palladio L, serif;
+  font-size: 16px;
+  font-family: 'Metropolis';
 }
 
 .nav-signin {
+  font-size: 16px;
   display: flex;
   justify-content: center;
   margin-top: 12px;
@@ -216,7 +217,7 @@
 
 
 
-.input-container[data-error] .modal-field {
+.input-container[data-error] .modal-field1,.modal-field2,.modal-field0,.modal-field3,.modal-field4{
   border-color: #c92432;
   color: #c92432;
   background: #fffafa;
@@ -254,8 +255,8 @@
     left: 14px;
     transition: all .2s ease-out;
     z-index: 5000;
-    margin-left: 13px;
-    margin-top: 79px;
+    margin-left: 14px;
+    margin-top: 83px;
   } 
   &:focus{
     outline: none;
@@ -294,7 +295,7 @@
     transition: all .2s ease-out;
     z-index: 5000;
     margin-left: 13px;
-    margin-top: 137px;
+    margin-top: 142px;
   } 
   &:focus{
     outline: none;
@@ -333,7 +334,7 @@
     transition: all .2s ease-out;
     z-index: 5000;
     margin-left: 13px;
-    margin-top: 136px;
+    margin-top: 142px;
   } 
   &:focus{
     outline: none;
@@ -371,7 +372,7 @@
     transition: all .2s ease-out;
     z-index: 5000;
     margin-left: 13px;
-    margin-top: 210px;
+    margin-top: 221px;
   } 
   &:focus{
     outline: none;
@@ -612,4 +613,7 @@
 //     transform-origin: left;
 // }
 // }
+
+
+
 

@@ -13,7 +13,7 @@ class SpotMap extends React.Component {
                 defaultZoom={13}
             >
                     <Marker
-                        // key={spot.id}
+                        key={spot.id}
                         position={{ lat: this.props.lat, lng: this.props.lng }}
                         defaultAnimation={google.maps.Animation.DROP}
                         // icon={spot.price}

@@ -30,7 +30,7 @@
   padding: 15px;
   font-size: 16px;
   font-weight: 800;
-  font-family: Palatino, URW Palladio L, serif;
+  font-family: 'Metropolis';
   margin: 0;
 }
 
@@ -80,7 +80,7 @@
   display: flex;
   justify-content: space-evenly;
   font-size: 14px; 
-  font-family: Palatino, URW Palladio L, serif;
+  font-family: 'Metropolis';
 }
 
 .signin-errors{

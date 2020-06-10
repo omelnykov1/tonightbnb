@@ -7,18 +7,30 @@ import NewBookingContainer from '../../booking/new_booking_container'
 class Spot extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            scrollFixed: true
+        }
     }
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId)
+        document.addEventListener('scroll', () => {
+            const belowPictures = (window.scrollY < 435 || window.scrollY > 1115)
+            if (belowPictures !== this.state.scrollFixed) {
+                this.setState({ scrollFixed: belowPictures });
+            }
+        });
     }
 
     render() {
         if (this.props.spot) {
-            debugger
+            const scrollClass = this.state.scrollFixed ? 'booking-container' : 'booking-container-fixed';
             const reviews = Object.values(this.props.spot.reviews)
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
-            const rating = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)]
+            let totalRating = 0
+            reviews.map(review => review.rating).forEach(ele => totalRating += ele)
+            const rating = Math.round((totalRating / reviews.length) * 100) / 100;
+            
             return (
                 <div className="spot-container">
                     <div className="spot-nav">
@@ -116,7 +128,7 @@ class Spot extends React.Component {
                         </div>  
                         <div className="spot-right-side">
                             <div className="booking-form-container">
-                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls}/>
+                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={scrollClass}/>
                             </div>
                         </div>
                     </div>

@@ -43,7 +43,7 @@
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: Palatino, URW Palladio L, serif;
+    font-family: 'Metropolis';
 }
 
 .splash-destinations h2{
@@ -54,7 +54,7 @@
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
-    font-family: Palatino, URW Palladio L, serif !important;
+    font-family: 'Metropolis';
 }
 
 .splash-online-image {
@@ -79,14 +79,14 @@
 }
 
 .explore-btn {
-    width: 70px;
+    /* width: 1000px; */
     justify-content: space-between;
     cursor: pointer !important;
     display: inline-block !important;
     position: relative !important;
     text-align: center !important;
-    font-family: Palatino, URW Palladio L, serif !important;
-    font-size: 14px !important;
+    font-family: 'Metropolis' !important;
+    font-size: 16px !important;
     line-height: 18px !important;
     font-weight: 600 !important;
     padding-top: 7px !important;
@@ -96,8 +96,8 @@
     color: rgb(255, 255, 255) !important;
     margin-left: 50px;
     margin-right: 50px;
-    height: 33px;
-    width: 110px;
+    height: 45px;
+    width: 120px;
     text-decoration: none !important;
     border-radius: 8px !important;
     border-width: 1px !important;
@@ -122,7 +122,7 @@
     text-align: left;
     cursor: pointer;
     color: #ffffff;
-    font-family: Palatino, URW Palladio L, serif !important;
+    font-family: 'Metropolis' !important;
     font-size: 16px;
 }
 

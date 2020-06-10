@@ -34,7 +34,7 @@
 .header-content {
     position: static;
     text-align: center;
-    font-family: Palatino, URW Palladio L, serif;
+    font-family: 'Metropolis';
     color: black;
     top: 150px;
     z-index: 4;
@@ -52,7 +52,7 @@
     padding: 3px;
     font-weight: bold;
     align-items: center;
-    font-family: Palatino, URW Palladio L, serif;;
+    font-family: 'Metropolis';
 }
 
 .bottom {
@@ -60,7 +60,7 @@
     padding: 3px;
     padding-bottom: 5px;
     text-align: center;
-    font-family: Palatino, URW Palladio L, serif;;
+    font-family: 'Metropolis';
 }
 
 .parent {
@@ -127,7 +127,7 @@
 .section h1 {
   text-align: center;
   font-size: 4rem;
-  font-family: Palatino, URW Palladio L, serif;
+  font-family: 'Metropolis';
   padding: 20px;
   margin: 15px;
   z-index: 9;
@@ -156,7 +156,7 @@
     background: transparent;
     padding: 10px 20px;
     font-size: 25px;
-    font-family: Palatino, URW Palladio L, serif;
+    font-family: 'Metropolis';
     cursor: pointer;
     margin: 10px;
     position: relative;

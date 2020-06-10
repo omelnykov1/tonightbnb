@@ -5,21 +5,27 @@
     border-radius: 20px;
 }
 
+.booking-container-fixed {
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 5px 15px -5px #00000070;
+    border-radius: 20px;
+    /* margin-top: -440px; */
+    transform: 300ms ease-in-out ;
+    position: absolute;
+}
+
 .booking-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: 5px;
     position: left;
-    padding: 12px;
+    padding: 4px;
 }
 
 .booking-form-container {
-    /* display: fixed; */
     right: 0;
-    /* margin-left: -400px; */
-    /* margin-top: -1750px; */
-    /* position: fixed; */
     height: 400px;
     width: 300px;
 }
@@ -84,7 +90,8 @@
 }
 .booking-add {
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
+    margin-top: -5px;
 }
 
 .checkin-checkout {
@@ -110,7 +117,7 @@
 }
 
 .date-label {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .booking-calendar {
@@ -150,7 +157,7 @@
 
 .guest-container label {
     /* padding-left: 4px; */
-    font-size: 11px;
+    font-size: 14px;
     text-align: left !important;
     margin-left: 25px;
 }
@@ -188,7 +195,7 @@
 
 
 .reserve-booking {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 18px;
   cursor: pointer;
   border: 0;
@@ -201,3 +208,13 @@
   border-radius: 10px;
   outline: none;
 }
+
+.booking-footer {
+    /* position: relative; */
+    margin-top: -30px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+
