@@ -16,7 +16,7 @@ class Map extends React.Component {
                         key={spot.id} 
                         position={{ lat: spot.lat, lng: spot.lng }} 
                         defaultAnimation={google.maps.Animation.DROP}
-                        icon={spot.price}
+                        // icon={spot.price}
                         // onClick={() => {
                         //     setSelectedSpot(spot)
                         // }}

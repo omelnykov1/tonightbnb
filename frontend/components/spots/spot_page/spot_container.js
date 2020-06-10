@@ -2,9 +2,12 @@ import { connect } from 'react-redux';
 import { fetchSpot, createSpot, updateSpot } from '../../../actions/spot_actions';
 import Spot from './spot';
 
-const mSTP = (state, ownProps) => ({
+const mSTP = (state, ownProps) => {
+    debugger
+    return{
     spot: state.entities.spots[ownProps.match.params.spotId]
-})
+    // reviews: Object.values(state.entities.spots[ownProps.match.params.spotId])
+}}
 
 const mDTP = dispatch => ({
     fetchSpot: spotId => dispatch(fetchSpot(spotId)),

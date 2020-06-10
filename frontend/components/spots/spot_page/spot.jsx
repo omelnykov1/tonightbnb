@@ -15,7 +15,9 @@ class Spot extends React.Component {
 
     render() {
         if (this.props.spot) {
-            const { reviews, title, description, address, price, city, lat, lng, guests } = this.props.spot;
+            debugger
+            const reviews = Object.values(this.props.spot.reviews)
+            const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
             const rating = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)]
             return (
                 <div className="spot-container">
@@ -99,10 +101,10 @@ class Spot extends React.Component {
                                     <div className="spot-rating-review">
                                         <div className="star"><i className="fas fa-star"></i></div>{rating}
                                     </div>
-                                    <h3 className="review-head">({Object.values(reviews).length} reviews)</h3>
+                                    <h3 className="review-head">({reviews.length} reviews)</h3>
                                 </div>
                                 <div className="reviews-container">
-                                    {Object.values(reviews).map(review => (
+                                    {reviews.map(review => (
                                         < SpotReview 
                                             review={review}
                                             key={review.id}

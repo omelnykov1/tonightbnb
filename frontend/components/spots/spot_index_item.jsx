@@ -10,12 +10,14 @@ class SpotIndexItem extends React.Component {
 
 
     handleClick() {
+        // debugger
         this.props.history.push(`/spots/${this.props.spot.id}`)
     }
 
 
 
     render() {
+        // debugger
         let { title, price, spot_type, photoUrls} = this.props.spot;
         const rating = window.star;
         const rating1 = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)]
