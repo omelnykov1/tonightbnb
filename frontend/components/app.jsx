@@ -8,7 +8,7 @@ import SessionModal from './modal/session_modal';
 import Splash from './splash/splash';
 import SpotIndexContainer from './spots/spot_index_container';
 import SpotContainer from "./spots/spot_page/spot_container"
-import BookingIndex from './booking/booking_index';
+import BookingIndexContainer from './booking/booking_index_container';
 
 
 
@@ -22,7 +22,7 @@ const App = () => (
             <Route exact path="/" component={Splash} />
             <Route exact path="/spots" component={SpotIndexContainer}/>
             <Route path={`/spots/:spotId`} component={SpotContainer} />
-            <Route path={`/:userId/bookings`} component={BookingIndex}/>
+            <Route path={`/:userId/bookings`} component={BookingIndexContainer}/>
         </Switch>
     </div>
 )
