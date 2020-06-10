@@ -15,7 +15,6 @@ const mSTP = (state, ownProps) => ({
         open: false,
         error: ""
     },
-    formType: 'createBooking'
 })
 
 const mDTP = (dispatch) => ({

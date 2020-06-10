@@ -4,16 +4,13 @@ import BookingItem from './booking_item'
 class BookingIndex extends React.Component {
     constructor(props) {
         super(props)
-        debugger
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchBookings(this.props.match.params.userId);
     }
 
     render() {
-        debugger
         console.log(this.props)
         if (this.props.user === undefined) {
             return <></>

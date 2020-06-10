@@ -7,8 +7,25 @@ class BookingListItem extends React.Component {
     }
 
     render(){
+        debugger
+        const {start_date, end_date, photoUrls, spot} = this.props.booking
         return(
-            <div></div>
+            <div className="booking-item-container">
+                <div>
+                    <div className="photo-booking">
+                       <img src={photoUrls[0]}/>
+                    </div>
+                    <div className="date-booking-header">
+                        {start_date}-{end_date}
+                    </div>
+                    <div className="booking-location">
+                        {spot.city}
+                    </div>
+                    <div className="booking-title">
+                        {spot.title}
+                    </div>
+                </div>
+            </div>
         )
     }
 }

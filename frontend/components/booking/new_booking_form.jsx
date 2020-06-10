@@ -30,7 +30,7 @@ class NewBookingForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
+        // debugger
         e.preventDefault();
         const { startDate, endDate, num_guests, guest_id} = this.state;
         this.props.action({
@@ -70,7 +70,7 @@ class NewBookingForm extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         let guests;
         if (this.state.num_guests > 1) {
             guests = 'guests'

@@ -16,7 +16,6 @@ class Spot extends React.Component {
     render() {
         if (this.props.spot) {
             const { reviews, title, description, address, price, city, lat, lng, guests } = this.props.spot;
-            const { openModal} = this.props;
             const rating = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)]
             return (
                 <div className="spot-container">
@@ -115,7 +114,7 @@ class Spot extends React.Component {
                         </div>  
                         <div className="spot-right-side">
                             <div className="booking-form-container">
-                                < NewBookingContainer spot={this.props.spot} rating={rating}/>
+                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls}/>
                             </div>
                         </div>
                     </div>

@@ -5,13 +5,13 @@ import BookingIndex from './booking_index';
 
 
 const mSTP = (state) => {
+    console.log(state)
     debugger
     return{
     user: state.entities.users[state.session.id],
     spots: state.entities.spots,
     bookings: Object.values(state.entities.bookings),
-    }
-}
+}}
 
 const mDTP = dispatch => ({
     fetchBookings: (userId) => dispatch(fetchBookings(userId)),
