@@ -1,6 +1,6 @@
 class Booking < ApplicationRecord
     validates :start_date, :end_date, :num_guests, presence: true
-    validates :guest_id, uniqueness: { scope: :spot_id }
+    # validates :guest_id, uniqueness: { scope: :spot_id }
 
     belongs_to :spot,
     class_name: :Spot,

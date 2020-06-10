@@ -11,7 +11,6 @@ json.spots do
     json.set! booking.spot_id do 
       json.partial! '/api/spots/spot', spot: booking.spot
       json.photoUrls booking.spot.photos.map { |file| url_for(file)}
-    
     end
   end
 end

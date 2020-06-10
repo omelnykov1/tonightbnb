@@ -1,20 +1,20 @@
 .CalendarDay__selected_span {
-  background: #82e0aa; 
+  background: #ff0066;
   color: white;
   border: 1px solid rgb(230, 73, 73);
 }
 
 .CalendarDay__selected {
-  background: rgb(235, 75, 75);
+  background: #ff0066;
   color: white;
 }
 
 .CalendarDay__selected:hover {
-  background: orange;
+  background: #ff0066;
   color: white;
 }
 
 .CalendarDay__hovered_span:hover,
 .CalendarDay__hovered_span {
-  background: brown;
+  background: #ff97c0;
 }

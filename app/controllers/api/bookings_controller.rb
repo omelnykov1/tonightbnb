@@ -1,5 +1,5 @@
 class Api::BookingsController < ApplicationController
-
+    before_action :ensure_logged_in!
     def index
         @bookings = if params[:user_id]
         Booking.includes(:spot).where(guest_id: params[:user_id])
@@ -19,8 +19,10 @@ class Api::BookingsController < ApplicationController
     end
 
     def create
+        debugger
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
+        debugger
         if @booking.save
             render :show
         else
@@ -33,7 +35,7 @@ class Api::BookingsController < ApplicationController
         if @booking.update(booking_params)
             render :show
         else
-            render json: @booking.errors.full_messages, status: 422
+            render json: @booking.errors.full_messages
         end
     end
 
@@ -49,6 +51,6 @@ class Api::BookingsController < ApplicationController
     private
 
     def booking_params
-        params.require(:booking).permit(:start_date, :end_date, :spot_id, :num_guests)
+        params.require(:booking).permit(:start_date, :end_date, :spot_id, :guest_id, :num_guests)
     end
 end

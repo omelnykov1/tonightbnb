@@ -4,7 +4,6 @@ import { withRouter } from 'react-router';
 
 class Greeting extends React.Component {
     constructor(props) {
-        debugger
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.handleTripsClick = this.handleTripsClick.bind(this)
@@ -62,10 +61,10 @@ class Greeting extends React.Component {
                                 <div className="nav-search">
                                     <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
                                     <label>LOCATION</label>
-                                        <div className="checkin-nav">
+                                        {/* <div className="checkin-nav">
                                             <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
                                             <label>CHECK IN/CHECK OUT</label>
-                                        </div>
+                                        </div> */}
                                     <button className="search-button"><i className="fas fa-search"></i>Search</button>
                                 </div>
                             </div>

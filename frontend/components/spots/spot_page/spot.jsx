@@ -1,7 +1,8 @@
 import React from 'react';
 import SpotMap from '../../map/spot_map';
 import SpotReview from './spot_review';
-import BookingForm from '../../booking/booking_form'
+import NewBookingContainer from '../../booking/new_booking_container'
+
 
 class Spot extends React.Component {
     constructor(props) {
@@ -46,67 +47,76 @@ class Spot extends React.Component {
                             <hr className="style-four"/>
                         </div>
                     </div>
-                    <div className="spot-details">
-                        <h2>Spot description</h2>
-                        <div className="spot-description">
-                            {description}
-                        </div>
-                    </div>
-                    < BookingForm />
-                    <div className="additional-spot-info">
-                        <h2>Sleeping arrangements</h2>
-                        <div className="spot-info-containers">
-                            <div className="spot-bedroom">
-                                <i className="fas fa-bed"></i>
-                                <br />
-                                <span>Bedroom 1</span>
-                                <br/>
-                                <br />
-                                <p>1 queen bed</p>
+                    <div className="split-spot-container">
+                        <div className="spot-left-side">
+                            <div className="left-side-spot"></div>
+                            <div className="spot-details">
+                                <h2>Spot description</h2>
+                                <div className="spot-description">
+                                    {description}
+                                </div>
                             </div>
-                            <div className="spot-common-spaces">
-                                <i className="fas fa-couch"></i>
-                                <br/>
-                                <span>Common spaces</span>
-                                <br />
-                                <p>1 couch</p>
+                            <div className="additional-spot-info">
+                                <h2>Sleeping arrangements</h2>
+                                <div className="spot-info-containers">
+                                    <div className="spot-bedroom">
+                                        <i className="fas fa-bed"></i>
+                                        <br />
+                                        <span>Bedroom 1</span>
+                                        <br/>
+                                        <br />
+                                        <p>1 queen bed</p>
+                                    </div>
+                                    <div className="spot-common-spaces">
+                                        <i className="fas fa-couch"></i>
+                                        <br/>
+                                        <span>Common spaces</span>
+                                        <br />
+                                        <p>1 couch</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="spot-amenities">
-                        <h2>Amenities</h2>
-                        <div className="spot-amenities-columns">
-                            <div className="spot-amenities-col1">
-                                <div className="spot-amenity"><i className="fas fa-wifi"></i>WiFi</div>
-                                <div className="spot-amenity"><i className="fas fa-tv"></i>TV</div>
-                                <div className="spot-amenity"><i className="fab fa-accessible-icon"></i>Wheelchair Accessible</div>
-                                <div className="spot-amenity"><i className="fas fa-charging-station"></i>Charging Station</div>
-                                <div className="spot-amenity"><i className="fas fa-parking"></i>Parking</div>
+                            <div className="spot-amenities">
+                                <h2>Amenities</h2>
+                                <div className="spot-amenities-columns">
+                                    <div className="spot-amenities-col1">
+                                        <div className="spot-amenity"><i className="fas fa-wifi"></i>WiFi</div>
+                                        <div className="spot-amenity"><i className="fas fa-tv"></i>TV</div>
+                                        <div className="spot-amenity"><i className="fab fa-accessible-icon"></i>Wheelchair Accessible</div>
+                                        <div className="spot-amenity"><i className="fas fa-charging-station"></i>Charging Station</div>
+                                        <div className="spot-amenity"><i className="fas fa-parking"></i>Parking</div>
+                                    </div>
+                                    <div className="spot-amenities-col2">
+                                        <div className="spot-amenity"><i className="fab fa-amazon"></i>Amazon TV</div>
+                                        <div className="spot-amenity"><i className="fas fa-allergies"></i>Sanitizing Equipment</div>
+                                        <div className="spot-amenity"><i className="fas fa-box-open"></i>Storage</div>
+                                        <div className="spot-amenity"><i className="fas fa-glass-cheers"></i>Bar</div>
+                                        <div className="spot-amenity"><i className="fas fa-laptop"></i>Laptop-friendly Workspace</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="spot-amenities-col2">
-                                <div className="spot-amenity"><i className="fab fa-amazon"></i>Amazon TV</div>
-                                <div className="spot-amenity"><i className="fas fa-allergies"></i>Sanitizing Equipment</div>
-                                <div className="spot-amenity"><i className="fas fa-box-open"></i>Storage</div>
-                                <div className="spot-amenity"><i className="fas fa-glass-cheers"></i>Bar</div>
-                                <div className="spot-amenity"><i className="fas fa-laptop"></i>Laptop-friendly Workspace</div>
+                            <div className="spot-reviews">
+                                <div className="reviews-header">
+                                    <div className="spot-rating-review">
+                                        <div className="star"><i className="fas fa-star"></i></div>{rating}
+                                    </div>
+                                    <h3 className="review-head">({Object.values(reviews).length} reviews)</h3>
+                                </div>
+                                <div className="reviews-container">
+                                    {Object.values(reviews).map(review => (
+                                        < SpotReview 
+                                            review={review}
+                                            key={review.id}
+                                            guests={(guests)}
+                                        />
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="spot-reviews">
-                        <div className="reviews-header">
-                            <div className="spot-rating-review">
-                                <div className="star"><i className="fas fa-star"></i></div>{rating}
+                        </div>  
+                        <div className="spot-right-side">
+                            <div className="booking-form-container">
+                                < NewBookingContainer spot={this.props.spot} rating={rating}/>
                             </div>
-                            <h3 className="review-head">({Object.values(reviews).length} reviews)</h3>
-                        </div>
-                        <div className="reviews-container">
-                            {Object.values(reviews).map(review => (
-                                < SpotReview 
-                                    review={review}
-                                    key={review.id}
-                                    guests={(guests)}
-                                />
-                            ))}
                         </div>
                     </div>
                     <div className="spot-map">
@@ -114,7 +124,6 @@ class Spot extends React.Component {
                         <SpotMap
                             lat={lat}
                             lng={lng}
-                        // address={address} 
                         />
                     </div>
                 </div>
