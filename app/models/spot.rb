@@ -16,7 +16,7 @@ class Spot < ApplicationRecord
     has_many_attached :photos
 
     def self.filtered_search(query)
-        result = self.where("city LIKE ?", "%#{query}%").or(where("title LIKE ?", "%#{query}%" ))
+        result = self.where("city LIKE ?", "%#{query}%")
         return result
     end
 
