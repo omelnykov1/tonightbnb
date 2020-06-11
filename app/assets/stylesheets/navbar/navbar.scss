@@ -224,10 +224,10 @@
 }
 
 .logo{
-  width: 90px;
+  width: 85px;
   position: relative;
-  margin-top: -4px;
-  margin-left: -1px;
+  margin-top: -8px;
+  margin-left: 3px;
 }
 
 .profile-img {
@@ -393,8 +393,6 @@
 }
 
 
-
-
 .nav-search {
   display: flex;
   flex-direction: row;
@@ -407,6 +405,7 @@
     margin-left: 35px;
     margin-top: 5px;
     padding:5px;
+    box-shadow: 0 5px 10px -5px #00000070;
 }
 
 .nav-search2 {
@@ -482,7 +481,9 @@
 .search-label {
   font-size: 16px;
 }
-
+input.search {
+  width: 150px;
+}
 .search {
     border: 1px solid #dddddd;
     padding: 15px 10px 0px 10px;

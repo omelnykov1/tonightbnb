@@ -38,7 +38,8 @@
     margin-top: 70px;
 }
 .spot-map-google {
-    margin-top: 100px;
+    padding-top: 40px;
+    padding-bottom: -20px;
 }
 .spot-grid {
     display: grid;
@@ -142,6 +143,10 @@
 
 .spot-title {
     cursor: pointer;
+}
+
+.date-input {
+    font-size: 14px;
 }
 
 .main-spot-photo {

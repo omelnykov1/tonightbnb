@@ -30,8 +30,6 @@ class NewBookingForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
-        
         e.preventDefault();
         if (this.props.booking.guest_id) {
             const { startDate, endDate, num_guests, guest_id } = this.state;
@@ -48,21 +46,6 @@ class NewBookingForm extends React.Component {
         
     }
 
-    renderError() {
-        if (this.state.error.length > 0) {
-            return (
-                <div className="booking-error">
-                    <p className="booking-error-message" key="booking-error">
-                        {this.state.error}
-                    </p>
-                </div>
-            )
-        } else {
-            return null;
-        }
-
-    }
-
     addGuest(e) {
         e.preventDefault();
         this.setState({ num_guests: this.state.num_guests + 1 });
@@ -76,7 +59,6 @@ class NewBookingForm extends React.Component {
     }
 
     render() {
-        // debugger
         let guests;
         if (this.state.num_guests > 1) {
             guests = 'guests'
@@ -155,7 +137,6 @@ class NewBookingForm extends React.Component {
                         </div>
                     </div>
                 </div>
-                    {this.renderError()}
                     <div className="booking-gem">
                         <div className="booking-extra-container">
                             <p className="des"><span>This is a rare find. </span> Usually this place is booked</p>

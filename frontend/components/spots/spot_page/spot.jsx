@@ -13,11 +13,13 @@ class Spot extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchSpot(this.props.match.params.spotId)
     }
 
     render() {
-        if (this.props.spot) {
+        debugger
+        if (this.props.spot !== undefined) {
 
             const reviews = Object.values(this.props.spot.reviews)
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
@@ -127,7 +129,6 @@ class Spot extends React.Component {
                         </div>
                     </div>
                     <div className="empty">
-
                     </div>
                     <div className="spot-map">
                         <h2>Location</h2>

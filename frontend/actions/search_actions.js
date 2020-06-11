@@ -1,6 +1,6 @@
-export const SEND_SEARCH = 'SEND_SEARCH';
+export const DO_SEARCH = 'DO_SEARCH';
 
-export const sendSearchForm = form => ({
-        type: SEND_SEARCH,
-        form
+export const doSearch = request => ({
+        type: DO_SEARCH,
+        request
 })

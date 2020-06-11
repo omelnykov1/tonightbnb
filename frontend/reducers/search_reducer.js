@@ -1,10 +1,10 @@
-import { SEND_SEARCH } from '../actions/search_actions';
+import { DO_SEARCH } from '../actions/search_actions';
 
 const searchReducer = (state = {}, action) => {
     Object.freeze(state);
     switch (action.type) {
-        case SEND_SEARCH:
-            return action.form
+        case DO_SEARCH:
+            return action.request
         default:
             return state;
     }

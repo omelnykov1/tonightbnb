@@ -19,9 +19,9 @@ class Api::SpotsController < ApplicationController
     end
     
     def search
-        result = Spot.search_by_keyword(params[:keyword])
-        if result
-            @spots = result
+        search_spots = Spot.filtered_search(params[:query])
+        if search_spots
+            @spots = search_spots
             render :index
         else 
             render json: ["No result"], status: 404

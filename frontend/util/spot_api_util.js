@@ -34,11 +34,9 @@ export const createReview = review => (
     })
 );
 
-export const fetchSearchResult = (keyword) => (
+export const fetchSearch = (query) => (
     $.ajax({
-        method: "GET",
         url: "api/search",
-        data: { keyword }
+        data: { query }
     })
 )
-

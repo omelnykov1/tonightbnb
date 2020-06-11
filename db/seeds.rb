@@ -99,7 +99,7 @@ venice_beach = Spot.create(price: 55,
                         country: 'USA', 
                         title: "Beach Bungalow In Trendy Venice Beach Location", 
                         lat: 33.9894812, 
-                        lng: 118.4726405, 
+                        lng: -118.4726405, 
                         spot_type: 'Private Room', 
                         host_id: harry.id, 
                         address: '299 Market St Venice, CA 90291')
