@@ -30,16 +30,22 @@ class NewBookingForm extends React.Component {
     }
 
     handleSubmit(e) {
-        // debugger
+        debugger
+        
         e.preventDefault();
-        const { startDate, endDate, num_guests, guest_id} = this.state;
-        this.props.action({
-            spot_id: this.props.spot.id,
-            guest_id: guest_id,
-            num_guests: num_guests,
-            start_date: startDate._d,
-            end_date: endDate._d, 
-        }).then(() => this.props.history.push(`/${this.state.guest_id}/bookings`))
+        if (this.props.booking.guest_id) {
+            const { startDate, endDate, num_guests, guest_id } = this.state;
+            this.props.action({
+                spot_id: this.props.spot.id,
+                guest_id: guest_id,
+                num_guests: num_guests,
+                start_date: startDate._d,
+                end_date: endDate._d,
+            }).then(() => this.props.history.push(`/${this.state.guest_id}/bookings`))
+        } else {
+            this.props.openModal('login')
+        }
+        
     }
 
     renderError() {
@@ -111,6 +117,7 @@ class NewBookingForm extends React.Component {
                 <div className="booking-calendar">
                     {dayPicker}
                 </div>
+                <div className="check-guest-out">
                     <div className="checkin-checkout">
                         <div className="booking-spot-start">
                             <label className="date-label">Check-in</label>
@@ -136,17 +143,18 @@ class NewBookingForm extends React.Component {
                         </div>
                     </div>
                     <div className="container-booking-checkout">
-                        <div className="guests-booking">
                             <div className="guest-container">
                                 <label>GUESTS</label>
                                 <div className="adding-guests-booking">
                                     <span className="substract-guests-booking" onClick={this.substractGuest}>-</span>
+                                    <div className="num-guests-123">
                                 <div className="booking-num-guests">{this.state.num_guests} {guests} </div>
+                                    </div>
                                     <span className="add-guests-booking" onClick={this.addGuest}>+</span>
                                 </div>
-                            </div>
                         </div>
                     </div>
+                </div>
                     {this.renderError()}
                     <div className="booking-gem">
                         <div className="booking-extra-container">

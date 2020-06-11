@@ -59,7 +59,6 @@ class BookingIndex extends React.Component {
                     <div className="upcoming-booking">
                         Upcoming
                     </div>
-                    <br/>
                     <div className="past-booking">
                         Past    
                     </div>

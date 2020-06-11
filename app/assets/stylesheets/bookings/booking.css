@@ -16,6 +16,10 @@
     /* position: fixed; */
 }
 
+.review-item-container {
+    margin-bottom: 30px;
+}
+
 .booking-picture1 {
     width: 90%;
     height: 320px;

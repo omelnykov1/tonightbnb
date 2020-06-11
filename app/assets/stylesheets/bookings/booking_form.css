@@ -3,22 +3,32 @@
     height: 400px;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 20px;
-}
+    /* margin-right: -250px; */
+    margin-left: 100px;
+    position: absolute;
+     padding-left: 3px;
+     padding-right: 3px;
+} 
 
 .booking-container-fixed {
     width: 350px;
     height: 400px;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 20px;
-    /* margin-top: -440px; */
+    margin-top: -440px;
     transform: 300ms ease-in-out ;
-    position: absolute;
+     position: fixed;
+     margin-left: 100px;
+     padding-left: 3px;
+     padding-right: 3px;
 }
+    
+
 
 .booking-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important; 
     margin: 5px;
     position: left;
     padding: 4px;
@@ -50,14 +60,15 @@
     width: 40%;
     right: 0;
     border-radius: 10px;
-    margin-right: -50px;
+    /* margin-right: -30px; */
     margin-top: 30px;
 }
 
 .container-booking-checkout {
     display: block;
-    border-radius: 10px;
-    border: 1px solid rgb(181, 181, 181);
+    border-top: 1px solid rgb(73, 72, 72);
+    /* margin-top: 2.5px; */
+
     /* flex-direction: row; */
 }
 
@@ -102,17 +113,26 @@
     justify-content: space-between;
 }
 .guests-booking {
-    padding-top: 2px;
+    /* padding-top: 2px; */
    width: 100%;
-    height: 50px;
+    height: 60px;
 }
 
 .booking-spot-start, .booking-spot-end {
     padding-left: 4px;
-    width: 50%;
-    height: 100%;
+    width: 48.5%;
+    height: 99.5%;
     text-align: left;
-    border: 1px solid rgb(181, 181, 181);
+    /* border: 1px solid rgb(73, 72, 72); */
+    /* border-radius: 10px; */
+}
+
+.booking-spot-start {
+    border-right: 1px solid rgb(73, 72, 72);
+}
+
+.check-guest-out {
+    border: 1px solid rgb(73, 72, 72); 
     border-radius: 10px;
 }
 
@@ -140,19 +160,31 @@
   /* background-color: #bbb; */
   border-radius: 50%;
   display: inline-block;
-  border: 2px solid rgb(59, 56, 56);
+  border: 2px solid rgb(163, 159, 159);
+  margin-top: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.substract-guests-booking:hover, .add-guests-booking:hover {
+    font-weight: 600;
+    border: 2px solid rgb(31, 31, 31);
 }
 
 
-.adding-guests-booking {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
-}
+
 
 .booking-num-guests {
     padding: 5px;
     margin-bottom: 2px;
+    padding-bottom: 10px;
+    font-size: 17px;
+}
+
+.num-guests-123 {
+    padding-bottom: 20px !important;
 }
 
 .guest-container label {
@@ -168,13 +200,21 @@
 } */
 
 .guest-container {
-    margin-bottom: 30px;
-    margin: 0 auto;
+    /* margin-bottom: 30px; */
+    display: flex;
     margin-left: -20px;
+    height: 50px;
 }
 
 .adding-guests-booking {
+    font-size: 18px;
+    font-weight: 500;
+      display: flex;
+    flex-direction: row;
+    margin-top: 9px;
+    /* margin-bottom: 75px; */
     padding-left: 4px;
+    /* margin: 20px auto; */
     margin-left: 140px;
     text-align: center;
     position: absolute;

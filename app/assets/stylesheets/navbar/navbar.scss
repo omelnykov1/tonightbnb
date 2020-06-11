@@ -224,10 +224,10 @@
 }
 
 .logo{
-  width: 96px;
+  width: 90px;
   position: relative;
-  margin-top: -18px;
-  margin-left: -11px;
+  margin-top: -4px;
+  margin-left: -1px;
 }
 
 .profile-img {
@@ -398,7 +398,15 @@
 .nav-search {
   display: flex;
   flex-direction: row;
-  height: 74px;
+  // height: 74px;
+  border-radius: 10px;
+    width: 530px;
+    height: 55px !important;
+    border: 1px solid rgb(144, 143, 143);
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-top: 5px;
+    padding:5px;
 }
 
 .nav-search2 {
@@ -413,6 +421,7 @@
    box-shadow: 0 5px 10px -5px #dad8d870;
    display: flex;
   justify-content: space-between;
+  
 }
 
 
@@ -470,40 +479,61 @@
   }
 }
 
-#search {
-  width: 260px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  height: 50px;
-  border: 1px solid #f9f0f0;
-  border-radius: 6px;
-  outline: none;
-  padding: 12px;
-  text-align: left;
-  margin-top: 1px;
-  margin-left: 5px;
-  box-shadow: 0 5px 10px -5px #dad8d870;
+.search-label {
+  font-size: 16px;
+}
+
+.search {
+    border: 1px solid #dddddd;
+    padding: 15px 10px 0px 10px;
+    border: 1px solid #dddddd;
+    position: relative;
+    margin-top: 7px;
+    // margin-left: 135px;
+    border: none;
+    color: lighten(black, 22%);
+    background-color: transparent;
+    font-size: 16px;
+
     & + label{
-    color: solid black;
-    // font-weight: bold;
-    font-weight: 600;
-    font-size: 12px;
+    color: lighten(black, 60%);
     position: absolute;
     top: 19px;
     left: 14px;
     transition: all .2s ease-out;
     z-index: 5000;
-    margin-left: 80px;
-    margin-top: -2px;
+    margin-left: 130px;
+    margin-top: 2px;
+    font-size: 26px;
+    font-weight: 800;
   } 
+  &:focus{
+    outline: none;
+    transition: all .2s ease-out;
+    border-color: rgb(49, 45, 45);
+    // font-weight: 700;
+  }
+   &:focus + label {
+    display: inline;
+    top: 9px;
+    color: gray;
+    font-size: 12px;
+    transition: top 0.2s;
+    // font-weight: 500;
+  }
+   &:valid + label {
+    top: 9px;
+    font-size: 13px;
+    font-weight: 800;
+  }
 }
 
-#search:focus{
-  border: 1px solid rgb(36, 33, 33);
-  outline: none;
-  // font-size: 14px;
-  // font-weight: 650;
-}
+// #search:focus{
+//   border: 1px solid rgb(36, 33, 33);
+//   outline: none;
+//   // font-size: 14px;
+//   // font-weight: 650;
+// }
 
 #checkin {
   width: 260px;
@@ -518,7 +548,7 @@
      & + label{
     color: solid black;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 16px;
     position: absolute;
     top: 19px;
     left: 14px;
@@ -545,13 +575,13 @@
   text-align: center;
   outline: none;
   border: none;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .search-button:hover {
-  background-color: #ee2777;
+  background-color: #f91570;
   transform: scale(1.001);
-  box-shadow: 0 4px 3px darkgray;
+  box-shadow: 0 3px 2px darkgray;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");

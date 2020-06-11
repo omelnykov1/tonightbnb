@@ -7,10 +7,15 @@ class Greeting extends React.Component {
         super(props);
         this.handleClick = this.handleClick.bind(this);
         this.handleTripsClick = this.handleTripsClick.bind(this)
+        this.handleSpots = this.handleSpots.bind(this);
     }
 
     handleClick() {
-        this.props.logout()
+        this.props.logout().then(this.props.history.push('/'))
+    }
+
+    handleSpots() {
+        this.props.history.push('/spots')
     }
 
     handleTripsClick() {
@@ -19,7 +24,7 @@ class Greeting extends React.Component {
 
     render() {
         let { currentUser, logout, openModal } = this.props
-
+        const logo = window.lo
         const display = currentUser ? (
             <nav className="navbar">
                 <div className="social-media">
@@ -55,17 +60,17 @@ class Greeting extends React.Component {
                 <div className="navbar">
                     <div className="nav">
                         <div className="nav-1">
-                            {/* <Link to="/"><img className="logo" src={window.logo} /></Link> */}
+                            <Link to="/"><img className="logo" src={logo} /></Link>
                             {/* <div className="logo5">tonightbnb</div> */}
                             <div className="search-box">
                                 <div className="nav-search">
-                                    <input type="text"  name="search" id="search" placeholder="Where are you going?"/>
+                                    <input type="text"  className="search" id="search" placeholder="Where are you going?"/>
                                     <label>LOCATION</label>
                                         {/* <div className="checkin-nav">
                                             <input type="datetime" name="checkin" id="checkin" placeholder="Add dates"/>
                                             <label>CHECK IN/CHECK OUT</label>
                                         </div> */}
-                                    <button className="search-button"><i className="fas fa-search"></i>Search</button>
+                                    <button className="search-button" onClick={this.handleSpots}><i className="fas fa-search"></i>Search</button>
                                 </div>
                             </div>
                         </div>

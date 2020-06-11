@@ -24,9 +24,9 @@ class SpotMap extends React.Component {
             </GoogleMap>
         ));
         return (
-            <div>
+            <div className="spot-map1">
                 <GoogleMapExample
-                    containerElement={<div style={{ height: '400px', width: '80vw' }} />}
+                    containerElement={<div className="spot-map-google"style={{ height: '400px', width: '80vw'}} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>

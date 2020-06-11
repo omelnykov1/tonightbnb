@@ -14,17 +14,11 @@ class Spot extends React.Component {
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId)
-        document.addEventListener('scroll', () => {
-            const belowPictures = (window.scrollY < 435 || window.scrollY > 1115)
-            if (belowPictures !== this.state.scrollFixed) {
-                this.setState({ scrollFixed: belowPictures });
-            }
-        });
     }
 
     render() {
         if (this.props.spot) {
-            const scrollClass = this.state.scrollFixed ? 'booking-container' : 'booking-container-fixed';
+
             const reviews = Object.values(this.props.spot.reviews)
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
             let totalRating = 0
@@ -128,9 +122,12 @@ class Spot extends React.Component {
                         </div>  
                         <div className="spot-right-side">
                             <div className="booking-form-container">
-                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={scrollClass}/>
+                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={'booking-container'}/>
                             </div>
                         </div>
+                    </div>
+                    <div className="empty">
+
                     </div>
                     <div className="spot-map">
                         <h2>Location</h2>
