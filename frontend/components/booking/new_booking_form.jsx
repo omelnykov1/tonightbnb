@@ -85,7 +85,12 @@ class NewBookingForm extends React.Component {
             dayPicker = null;
         }
         const condition = this.state.condition
-        const guestCount = this.state.num_guests / 2.0 * this.props.spot.price;
+        let guestCount
+        if (this.state.num_guests > 1) {
+            guestCount = (this.state.num_guests - 1 )/ 2.0 * this.props.spot.price;
+        } else {
+            guestCount = 0
+        }
         let guestTotal = (this.handleDate(this.state.endDate).split('/')[1] - this.handleDate(this.state.startDate).split('/')[1]) * this.props.spot.price;
         let total = guestCount + guestTotal
         const toggleClass = this.props.scroll;

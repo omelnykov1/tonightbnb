@@ -42,7 +42,7 @@ class Map extends React.Component {
         return (
             <div>
                 <GoogleMapExample
-                    containerElement={<div className="google" style={{ height: `100vh`, width: '90vh', padding: '5%' }} />}
+                    containerElement={<div className="google" style={{ height: `90vh`, width: '90vh', padding: '5%' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>
