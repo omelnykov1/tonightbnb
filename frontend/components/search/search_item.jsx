@@ -13,8 +13,6 @@ class SearchItem extends React.Component {
         this.props.history.push(`/spots/${this.props.spot.id}`)
     }
 
-
-
     render() {
         let { title, price, spot_type, photoUrls } = this.props.spot;
         const rating = window.star;

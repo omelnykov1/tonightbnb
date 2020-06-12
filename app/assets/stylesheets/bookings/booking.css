@@ -2,7 +2,7 @@
     margin-top: 25px;
     /* margin-left: 3%; */
     /* margin-right: 3%; */
-    font-family: 'BEAVER';
+    font-family: 'Montserrat';
     padding-left: 65px !important;
     padding-right: 40px !important;
 }
@@ -35,7 +35,7 @@
     margin-top: 110px;
     font-size: 32px;
     font-weight: 700;
-    font-family: 'Metropolis';
+    font-family: 'Montserrat';
 }
 
 .booking-index-header {
@@ -69,7 +69,7 @@
     display: inline-block !important;
     position: relative !important;
     text-align: center !important;
-    font-family: 'Metropolis' !important;
+    font-family: 'Montserrat' !important;
     font-size: 16px !important;
     line-height: 18px !important;
     font-weight: 500 !important;

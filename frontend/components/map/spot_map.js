@@ -8,6 +8,7 @@ class SpotMap extends React.Component {
     }
 
     render() {
+        
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
                 defaultCenter={{ lat: this.props.lat, lng: this.props.lng}}
@@ -21,12 +22,10 @@ class SpotMap extends React.Component {
             </GoogleMap>
         ));
         return (
-            <div className="spot-map1">
                 <GoogleMapExample
-                    containerElement={<div className="spot-map-google"style={{ height: '400px', width: '80vw'}} />}
+                    containerElement={<div style={{ height: '400px', width: '80vw'}} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
-            </div>
         );
     }
 };

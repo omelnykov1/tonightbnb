@@ -15,12 +15,24 @@
     height: 400px;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 20px;
-    margin-top: -440px;
+    margin-top: -740px;
     transform: 300ms ease-in-out ;
      position: fixed;
      margin-left: 100px;
      padding-left: 3px;
      padding-right: 3px;
+}
+
+.booking-container-absolute {
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 5px 15px -5px #00000070;
+    border-radius: 20px;
+    margin-left: 100px;
+    position: absolute;
+     padding-left: 3px;
+     padding-right: 3px;
+     bottom: -145px;
 }
     
 
@@ -62,6 +74,7 @@
     border-radius: 10px;
     /* margin-right: -30px; */
     margin-top: 30px;
+    position: relative;
 }
 
 .container-booking-checkout {

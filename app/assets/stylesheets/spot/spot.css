@@ -8,7 +8,7 @@
     margin: 100px;
     padding-left: 35px;
     padding-right: 35px;
-    font-family:'Metropolis';
+    font-family:'Montserrat';
 }
 
 .split-spot-container {
@@ -41,6 +41,10 @@
     padding-top: 40px;
     padding-bottom: -20px;
 }
+
+.map-work{
+    margin-top: 150px;
+}
 .spot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,8 +61,9 @@
 
 .reviews-container {
     width: 50%;
-    height: 200px;
-    padding-bottom: 170px;
+    height: 400px;
+    /* padding-bottom: 170px; */
+    /* margin-bottom: 100px; */
 }
 
 .spot-rating {
@@ -103,6 +108,8 @@
     grid-template-columns: repeat(2, 1fr);
 }
 
+
+
 .reviews-header {
     display: flex;
     flex-direction: row;
@@ -113,7 +120,7 @@
 .spot-reviews {
     margin-top: -40px;
     /* position: relative; */
-    margin-bottom: 0;
+    /* margin-bottom: 1000; */
 }
 
 .spot-rating-review{
@@ -143,6 +150,7 @@
 
 .spot-title {
     cursor: pointer;
+    font-weight: 1000;
 }
 
 .date-input {

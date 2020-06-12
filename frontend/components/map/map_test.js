@@ -6,10 +6,12 @@ class Map extends React.Component {
     }
     
     render() {
+        const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
                 defaultCenter={{ lat: 40.74, lng: -73.934298 }}
                 defaultZoom={12}
+                
             >
                 {this.props.spots.map(spot => (
                     <Marker 

@@ -3,7 +3,6 @@ import * as BookingAPI from '../util/booking_api_util';
 export const RECEIVE_ALL_BOOKINGS = 'RECEIVE_ALL_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
-export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 
 const receiveAllBookings = bookings => ({
     type: RECEIVE_ALL_BOOKINGS,
@@ -21,10 +20,6 @@ const removeBooking = bookingId => ({
     bookingId
 });
 
-const receiveBookingErrors = errors => ({
-    type: RECEIVE_BOOKING_ERRORS,
-    errors
-});
 
 export const fetchBookings = (userId) => dispatch => (
     BookingAPI.fetchBookings(userId).then(bookings => dispatch(receiveAllBookings(bookings)))

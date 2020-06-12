@@ -22,8 +22,10 @@ class SearchShow extends React.Component {
         let title
         if (this.props.search.query === undefined) {
             title = ''
+        } else if (this.props.spots.length === 0) {
+            title = "No places found, try something like 'New York' or 'Venice' "
         } else {
-            title = `We found ${ this.props.spots.length } spots for you to stay at ${ this.props.search.query }`
+            title = `We found ${ this.props.spots.length } spots for you to stay at `
         }
         return (
            <div className="spots-content">

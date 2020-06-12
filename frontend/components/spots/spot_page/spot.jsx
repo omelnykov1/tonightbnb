@@ -8,37 +8,47 @@ class Spot extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            scrollFixed: true
+            scrollFixedUp: true,
+            scrollFixedB: false
         }
     }
 
     componentDidMount() {
-        debugger
-        this.props.fetchSpot(this.props.match.params.spotId)
+        this.props.fetchSpot(this.props.match.params.spotId);
+        document.addEventListener('scroll', () => {
+            const belowPictures = window.scrollY < 740;
+            if (belowPictures !== this.state.scrollFixedUp) {
+                this.setState({ scrollFixedUp: belowPictures });
+                 }
+            });
+        document.addEventListener('scroll', () => {
+            const topPictures = window.scrollY > (document.body.scrollHeight - window.innerHeight - 100);
+            if (topPictures !== this.state.scrollFixedB) {
+                this.setState({ scrollFixedB: topPictures });
+                 }
+            });
     }
 
     render() {
-        debugger
-        if (this.props.spot !== undefined) {
-
-            const reviews = Object.values(this.props.spot.reviews)
+        if (this.props.spot) {
+            const reviews = this.props.spot.reviews ? Object.values(this.props.spot.reviews) : []
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
             let totalRating = 0
             reviews.map(review => review.rating).forEach(ele => totalRating += ele)
             const rating = Math.round((totalRating / reviews.length) * 100) / 100;
-            
+            const someClass = this.state.scrollFixedUp ? 'booking-container' : (this.state.scrollFixedB ? 'booking-container-absolute' : 'booking-container-fixed' )
             return (
                 <div className="spot-container">
                     <div className="spot-nav">
                         <span className="spot-title">
                             <h1>{title}</h1>
-                        <br/>
+                            <br />
                         </span>
                         <span className="spot-rating">
                             <div className="rating-container">
                                 <div className="star"><i className="fas fa-star"></i></div>{rating}
                             </div>
-                            <br/>
+                            <br />
                             <div className="spot-city">{city}</div>
                         </span>
                     </div>
@@ -53,7 +63,7 @@ class Spot extends React.Component {
                                 <img className="photo-row2" src={this.props.spot.photoUrls[3]} />
                                 <img className="photo-row2" src={this.props.spot.photoUrls[4]} />
                             </div>
-                            <hr className="style-four"/>
+                            <hr className="style-four" />
                         </div>
                     </div>
                     <div className="split-spot-container">
@@ -72,13 +82,13 @@ class Spot extends React.Component {
                                         <i className="fas fa-bed"></i>
                                         <br />
                                         <span>Bedroom 1</span>
-                                        <br/>
+                                        <br />
                                         <br />
                                         <p>1 queen bed</p>
                                     </div>
                                     <div className="spot-common-spaces">
                                         <i className="fas fa-couch"></i>
-                                        <br/>
+                                        <br />
                                         <span>Common spaces</span>
                                         <br />
                                         <p>1 couch</p>
@@ -113,7 +123,7 @@ class Spot extends React.Component {
                                 </div>
                                 <div className="reviews-container">
                                     {reviews.map(review => (
-                                        < SpotReview 
+                                        < SpotReview
                                             review={review}
                                             key={review.id}
                                             guests={(guests)}
@@ -121,26 +131,26 @@ class Spot extends React.Component {
                                     ))}
                                 </div>
                             </div>
-                        </div>  
+                        </div>
                         <div className="spot-right-side">
                             <div className="booking-form-container">
-                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={'booking-container'}/>
+                                < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={someClass} />
                             </div>
                         </div>
                     </div>
-                    <div className="empty">
-                    </div>
                     <div className="spot-map">
-                        <h2>Location</h2>
-                        <SpotMap
-                            lat={lat}
-                            lng={lng}
-                        />
+                        <div className="map-work">
+                            <h2>Location</h2>
+                            <SpotMap
+                                lat={lat}
+                                lng={lng}
+                            />
+                        </div>
                     </div>
                 </div>
             )
         } else {
-            return null;
+            return <></>;
         }
 
     }

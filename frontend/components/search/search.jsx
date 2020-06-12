@@ -16,14 +16,9 @@ class Search extends React.Component {
     
     handleClick(e) {
         e.preventDefault();
-        if (this.state.length > 0) {
-            this.props.doSearch(this.state)
-            this.props.history.push('/search');
-            this.setState({query: ''})
-        } else {
-            this.props.history.push('/spots'); 
-            this.setState({ query: '' });
-        }
+        this.props.doSearch(this.state)
+        this.props.history.push('/search');
+        this.setState({query: ''})
     }
 
     render() {
