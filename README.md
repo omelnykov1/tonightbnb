@@ -1,32 +1,69 @@
-# TonightBnB
-TonightBnB is an [Airbnb](https://www.airbnb.com/) clone. TonightBnB is an online platform that connects hosts renting out space in their homes with guests seeking lodging generally for a short period of time, couple nights or even hours. 
+# tonightbnb
+[Tonightbnb](https://tonight-bnb-aa.herokuapp.com/) is an [Airbnb](https://www.airbnb.com/) clone. It is an online platform that connects hosts renting out space in their homes with guests seeking lodging generally for a short period of time.
 
-1. Hosting on Heroku
+![splash](https://media.giphy.com/media/ftHPKR8ZPUWGAfvWL6/giphy.gif)
 
+<hr/>
 
-2. User authentication (2 days)
-- [ ] Login page
-- [ ] Log in / Sign Up
-- [ ] Demo login 
-- [ ] Users cannot make reservations or wtite reviews when not logged im, but can browse the site otherwise
+# Technologies 
+* Ruby on Rails
+* React
+* Redux
+* Javascript
+* PostgreSQL
+* Google Maps API
+* CSS
+* AWS S3
 
-3. Spots (2 days)
-- [ ] Listings with main picture and short description on the right side 
-- [ ] Rating and price per night
-4. Bookings (2 days)
-- [ ] Listing page with 4-5 photos in the preview
-- [ ] Sidebar with check-in and checkout, number of guests, and price breakdown on the right side and reverve button
-- [ ] Full description on the left 
-- [ ] Amenities, sleeping arrangements 
-- [ ] Reviews will be at the bottom of page
-5. Spots search by (location & availability) & Google Maps on search(2 days)
-- [ ] Google Map on the right side 
-- [ ] Index of the page at the bottom of the page 
-6. Reviews(2 days)
-- [ ] User should be able to leave review(if logged in)
-- [ ] User can see all reviews and rating of the lising (5.0 max) 
+<hr/>
 
-## BONUS 
+# Features
 
+## User authentication 
+
+* New users are able to create an account in the sign-up modal. 
+* Users can log-in and log out(if they already have an account)
+* Demo account feature implementented 
+
+![login](https://media.giphy.com/media/Pgo2UNOuEM7o7286LW/giphy.gif)
+
+<hr/>
+
+## Spots
+
+* Spots index page with fixed Google Map and Markers of the spots locations
+
+![](https://media.giphy.com/media/iesnLkjk9oqhSPZ3fd/giphy.gif)
+
+* Spot show page, with booking form, unique reviews, photos and amenities 
+
+![](https://media.giphy.com/media/WOTxgWBHdnA23NKniL/giphy.gif)
+
+<hr/>
+
+## Bookings
+
+* Booking form with datepicker
+
+![](https://media.giphy.com/media/kHrcG7sIR9u0mGcVWk/giphy.gif)
+
+* Booking index page, with past and upcoming trips. User can cancel any upcoming booking or go to spots index page to make another booking.
+
+![](https://media.giphy.com/media/J4CCsxi3gh2AZ1JOjt/giphy.gif)
+
+<hr/>
+
+## Spots search with Google Maps API
+
+* User can search spots by location
+
+![](https://media.giphy.com/media/Qwn2mzk2j93Pw97FDF/giphy.gif)
+
+<hr/>
+
+##  In Progress
+
+* Ability to leave reviews
 * Messaging
-* User/host profiles
+* Guest/host profiles
+
