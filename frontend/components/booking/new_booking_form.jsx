@@ -9,6 +9,7 @@ import './react_dates_overrides.css'
 
 class NewBookingForm extends React.Component {
     constructor(props) {
+        debugger
         super(props)
         this.state = this.props.booking;
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -30,6 +31,7 @@ class NewBookingForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         if (this.props.booking.guest_id) {
             const { startDate, endDate, num_guests, guest_id } = this.state;
@@ -84,7 +86,6 @@ class NewBookingForm extends React.Component {
         } else {
             dayPicker = null;
         }
-        const condition = this.state.condition
         let guestCount
         if (this.state.num_guests > 1) {
             guestCount = (this.state.num_guests - 1 )/ 2.0 * this.props.spot.price;
@@ -125,6 +126,7 @@ class NewBookingForm extends React.Component {
                             <label className="date-label">Check-out</label>
                             <input
                                 className="date-input"
+                                id="end-date-datepicker"
                                 type="text"
                                 value={this.handleDate(this.state.endDate)}
                                 placeholder="MM/DD/YYYY"

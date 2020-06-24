@@ -19,6 +19,7 @@ class SearchShow extends React.Component {
     }
 
     render() {
+        debugger
         let title
         if (this.props.search.query === undefined) {
             title = ''

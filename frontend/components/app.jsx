@@ -8,7 +8,6 @@ import SpotIndexContainer from './spots/spot_index_container';
 import SpotContainer from "./spots/spot_page/spot_container"
 import BookingIndexContainer from './booking/booking_index_container';
 import SearchShowContainer from './search/search_show_container';
-// import Footer from './splash/foooter'
 
 
 const App = () => (
@@ -23,7 +22,6 @@ const App = () => (
             <Route path={`/:userId/bookings`} component={BookingIndexContainer}/>
             <Route path="/search" component={SearchShowContainer} />
         </Switch>
-        {/* <Footer /> */}
     </div>
 )
 

@@ -21,16 +21,17 @@ class LoginForm extends React.Component {
     }
 
     demoLogin() {
-        this.props.processForm(this.props.demo).then(this.props.closeModal)
+        const {email, password} = this.props.demo;
+        this.setState({email: email, password: password });
+        this.handleSubmit(this.state);
     }
 
-    componentWillUnmount() {
+    componentDidMount() {
         this.props.clearErrors()
     }
 
     renderErrors() {
-        let { errors } = this.props
-        if (errors.length === 0) {
+        if (this.props.errors.length === 0) {
             return null;
         } else {
             return (

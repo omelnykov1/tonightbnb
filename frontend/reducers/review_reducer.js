@@ -2,7 +2,6 @@ import { RECEIVE_SPOT, RECEIVE_REVIEW} from '../actions/spot_actions';
 
 const reviewsReducer = (state = {}, action) => {
     Object.freeze(state);
-    console.log(action)
     switch (action.type) {
         case RECEIVE_SPOT:
             return Object.assign({}, state, action.reviews);

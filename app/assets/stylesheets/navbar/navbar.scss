@@ -42,7 +42,7 @@
   padding: 0 0 3px 0;
   background: #ff0066;
   color: white;
-  width: 430px;
+  width: 100%;
   height: 40px;
   text-align: center;
   border-radius: 10px;
@@ -62,15 +62,18 @@
   display: flex;
   justify-content: center;
   margin-top: 12px;
-  padding: 12px 22px;
+  padding: 12px;
   vertical-align: middle;
-  &:hover {
-    background-color: rgba(121, 117, 117, 0.08);
-    padding-bottom: 20px;
-    cursor: pointer;
-    border-radius: 30px;
-  }
+  width: 90px;
+  height: 20px;
 }
+
+.nav-signin:hover {
+    background-color: rgba(82, 79, 79, 0.08);
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 20px;
+  }
 
 .nav-signin1 {
   display: flex;
@@ -83,7 +86,7 @@
 
 
 .modal-field, .modal-field1, .modal-field2, .modal-field3, .modal-field4 {
-  width: 430px;
+  width: 40%;
   height: 25px;
   border: 1px solid #dddddd;
   border-radius: 6px;
@@ -108,10 +111,11 @@
 
 
 .personal-social i {
-  padding-bottom: 50px;
+  margin-top: 5px;
+  padding-bottom: 20px;
   line-height: 40px;
   font-size: 45px;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
   padding-left: 5px;
   text-align: center;
 }
@@ -152,9 +156,10 @@
 }
 
 .git i {
+  margin-top: 5px;
   line-height: 40px;
   font-size: 45px;
-  transition: 0.2s linear;
+  transition: 0.3s linear;
   padding-left: 5px;
   text-align: center;
 }
@@ -397,16 +402,15 @@
 .nav-search {
   display: flex;
   flex-direction: row;
-  // height: 74px;
   border-radius: 10px;
-    width: 530px;
-    height: 55px !important;
-    border: 1px solid rgb(144, 143, 143);
-    justify-content: space-between;
-    margin-left: 35px;
-    margin-top: 5px;
-    padding:5px;
-    box-shadow: 0 5px 10px -5px #00000070;
+  width: 530px;
+  height: 55px !important;
+  border: 1px solid rgb(144, 143, 143);
+  justify-content: space-between;
+  margin-left: 35px;
+  margin-top: 5px;
+  padding:5px;
+  box-shadow: 0 5px 10px -5px #00000070;
 }
 
 .nav-search2 {
@@ -514,7 +518,6 @@ input.search {
     outline: none;
     transition: all .2s ease-out;
     border-color: rgb(49, 45, 45);
-    // font-weight: 700;
   }
    &:focus + label {
     display: inline;
@@ -522,7 +525,6 @@ input.search {
     color: gray;
     font-size: 12px;
     transition: top 0.2s;
-    // font-weight: 500;
   }
    &:valid + label {
     top: 9px;
@@ -530,13 +532,6 @@ input.search {
     font-weight: 800;
   }
 }
-
-// #search:focus{
-//   border: 1px solid rgb(36, 33, 33);
-//   outline: none;
-//   // font-size: 14px;
-//   // font-weight: 650;
-// }
 
 #checkin {
   width: 260px;
@@ -588,64 +583,6 @@ input.search {
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-
-// .nav-search {
-// 	// position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform:  translate(-50%,50%);
-//   background: transparent;
-//   height: 40px;
-//   border-radius: 40px;
-//   padding: 10px;
-//   margin-top: -46px;
-//   margin-left: 55px;
-// }
-
-// .nav-search:hover > #search {
-//     width: 240px;
-//     padding: 0 6px;
-// }
-
-// .search-button {
-//     color: white;
-//     float: right;
-//     width: 60px;
-//     height: 60px;
-//     border-radius: 50%;
-//     background: #ee2777;
-//     display: flex;
-//     // position: absolute;
-//     justify-content: center;
-//     align-items: center;
-//     transition: 0.4s;
-//     margin-left: 120px;
-// }
-
-// #search {
-//     margin-top: 20px;
-//     border:none;
-//     background: none;
-//     outline:none;
-//     float:left;
-//     padding: 0;
-//     color: white;
-//     font-size: 16px;
-//     transition: 0.4s;
-//     line-height: 40px;
-//     width: 0px;
-//     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-// }
-
-// @media screen and (max-width: 620px) {
-// .nav-search:hover > #search {
-//     width: 150px;
-//     padding: 0 6px;
-//     transition: right, 300ms ease-in-out;
-//     transform: scaleX(0);
-//     transform-origin: left;
-// }
-// }
 
 
 

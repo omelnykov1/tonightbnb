@@ -8,12 +8,12 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-   <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['REACT_APP_GOOGLE_KEY']}" %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['REACT_APP_GOOGLE_KEY']}" %>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css">
-  
+    <link  href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Crimson+Text|Archivo|Cardo|Quicksand|Roboto|Sarabun|Dancing+Script|Asap|Lato|Montserrat|Great+Vibes|Pacifico|Sacramento&display=swap" rel="stylesheet">
   </head>
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Crimson+Text|Archivo|Cardo|Quicksand|Roboto|Sarabun|Dancing+Script|Asap|Lato|Montserrat|Great+Vibes|Pacifico|Sacramento&display=swap" rel="stylesheet">
   
 
   <script type="text/javascript">
@@ -42,7 +42,6 @@
     window.booking = "<%= image_url('backbook.png')%>"
     window.booking1 = "<%= image_url('background_trips.jpg')%>"
     window.trips =  "<%= image_url('trips.png')%>"
-    window.lo = "<%= image_url('lo.JPG')%>"
     window.newlogo = "<%= image_url('newlogo.jpg')%>" 
     window.superleft = "<%= image_url('superleft.jpg')%>"
     window.atlantic = "<%= image_url('atlantic.jpg')%>"

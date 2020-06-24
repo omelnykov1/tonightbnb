@@ -20,7 +20,6 @@ class Greeting extends React.Component {
 
     render() {
         let { currentUser, logout, openModal } = this.props
-        // const logo = window.lo
         const logo = window.newlogo
         const display = currentUser ? (
             <nav className="navbar">
@@ -34,8 +33,6 @@ class Greeting extends React.Component {
                 </div>
                 <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
                 <div className="nav-signin" onClick={this.handleTripsClick}>Trips</div>
-                {/* <div className="nav-signin1">Welcome, {this.props.currentUser.name}</div> */}
-                {/* <img className="profile-img" src={window.profile_pic} /> */}
             </nav>
         ) : (
                 <nav className="navbar">

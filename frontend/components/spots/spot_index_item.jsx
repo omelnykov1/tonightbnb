@@ -44,7 +44,6 @@ class SpotIndexItem extends React.Component {
                         <div className="spot-price">
                             <span>${price}</span>/night
                         </div>
-                {/* <hr className="style-seven" /> */}
             </div>
         )
     }
