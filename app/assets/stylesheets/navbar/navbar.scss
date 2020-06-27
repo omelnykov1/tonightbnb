@@ -500,8 +500,8 @@ input.search {
     color: lighten(black, 22%);
     background-color: transparent;
     font-size: 16px;
-    width: 150px;
-
+    width: 200px !important;
+  
     & + label{
     color: lighten(black, 60%);
     position: absolute;

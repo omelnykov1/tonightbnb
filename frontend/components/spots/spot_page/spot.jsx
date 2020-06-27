@@ -2,6 +2,7 @@ import React from 'react';
 import SpotMap from '../../map/spot_map';
 import SpotReview from './spot_review';
 import NewBookingContainer from '../../booking/new_booking_container'
+import ReviewContainer from '../../review/review_container'
 
 
 class Spot extends React.Component {
@@ -31,7 +32,12 @@ class Spot extends React.Component {
 
     render() {
         if (this.props.spot) {
+            debugger
             const reviews = this.props.spot.reviews ? Object.values(this.props.spot.reviews) : []
+            // const otherReviews = this.state.entities.reviews ? Object.values(this.state.entities.reviews) : [];
+            // if (otherReviews.length) {
+            //     otherReviews.forEach(review => reviews.push(review));
+            // }
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
             let totalRating = 0
             reviews.map(review => review.rating).forEach(ele => totalRating += ele)
@@ -129,6 +135,7 @@ class Spot extends React.Component {
                                             guests={(guests)}
                                         />
                                     ))}
+                                    < ReviewContainer spot={this.props.spot}/>
                                 </div>
                             </div>
                         </div>
