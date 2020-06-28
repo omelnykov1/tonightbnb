@@ -6,7 +6,6 @@ class ReviewForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.review;
-        debugger
         this.state.spot_id = this.props.spot.id;
         this.handleRating = this.handleRating.bind(this);
     }
@@ -60,11 +59,6 @@ class ReviewForm extends React.Component {
                             <input className="start-reviews" type="radio" id="star2" name="rating" value={this.state.rating} onClick={() => this.handleRating(2.0)} /><label htmlFor="star2"></label>
                             <input className="start-reviews" type="radio" id="star1" name="rating" value={this.state.rating} onClick={() => this.handleRating(1.0)} /><label htmlFor="star1"></label>
                         </div>
-                            {/* <i className="fas fa-star" aria-hidden="true" id="s1" value={this.state.rating} onClick={() => this.handleRating(5.0)}></i>
-                            <i className="fas fa-star" aria-hidden="true" id="s2" value={this.state.rating} onClick={() => this.handleRating(4.0)}></i>
-                            <i className="fas fa-star" aria-hidden="true" id="s3" value={this.state.rating} onClick={() => this.handleRating(3.0)}></i>
-                            <i className="fas fa-star" aria-hidden="true" id="s4" value={this.state.rating} onClick={() => this.handleRating(2.0)}></i>
-                            <i className="fas fa-star" aria-hidden="true" id="s5" value={this.state.rating} onClick={() => this.handleRating(1.0)}></i> */}
                     </div>
                     <textarea
                         className="review-body" 

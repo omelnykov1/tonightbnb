@@ -150,7 +150,6 @@
 .spot-reviews {
     margin-top: -40px;
     height: 100%;
-    /* position: relative; */
     margin-bottom: 100px;
 }
 
@@ -189,10 +188,6 @@
 }
 
 .reviews-ratings {
-    /* display: flex;
-    text-align: left !important;
-    direction: rtl !important;
-    float: left !important; */
     position: relative;
 }
 
@@ -206,36 +201,6 @@
    outline: none;
    
 }
-/* .reviews-stars-create {
-    width: 100%;
-}
-.reviews-stars-create i {
-    font-size: 30px;
-    transition: 0.3 all;
-    direction: rtl;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.reviews-stars-create i:hover{
-    color: #ff0066;
-}
-
-#s5:hover ~ i {
-    color: #ff0066; 
-}
-#s4:hover ~ i {
-    color: #ff0066; 
-}
-#s3:hover ~ i {
-    color: #ff0066; 
-}
-#s2:hover ~ i {
-    color: #ff0066; 
-}
-#s1:hover ~ i {
-    color: #ff0066; 
-} */
 
 .reviews-stars-create {
     position: absolute;
@@ -420,7 +385,6 @@ hr.style-four {
     flex-direction: row; 
     padding: 5px;
     font-size: 17px;
-    /* margin-top: 10px; */
 }
 
 .spot-amenity i {
@@ -443,14 +407,14 @@ hr.style-four {
 
 
 hr.style-seven {
-    overflow: visible; /* For IE */
+    overflow: visible; 
     height: 30px;
     border-style: solid;
     border-color: black;
     border-width: 1px 0 0 0;
     border-radius: 20px;
 }
-hr.style-seven:before { /* Not really supposed to work, but does */
+hr.style-seven:before { 
     display: block;
     content: "";
     height: 30px;

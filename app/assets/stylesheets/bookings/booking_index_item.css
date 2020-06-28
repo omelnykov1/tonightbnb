@@ -1,4 +1,3 @@
-
 .booking-item-container {
   margin: 0 15px 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -6,7 +5,6 @@
     border-radius: 10px;
     flex-basis: 33%; 
     max-width: 360px; 
-    /* text-align: center; */
     cursor: pointer;
     height: 430px;
     z-index: 4;
@@ -19,7 +17,6 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: 50px; */
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -38,13 +35,11 @@
     padding-top: 10px;
     grid-gap: 20px;
     margin-left: 70px;
-    /* position: absolute; */
 }
 
 .bottom-booking-item {
     text-align: left;
     padding: 10px;
-    /* margin-bottom: 145px; */
 }
 
 .date-booking-header {
@@ -94,64 +89,6 @@
     font-weight: 300;
 }
 
-/* .destroy-booking {
-      justify-content: space-between;
-    cursor: pointer !important;
-    display: inline-block !important;
-    position: relative !important;
-    text-align: center !important;
-    font-family: Palatino, URW Palladio L, serif !important;
-    font-size: 16px !important;
-    line-height: 18px !important;
-    font-weight: 500 !important;
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    color: rgb(255, 255, 255) !important;
-    height: 55px;
-    width: 166px;
-    text-decoration: none !important;
-    border-radius: 8px !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-    outline: none !important;
-    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
-    border-color: rgb(255, 255, 255);
-    background :#ff0066;
-    z-index: 3;
-} */
-
-/* .edit-booking {
-      justify-content: space-between;
-    cursor: pointer !important;
-    display: inline-block !important;
-    position: relative !important;
-    text-align: center !important;
-    font-family: Palatino, URW Palladio L, serif !important;
-    font-size: 16px !important;
-    line-height: 18px !important;
-    font-weight: 500 !important;
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    color: rgb(255, 255, 255) !important;
-    margin-bottom: 150px;
-    height: 55px;
-    width: 166px;
-    text-decoration: none !important;
-    border-radius: 8px !important;
-    border-width: 1px !important;
-    border-style: solid !important;
-    outline: none !important;
-    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s !important;
-    border-color: rgb(255, 255, 255);
-    background: rgb(76, 181, 231);
-    z-index: 3;
-    margin-top: 140px;
-} */
-
 .edit-booking {
     border: transparent;
     background: transparent;
@@ -194,7 +131,6 @@
     transform: scaleX(0);
     transition: transform 300ms ease-in-out ;
     border-radius: 10px;
-    /* transform-origin: left; */
 }
 .edit-booking:hover::before,
 .edit-booking:focus::before {
@@ -228,7 +164,6 @@
     padding-bottom: 7px !important;
     padding-left: 15px !important;
     padding-right: 15px !important;
-    /* margin-bottom: 150px; */
     height: 55px;
     width: 166px;
     --accent-color :#ff0066;
@@ -255,7 +190,6 @@
     transform: scaleX(0);
     transition: transform 300ms ease-in-out ;
     border-radius: 10px;
-    /* transform-origin: left; */
 }
 .destroy-booking:hover::before,
 .destroy-booking:focus::before {

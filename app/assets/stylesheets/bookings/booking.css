@@ -1,5 +1,5 @@
 .booking-index-container {
-    margin-top: 25px;
+    margin-top: 15px;
     font-family: 'Montserrat';
     padding-left: 65px !important;
     padding-right: 40px !important;
@@ -8,7 +8,7 @@
 
 .booking-picture {
     width: 90%;
-    height: 380px;
+    height: 40vh;
     z-index: 0;
     margin-top: 100px;
 }
@@ -19,7 +19,7 @@
 
 .booking-picture1 {
     width: 90%;
-    height: 380px;
+    height: 40vh;
     z-index: 0;
     margin-top: 100px;
     position: fixed;
@@ -29,7 +29,7 @@
 
 .booking-index-container h1 {
     z-index: 1;
-    margin-top: 110px;
+    margin-top: 10vh;
     font-size: 32px;
     font-weight: 700;
     font-family: 'Montserrat';
@@ -40,7 +40,7 @@
     flex-direction: row;
     width: 200px;
     font-size: 16px;
-    margin-top: 26px;
+    margin-top: 1vh;
 }
 
 .upcoming-booking {
@@ -63,7 +63,6 @@
     padding-left: 15px !important;
     padding-right: 15px !important;
     color: rgb(255, 255, 255) !important;
-    margin-bottom: 50px;
     height: 55px;
     width: 166px;
     text-decoration: none !important;
@@ -75,7 +74,7 @@
     border-color: rgb(255, 255, 255);
     background: black;
     z-index: 3;
-    margin-top: 50px;
+    margin-top: 5vh;
 }
 
 

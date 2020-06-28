@@ -19,7 +19,7 @@ class SearchShow extends React.Component {
     }
 
     render() {
-        let title
+        let title;
         if (this.props.search.query === undefined) {
             title = ''
         } else if (this.props.spots.length === 0) {

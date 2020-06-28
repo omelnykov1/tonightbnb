@@ -4,7 +4,6 @@ import BookingItem from './booking_item'
 class BookingIndex extends React.Component {
     constructor(props) {
         super(props)
-        debugger
         this.handleClick = this.handleClick.bind(this);
     }
 

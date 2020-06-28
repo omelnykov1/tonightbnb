@@ -1,5 +1,6 @@
 class Api::BookingsController < ApplicationController
     before_action :ensure_logged_in!
+
     def index
         @bookings = if params[:user_id]
         Booking.includes(:spot).where(guest_id: params[:user_id])
@@ -21,6 +22,7 @@ class Api::BookingsController < ApplicationController
     def create
         @booking = Booking.new(booking_params)
         @booking.guest_id = current_user.id
+        
         if @booking.save
             render :show
         else
