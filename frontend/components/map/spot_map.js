@@ -23,7 +23,7 @@ class SpotMap extends React.Component {
         ));
         return (
                 <GoogleMapExample
-                    containerElement={<div class="spot-map" style={{ height: '400px', width: '80vw', position: 'absolute !important',bottom: '0', marginTop: '3vh'}} />}
+                    containerElement={<div className="spot-map" style={{ height: '400px', width: '80vw', position: 'absolute !important',bottom: '0', marginTop: '3vh'}} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
         );

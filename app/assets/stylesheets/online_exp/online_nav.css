@@ -153,7 +153,6 @@
 
 
 .online-exp1 {
-    
     margin: 0 15px 5px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     background: #282828;
@@ -169,10 +168,7 @@
 
 
 .splash-hots-hero {
-    /* display: grid;
-    grid-template-rows: 50% 50%; */
     padding-left: 10%;
-    padding-right: 10%;
     display: flex;
     flex-direction: column;
     margin-top: 100px;
@@ -210,7 +206,6 @@
 }
 .splash-escape-item-bottom:hover {
     border-bottom: black;
-    cursor: pointer;
 }
 
 .splash-escape-item-bottom h5{
@@ -224,9 +219,7 @@
 }
 
 .host-hero-top-left {
-    /* display: flex; */
     align-items: left;
-
 }
 
 .host-hero-top-left h1 {
@@ -237,7 +230,9 @@
 }
 
 .host-hero-top-right {
-    font-size: 18px;
+    margin-left: 8vw;
+    text-align: left;
+    font-size: 19px;
     width: 460px;
     height: 140px;
 }
@@ -254,7 +249,6 @@
     padding-bottom: 7px !important;
     padding-right: 15px !important;
     color: rgb(0, 0, 0) !important;
-    /* margin-left: 50px; */
     margin-right: 50px;
     height: 38px;
     width: 125px;

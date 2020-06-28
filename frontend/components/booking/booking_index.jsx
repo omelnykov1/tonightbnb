@@ -4,6 +4,7 @@ import BookingItem from './booking_item'
 class BookingIndex extends React.Component {
     constructor(props) {
         super(props)
+        debugger
         this.handleClick = this.handleClick.bind(this);
     }
 
@@ -47,6 +48,7 @@ class BookingIndex extends React.Component {
                         spots={spots}
                         destroyBooking={destroyBooking}
                         key={booking.id}
+                        openModal={this.props.openModal}
                     />
                 ))}
             </div>

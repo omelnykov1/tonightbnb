@@ -4,16 +4,14 @@ import { connect } from 'react-redux';
 import { openModal } from '../../actions/modal_actions'
 
 
-const mSTP = (state, ownProps) => {
-    debugger
-    return {
+const mSTP = (state, ownProps) => ({
     review: {
         body: "",
         guest_id: state.session.id,
         spot_id: "",
         rating: ""
     }
-}}
+})
 
 
 const mDTP = (dispatch) => ({

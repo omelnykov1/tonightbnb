@@ -14,6 +14,7 @@ class BookingListItem extends React.Component {
 
     handleDelete() {
         this.props.destroyBooking(this.props.booking.id)
+        // this.props.openModal('review')
     }
 
     handleDate(date){

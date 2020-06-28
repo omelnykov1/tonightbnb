@@ -122,7 +122,7 @@ const Splash = props => {
                 <div className="host-hero-top">
                     <div className="host-hero-top-left">
                         <h1> Host a hero: help house frontline responders around the world </h1>
-                     <button className="hero-button">Get involved</button>
+                        <Link to="/spots"><button className="hero-button">Get involved</button></Link>
                     </div>
                     <div className="host-hero-top-right">
                         <p> With frontline stays, Tonightbnb is partnering with our hosts to connect 100,000 healthcare providers, 

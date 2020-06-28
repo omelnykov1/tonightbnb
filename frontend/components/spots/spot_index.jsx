@@ -21,7 +21,7 @@ class SpotIndex extends React.Component {
                             this.props.spots.map(spot => (
                                 <SpotIndexItem
                                     spot={spot}
-                                    key={spot.id} 
+                                    key={spot.id}
                                 />
                             ))
                         }

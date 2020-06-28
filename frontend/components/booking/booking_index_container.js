@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { fetchBookings, destroyBooking} from '../../actions/booking_actions';
 import { fetchSpots } from '../../actions/spot_actions';
 import BookingIndex from './booking_index';
+import { openModal, closeModal } from "../../actions/modal_actions";
 
 
 const mSTP = (state) => ({
@@ -13,6 +14,8 @@ const mSTP = (state) => ({
 const mDTP = dispatch => ({
     fetchBookings: (userId) => dispatch(fetchBookings(userId)),
     destroyBooking: (bookingId) => dispatch(destroyBooking(bookingId)),
+    closeModal: () => dispatch(closeModal()),
+    openModal: () => dispatch(openModal('review')),
     fetchSpots: () => dispatch(fetchSpots()),
 })
 

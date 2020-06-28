@@ -17,13 +17,13 @@ class Spot extends React.Component {
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
         document.addEventListener('scroll', () => {
-            const belowPictures = window.scrollY < 740;
+            const belowPictures = window.scrollY < 800;
             if (belowPictures !== this.state.scrollFixedUp) {
                 this.setState({ scrollFixedUp: belowPictures });
                  }
             });
         document.addEventListener('scroll', () => {
-            const topPictures = window.scrollY > (document.body.scrollHeight - window.innerHeight - 100);
+            const topPictures = window.scrollY > (document.body.scrollHeight - window.innerHeight - 150);
             if (topPictures !== this.state.scrollFixedB) {
                 this.setState({ scrollFixedB: topPictures });
                  }
@@ -33,10 +33,6 @@ class Spot extends React.Component {
     render() {
         if (this.props.spot) {
             const reviews = this.props.spot.reviews ? Object.values(this.props.spot.reviews) : []
-            // const otherReviews = this.state.entities.reviews ? Object.values(this.state.entities.reviews) : [];
-            // if (otherReviews.length) {
-            //     otherReviews.forEach(review => reviews.push(review));
-            // }
             const { title, description, address, price, city, lat, lng, guests } = this.props.spot;
             let totalRating = 0
             reviews.map(review => review.rating).forEach(ele => totalRating += ele)
@@ -44,7 +40,7 @@ class Spot extends React.Component {
             const someClass = this.state.scrollFixedUp ? 'booking-container' : (this.state.scrollFixedB ? 'booking-container-absolute' : 'booking-container-fixed' )
             return (
                 <div className="spot-container">
-                    <div class="up">
+                    <div className="up">
                     <div className="spot-nav">
                         <span className="spot-title">
                             <h1>{title}</h1>

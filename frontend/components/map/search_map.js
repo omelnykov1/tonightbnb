@@ -32,7 +32,7 @@ class SearchMap extends React.Component {
         return (
             <div>
                 <GoogleMapExample
-                    containerElement={<div className="google" style={{ height: `100vh`, width: '90vh'}} />}
+                    containerElement={<div className="google" style={{ height: `100vh`, width: '90vh' }} />}
                     mapElement={<div style={{ height: `100%` }} />}
                 />
             </div>

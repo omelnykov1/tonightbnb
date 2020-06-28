@@ -1,6 +1,5 @@
 .nav, .nav-1, .nav-2 {
   height: 77px;
-
 }
 
 .nav-1 {
@@ -403,7 +402,7 @@
   display: flex;
   flex-direction: row;
   border-radius: 10px;
-  width: 530px;
+  width: 25vw;
   height: 55px !important;
   border: 1px solid rgb(144, 143, 143);
   justify-content: space-between;
@@ -495,7 +494,6 @@ input.search {
     border: 1px solid #dddddd;
     position: relative;
     margin-top: 7px;
-    // margin-left: 135px;
     border: none;
     color: lighten(black, 22%);
     background-color: transparent;
@@ -579,7 +577,7 @@ input.search {
 .search-button:hover {
   background-color: #f91570;
   transform: scale(1.001);
-  box-shadow: 0 3px 2px darkgray;
+  transition: 0.3s;
 }
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
