@@ -15,14 +15,12 @@ class Search extends React.Component {
     }
     
     handleClick(e) {
-        debugger
         e.preventDefault();
         let newSearch = this.state.query.split(' ');
         let fixedSearch = [];
         newSearch.forEach(ele => {
             fixedSearch.push(ele[0].toUpperCase() + ele.slice(1).toLowerCase())
         })
-        debugger
         this.state.query = fixedSearch.join(' ');
         this.props.doSearch(this.state);
         this.props.history.push('/search');

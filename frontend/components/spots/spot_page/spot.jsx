@@ -32,7 +32,6 @@ class Spot extends React.Component {
 
     render() {
         if (this.props.spot) {
-            debugger
             const reviews = this.props.spot.reviews ? Object.values(this.props.spot.reviews) : []
             // const otherReviews = this.state.entities.reviews ? Object.values(this.state.entities.reviews) : [];
             // if (otherReviews.length) {
@@ -45,6 +44,7 @@ class Spot extends React.Component {
             const someClass = this.state.scrollFixedUp ? 'booking-container' : (this.state.scrollFixedB ? 'booking-container-absolute' : 'booking-container-fixed' )
             return (
                 <div className="spot-container">
+                    <div class="up">
                     <div className="spot-nav">
                         <span className="spot-title">
                             <h1>{title}</h1>
@@ -135,7 +135,9 @@ class Spot extends React.Component {
                                             guests={(guests)}
                                         />
                                     ))}
-                                    < ReviewContainer spot={this.props.spot}/>
+                                    <div className="create-review">
+                                        < ReviewContainer spot={this.props.spot}/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -144,15 +146,15 @@ class Spot extends React.Component {
                                 < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={someClass} />
                             </div>
                         </div>
+
                     </div>
-                    <div className="spot-map">
-                        <div className="map-work">
-                            <h2>Location</h2>
-                            <SpotMap
-                                lat={lat}
-                                lng={lng}
-                            />
-                        </div>
+                    </div>
+                    <div className="map-work">
+                        <h2>Location</h2>
+                        <SpotMap
+                            lat={lat}
+                            lng={lng}
+                        />
                     </div>
                 </div>
             )

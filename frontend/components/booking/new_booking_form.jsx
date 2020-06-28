@@ -1,6 +1,5 @@
 import React from 'react';
 import 'react-dates/initialize';
-import DayPicker from 'react-day-picker';
 import { withRouter } from 'react-router';
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
@@ -9,7 +8,6 @@ import './react_dates_overrides.css'
 
 class NewBookingForm extends React.Component {
     constructor(props) {
-        debugger
         super(props)
         this.state = this.props.booking;
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,12 +16,11 @@ class NewBookingForm extends React.Component {
         this.state.condition = false;
     }
 
-    handleDate(date) {
+    dateFormat(date) {
         if (date) {
-            const dateStr = date.toISOString().slice(0, 10);
-            const dateArr = dateStr.split("-");
-            dateArr.push(dateArr.shift());
-            return dateArr.join("/");
+            let dateStr = date.toISOString().slice(0, 10).split("-");
+            dateStr.push(dateStr.shift());
+            return dateStr.join("/");
         } else {
             return "";
         }
@@ -31,7 +28,6 @@ class NewBookingForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         if (this.props.booking.guest_id) {
             const { startDate, endDate, num_guests, guest_id } = this.state;
@@ -92,7 +88,7 @@ class NewBookingForm extends React.Component {
         } else {
             guestCount = 0
         }
-        let guestTotal = (this.handleDate(this.state.endDate).split('/')[1] - this.handleDate(this.state.startDate).split('/')[1]) * this.props.spot.price;
+        let guestTotal = (this.dateFormat(this.state.endDate).split('/')[1] - this.dateFormat(this.state.startDate).split('/')[1]) * this.props.spot.price;
         let total = guestCount + guestTotal
         const toggleClass = this.props.scroll;
         if (this.props.spot) {
@@ -116,7 +112,7 @@ class NewBookingForm extends React.Component {
                             <input
                                 className="date-input"
                                 type="text"
-                                value={this.handleDate(this.state.startDate)}
+                                value={this.dateFormat(this.state.startDate)}
                                 placeholder="MM/DD/YYYY"
                                 required
                                 onClick={() => this.setState({condition: true})}
@@ -128,7 +124,7 @@ class NewBookingForm extends React.Component {
                                 className="date-input"
                                 id="end-date-datepicker"
                                 type="text"
-                                value={this.handleDate(this.state.endDate)}
+                                value={this.dateFormat(this.state.endDate)}
                                 placeholder="MM/DD/YYYY"
                                 required
                                 onClick={() => this.setState({ condition: false })}

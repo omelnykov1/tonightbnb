@@ -1,0 +1,41 @@
+$stars: 5;
+$star-size: 30px;
+$star-spacing: 8px;
+$star-on-color: rgb(242, 88, 88);
+$star-off-color: #CCCCCC;
+
+
+.rating {
+	width: ($star-size * $stars) + ($star-spacing * ($stars - 1));
+	height: $star-size;
+
+	label {
+		float: right;
+		position: relative;
+		width: $star-size;
+		height: $star-size;
+		cursor: pointer;
+		
+		&:not(:first-of-type) {
+			padding-right: $star-spacing;
+		}
+		
+		&:before {
+            content: "\f005";
+            font-family: 'Font Awesome 5 free';
+			font-size: $star-size + 2px;
+			color: $star-off-color;
+			line-height: 1;
+		}
+	}
+	
+	input {
+		display: none;
+	}
+	
+	input:checked ~ label:before,
+	&:not(:checked) > label:hover:before,
+	&:not(:checked) > label:hover ~ label:before {
+        color: $star-on-color;
+	}
+}

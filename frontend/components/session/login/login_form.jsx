@@ -23,7 +23,7 @@ class LoginForm extends React.Component {
     demoLogin() {
         const {email, password} = this.props.demo;
         this.setState({email: email, password: password });
-        this.handleSubmit(this.state);
+        this.handleSubmit;
     }
 
     componentDidMount() {

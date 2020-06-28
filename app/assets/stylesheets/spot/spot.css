@@ -4,29 +4,42 @@
 } */
 
 .spot-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     margin: 100px;
     padding-left: 35px;
     padding-right: 35px;
     font-family:'Montserrat';
+    height: 100%;
 }
 
 .split-spot-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: 80%;
 }
 
 .spot-left-side {
     width: 60%;
+    height: 100%;
+}
+
+.map-work {
+    position: relative;
+    height: 20% !important;
+}
+
+.up {
+    height: 90%;
+    margin-bottom: 100px;
+    height: 90% !important;
 }
 
 .spot-map1 {
-    /* position: absolute; */
-    margin-left: 20px;
-    margin-right: 30px;
-    margin-top: 100px;
-    /* margin-bottom: 50px */
+   width: 20%;
+   bottom: 0;
 }
 
 .empty {
@@ -34,16 +47,19 @@
     margin-bottom: 250px;
 }
 
-.spot-map h2 {
-    margin-top: 70px;
-}
 .spot-map-google {
     padding-top: 40px;
     padding-bottom: -20px;
 }
 
-.map-work{
-    margin-top: 150px;
+.spot-map{
+    position: relative;
+    margin: 3vh;
+    width: 100%;
+}
+
+.map-wor {
+    margin-top: 3vh;
 }
 .spot-grid {
     display: grid;
@@ -61,9 +77,23 @@
 
 .reviews-container {
     width: 50%;
-    height: 400px;
-    /* padding-bottom: 170px; */
-    /* margin-bottom: 100px; */
+    height: 40%;
+    margin-bottom: 100px;
+}
+
+.review-form-containter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh !important;
+    width: 100%;
+    height: 80%;
+    box-shadow: 0 5px 15px -5px #00000070;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.review-header h3 {
+    margin: 0 auto;
 }
 
 .spot-rating {
@@ -119,8 +149,14 @@
 
 .spot-reviews {
     margin-top: -40px;
+    height: 100%;
     /* position: relative; */
-    /* margin-bottom: 1000; */
+    margin-bottom: 100px;
+}
+
+.create-review {
+    width: 100%;
+    height: 500px;
 }
 
 .spot-rating-review{
@@ -143,9 +179,128 @@
 .spot-description {
     font-size: 18px;
 }
+.review-middle {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    float: left;
+}
+
+.reviews-ratings {
+    /* display: flex;
+    text-align: left !important;
+    direction: rtl !important;
+    float: left !important; */
+    position: relative;
+}
 
 .review-body {
+    margin-top: 0px;
    font-size: 18px; 
+   resize: none;
+   border-radius: 5px;
+   width: 100%;
+   height: 50%;
+   outline: none;
+   
+}
+/* .reviews-stars-create {
+    width: 100%;
+}
+.reviews-stars-create i {
+    font-size: 30px;
+    transition: 0.3 all;
+    direction: rtl;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.reviews-stars-create i:hover{
+    color: #ff0066;
+}
+
+#s5:hover ~ i {
+    color: #ff0066; 
+}
+#s4:hover ~ i {
+    color: #ff0066; 
+}
+#s3:hover ~ i {
+    color: #ff0066; 
+}
+#s2:hover ~ i {
+    color: #ff0066; 
+}
+#s1:hover ~ i {
+    color: #ff0066; 
+} */
+
+.reviews-stars-create {
+    position: absolute;
+    transform: translate(-50%, -50%) rotateY(180deg);
+    display: flex;
+}
+
+.reviews-stars-create input {
+    display: none;
+}
+
+.reviews-stars-create label {
+    display: block;
+    cursor: pointer;
+    width: 60%;
+    padding-left: 10px;
+}
+
+.reviews-stars-create label::before {
+    content: '\f005';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    position: relative;
+    display: block;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.reviews-stars-create label::after {
+    content: '\f005';
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: block;
+    color: #ff0066;
+    transition: 0.4s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.rating {
+    margin-bottom: 20px;
+}
+
+.reviews-stars-create label:hover::after,
+.reviews-stars-create label:hover ~ label::after,
+.reviews-stars-create input:checked ~ label::after {
+    opacity: 1;
+}
+
+.add-review-btn {
+    margin-top: 15px;
+    margin-left: 18px;
+    cursor: pointer;
+    border: 0;
+    padding: 0 0 3px 0;
+    background: #ff0066;
+    color: white;
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    border-radius: 10px;
+    outline: none;
 }
 
 .spot-title {
