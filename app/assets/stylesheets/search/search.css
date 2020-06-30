@@ -1,0 +1,23 @@
+.search-show-container {
+    padding-top: 5%;
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+}
+
+.left-side-search {
+    width: 60%;
+    float: left;
+}
+
+.search-map {
+    float: right;
+}
+
+.left-side h2 {
+    padding-left: 40px;
+}
+
+.google-map {
+    padding-right: 50px;
+}

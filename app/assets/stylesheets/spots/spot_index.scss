@@ -1,3 +1,5 @@
+
+
 .spot-main-container {
     display: flex;
     flex-direction: row;
@@ -10,8 +12,8 @@
 }
 
 .main-spot:hover {
-    transform: scale(1.02);
-    transition: all 1s ease;
+    transform: scale(1.01);
+    transition: all 0.7s ease;
 }
 
 .spot-price {

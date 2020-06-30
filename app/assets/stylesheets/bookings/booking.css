@@ -1,5 +1,7 @@
 .booking-index-container {
-    margin-top: 15px;
+    margin-top: 25px;
+    /* margin-left: 3%; */
+    /* margin-right: 3%; */
     font-family: 'Montserrat';
     padding-left: 65px !important;
     padding-right: 40px !important;
@@ -8,9 +10,10 @@
 
 .booking-picture {
     width: 90%;
-    height: 40vh;
+    height: 320px;
     z-index: 0;
     margin-top: 100px;
+    /* position: fixed; */
 }
 
 .review-item-container {
@@ -19,17 +22,17 @@
 
 .booking-picture1 {
     width: 90%;
-    height: 40vh;
+    height: 320px;
     z-index: 0;
     margin-top: 100px;
     position: fixed;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
+     filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
 
 .booking-index-container h1 {
     z-index: 1;
-    margin-top: 10vh;
+    margin-top: 110px;
     font-size: 32px;
     font-weight: 700;
     font-family: 'Montserrat';
@@ -40,13 +43,25 @@
     flex-direction: row;
     width: 200px;
     font-size: 16px;
-    margin-top: 1vh;
+    margin-top: 26px;
 }
 
 .upcoming-booking {
     padding-right: 22px;
+    cursor: pointer;
 }
 
+.past-booking{
+    cursor: pointer;
+}
+
+.past-booking:hover {
+    border-bottom: 1.5px solid black;
+}
+
+.upcoming-booking:hover {
+    border-bottom: 1.5px solid black;
+}
 
 .booking-index-button {
     justify-content: space-between;
@@ -63,6 +78,9 @@
     padding-left: 15px !important;
     padding-right: 15px !important;
     color: rgb(255, 255, 255) !important;
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
+    margin-bottom: 50px;
     height: 55px;
     width: 166px;
     text-decoration: none !important;
@@ -74,7 +92,7 @@
     border-color: rgb(255, 255, 255);
     background: black;
     z-index: 3;
-    margin-top: 5vh;
+    margin-top: 50px;
 }
 
 

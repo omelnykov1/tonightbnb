@@ -6,6 +6,7 @@ class ReviewForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.review;
+        debugger
         this.state.spot_id = this.props.spot.id;
         this.handleRating = this.handleRating.bind(this);
     }
@@ -23,7 +24,7 @@ class ReviewForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault(); 
-        if (this.state.guest_id) {
+        if (this.props.review.guest_id) {
             this.props.createReview(this.state)
                     .then(this.props.fetchSpot(this.state.spot_id))
                     .then(this.clearReview())
@@ -63,7 +64,7 @@ class ReviewForm extends React.Component {
                     <textarea
                         className="review-body" 
                         onChange={this.update('body')} 
-                        placeholder="Review here"
+                        placeholder="Tell us about your stay"
                         value={this.state.body}
                     />
                 </div>

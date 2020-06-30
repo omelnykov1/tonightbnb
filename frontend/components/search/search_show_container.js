@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchSearch } from '../../actions/spot_actions';
+import { fetchSearch} from '../../actions/spot_actions';
 import SearchShow from './search_show';
 
 const mSTP = (state) => ({

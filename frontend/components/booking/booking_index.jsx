@@ -7,9 +7,9 @@ class BookingIndex extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchBookings(this.props.match.params.userId);
-    }
+        componentDidMount() {
+            this.props.fetchBookings(this.props.match.params.userId);
+        }
 
     handleClick() {
         this.props.history.push('/spots')
@@ -47,7 +47,6 @@ class BookingIndex extends React.Component {
                         spots={spots}
                         destroyBooking={destroyBooking}
                         key={booking.id}
-                        openModal={this.props.openModal}
                     />
                 ))}
             </div>

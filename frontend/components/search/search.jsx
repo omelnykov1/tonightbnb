@@ -24,12 +24,12 @@ class Search extends React.Component {
         this.state.query = fixedSearch.join(' ');
         this.props.doSearch(this.state);
         this.props.history.push('/search');
-        this.setState({query: ''})
+        this.setState({ query: '' })
     }
 
     render() {
         return (
-            <div className="search-box">
+            <form className="search-box" onSubmit={this.handleClick}>
                 <div className="nav-search">
                     <input 
                         type="text" 
@@ -41,7 +41,7 @@ class Search extends React.Component {
                     <label>LOCATION</label>
                     <button className="search-button" onClick={this.handleClick}><i className="fas fa-search"></i>Search</button>
                 </div>
-            </div>
+            </form>
         )
     }
 }

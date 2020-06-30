@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
-import { doSearch } from '../../actions/search_actions';
+import {connect} from 'react-redux';
+import {doSearch} from '../../actions/search_actions';
 import Search from './search';
 
-const mDTP = dispatch => ({
+const mDTP  = dispatch => ({
     doSearch: request => dispatch(doSearch(request))
 })
 

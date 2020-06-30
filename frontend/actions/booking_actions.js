@@ -11,9 +11,9 @@ const receiveAllBookings = bookings => ({
 });
 
 const receiveBooking = booking => ({
-    type: RECEIVE_BOOKING,
-    booking
-})
+        type: RECEIVE_BOOKING,
+        booking
+    })
 
 const removeBooking = bookingId => ({
     type: REMOVE_BOOKING,

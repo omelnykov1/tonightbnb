@@ -66,6 +66,7 @@ class BookingListItem extends React.Component {
                         </div>
                         <div className="booking-footer">
                             <button className="destroy-booking" onClick={this.handleDelete}>Cancel Booking</button>
+                            {/* <button className="edit-booking">Edit Booking</button> */}
                         </div>
                     </div>
                 </div>

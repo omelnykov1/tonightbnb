@@ -1,5 +1,6 @@
 import React from 'react';
 import 'react-dates/initialize';
+import DayPicker from 'react-day-picker';
 import { withRouter } from 'react-router';
 import 'react-dates/initialize';
 import { DateRangePicker, SingleDatePicker, DayPickerRangeController } from 'react-dates';
@@ -16,11 +17,12 @@ class NewBookingForm extends React.Component {
         this.state.condition = false;
     }
 
-    dateFormat(date) {
+    handleDate(date) {
         if (date) {
-            let dateStr = date.toISOString().slice(0, 10).split("-");
-            dateStr.push(dateStr.shift());
-            return dateStr.join("/");
+            const dateStr = date.toISOString().slice(0, 10);
+            const dateArr = dateStr.split("-");
+            dateArr.push(dateArr.shift());
+            return dateArr.join("/");
         } else {
             return "";
         }
@@ -82,18 +84,23 @@ class NewBookingForm extends React.Component {
         } else {
             dayPicker = null;
         }
+
+        const condition = this.state.condition
         let guestCount
+
         if (this.state.num_guests > 1) {
             guestCount = (this.state.num_guests - 1 )/ 2.0 * this.props.spot.price;
         } else {
             guestCount = 0
-        }
-        let guestTotal = (this.dateFormat(this.state.endDate).split('/')[1] - this.dateFormat(this.state.startDate).split('/')[1]) * this.props.spot.price;
+        };
+
+        let guestTotal = (this.handleDate(this.state.endDate).split('/')[1] - this.handleDate(this.state.startDate).split('/')[1]) * this.props.spot.price;
         let total = guestCount + guestTotal
         const toggleClass = this.props.scroll;
+        let bookingShadow = document.getElementById('shadow')
         if (this.props.spot) {
         return (
-            <div className={toggleClass}>   
+            <div className={toggleClass} id="shadow">   
                 <div className="booking-header">
                     <div className="spot-price-booking">
                         <span>{this.props.spot.price}</span>/night
@@ -112,22 +119,27 @@ class NewBookingForm extends React.Component {
                             <input
                                 className="date-input"
                                 type="text"
-                                value={this.dateFormat(this.state.startDate)}
+                                value={this.handleDate(this.state.startDate)}
                                 placeholder="MM/DD/YYYY"
                                 required
-                                onClick={() => this.setState({condition: true})}
+                                onClick={() => {
+                                    bookingShadow.setAttribute('style','height: 71vh');
+                                    this.setState({condition: true})
+                                }}
                             />
                         </div>
                         <div className="booking-spot-end">
                             <label className="date-label">Check-out</label>
                             <input
                                 className="date-input"
-                                id="end-date-datepicker"
                                 type="text"
-                                value={this.dateFormat(this.state.endDate)}
+                                value={this.handleDate(this.state.endDate)}
                                 placeholder="MM/DD/YYYY"
                                 required
-                                onClick={() => this.setState({ condition: false })}
+                                onClick={() => {
+                                    bookingShadow.removeAttribute('style', 'height: 71vh');
+                                    this.setState({ condition: false })
+                                }}
                             />
                         </div>
                     </div>
