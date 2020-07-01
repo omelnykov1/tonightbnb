@@ -25,10 +25,8 @@ class Map extends React.Component {
                 {this.props.spots.map(spot => (
                     <Marker 
                         key={spot.id} 
-                        label={ spot.price }
                         position={{ lat: spot.lat, lng: spot.lng }} 
                         defaultAnimation={google.maps.Animation.DROP}
-                        // icon={iconMarker}
                         onClick={() => props.onMarkerClick(spot)}
                     />
                 ))}

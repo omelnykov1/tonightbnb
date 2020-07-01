@@ -8,7 +8,6 @@ class SpotMap extends React.Component {
     }
 
     render() {
-        
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
                 defaultCenter={{ lat: this.props.lat, lng: this.props.lng}}

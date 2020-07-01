@@ -5,10 +5,12 @@
     flex-direction: row;
     width: 100%;
     margin-bottom: 12px;
+    padding: 6px;
 }
 .main-spot {
-    width: 700px;
+    width: 80%;
     margin-bottom: 15px;
+    padding: 6px;
 }
 
 .main-spot:hover {
@@ -17,12 +19,13 @@
 }
 
 .spot-price {
-    margin-left: 100%;
-    margin-top: -5%;
+    margin-left: 87%;
+    margin-top: -6%;
 }
 
 .index-photo {
     border-radius: 5px;
+    outline: none;
 }
 
 
@@ -30,6 +33,25 @@
     font-weight: bold !important;
     font-size: 20px;
     text-align: right;
+}
+
+.slider-control-centerleft button, .slider-control-centerright button, .padding-item button{
+    outline: none;
+}
+
+.slider-control-centerleft button, .slider-control-centerright button {
+    width: 3vw;
+    height: 4vh;
+    font-size: 15px;
+    opacity: 0.7;
+}
+
+.slider-control-centerleft button, .slider-control-centerright button {
+    opacity: 1;
+}
+
+.slider-control-centerleft, .slider-control-centerright {
+    font-size: 5px;
 }
 
 
@@ -74,6 +96,11 @@
 .rating-star {
     display: flex;
     flex-direction: row;
+    margin-top: 1vh;
+}
+
+.spot-type {
+    margin-top: 1vh;
 }
 
 .star {

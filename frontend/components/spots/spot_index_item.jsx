@@ -1,5 +1,6 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router'; 
+import Carousel from 'nuka-carousel';
 
 
 class SpotIndexItem extends React.Component {
@@ -22,25 +23,38 @@ class SpotIndexItem extends React.Component {
         return (
             <div className="main-spot">
                 <div className="spot-main-container">
-                    <div className="main-spot-photo" onClick={this.handleClick}>
-                        <img className="index-photo" src={photoUrls[1]} style={{ width: "300px", height: "200px"}}/>
+                    <div className="main-spot-photo" >
+                        < Carousel width={"20vw"} wrapAround={true} heightMode={"first"} transitionMode={'scroll3d'} >
+                            {photoUrls.map((photo,idx) => {
+                                if (idx < 5) {
+                                    return (
+                                    <img 
+                                        src={photo}
+                                        key={idx}
+                                        className="index-photo"
+                                        style={{ height: "23vh" }}
+                                        onClick={this.handleClick}
+                                    />
+                                )}
+                            })}  
+                        </ Carousel>  
                     </div>
                     <div className="spot-details">
                         <div className="row-details">
                             <div className="spot-type">{spot_type}</div>
-                            <ul className="rating-spot">
-                                <li className="rating-star"> 
-                                    <div className="star"><i className="fas fa-star"></i></div>{rating1}
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="spot-title" onClick={this.handleClick}><h3>{title}</h3></div>
-                        <div className="spot-info">
-                            <div className="spot-basic-info">2 guests • 1 bedroom•2 beds • 1 bath</div>
-                            <div className="spot-basic-amenities">Wifi • Air conditioning • Kitchen • Washer</div>
+                                <ul className="rating-spot">
+                                    <li className="rating-star"> 
+                                        <div className="star"><i className="fas fa-star"></i></div>{rating1}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="spot-title" onClick={this.handleClick}><h3>{title}</h3></div>
+                                <div className="spot-info">
+                                    <div className="spot-basic-info">2 guests • 1 bedroom•2 beds • 1 bath</div>
+                                    <div className="spot-basic-amenities">Wifi • Air conditioning • Kitchen • Washer</div>
+                                </div>
                         </div>
                     </div>
-                </div>
                         <div className="spot-price">
                             <span>${price}</span>/night
                         </div>
