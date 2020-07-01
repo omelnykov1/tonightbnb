@@ -14,9 +14,7 @@ class ReviewForm extends React.Component {
     clearReview() {
         let start = Array.from(document.getElementsByClassName('start-reviews'));
 
-        start.forEach(star => {
-            star.checked = false;
-        })
+        start.forEach(star => star.checked = false  )
 
         this.setState(this.props.review)
         this.state.spot_id = this.props.spot.id
