@@ -6,9 +6,9 @@ class ReviewForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.review;
-        debugger
         this.state.spot_id = this.props.spot.id;
         this.handleRating = this.handleRating.bind(this);
+        debugger
     }
 
     clearReview() {
@@ -18,9 +18,29 @@ class ReviewForm extends React.Component {
 
         this.setState(this.props.review)
         this.state.spot_id = this.props.spot.id
+        debugger
+    }
+
+    renderErrors() {
+        if (!this.props.errors.length) {
+            return null;
+        } else {
+            let textArea = document.getElementById('review-text');
+            textArea.className = "review-body-yes-error"
+            return (
+                <div className="review-errors">
+                    {this.props.errors.map((error, idx) => (
+                        <p className="errors-body" key={idx}>
+                            {error}
+                        </p>
+                    ))}
+                </div>
+            )
+        }
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault(); 
         if (this.props.review.guest_id) {
             this.props.createReview(this.state)
@@ -36,7 +56,9 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchSpot(this.state.spot_id);
+        let textArea = document.getElementById('review-text');
+        textArea.className = "review-body-no-error"
+        this.props.clearErrors();
     }
 
     handleRating(rating) {
@@ -44,6 +66,7 @@ class ReviewForm extends React.Component {
     }
 
     render() {
+        let errors = this.renderErrors()
         return (
             <div className="review-form-containter">
                 <div className="review-header">
@@ -59,13 +82,15 @@ class ReviewForm extends React.Component {
                             <input className="start-reviews" type="radio" id="star1" name="rating" value={this.state.rating} onClick={() => this.handleRating(1.0)} /><label htmlFor="star1"></label>
                         </div>
                     </div>
-                    <textarea
-                        className="review-body" 
-                        onChange={this.update('body')} 
-                        placeholder="Tell us about your stay"
-                        value={this.state.body}
-                    />
-                </div>
+                        <textarea
+                            id="review-text"
+                            className="review-body-no-error" 
+                            onChange={this.update('body')} 
+                            placeholder="Tell us about your stay"
+                            value={this.state.body}
+                        />
+                    </div>
+                {errors}
                 <div className="review-footer">
                     <button className="add-review-btn" type="submit" onClick={this.handleSubmit}>Add review</button>
                 </div>

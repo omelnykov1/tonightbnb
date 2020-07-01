@@ -4,6 +4,8 @@ export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
+export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
+export const CLEAR_REVIEW_ERRORS = 'CLEAR_REVIEW_ERRORS';
 
 const receiveAllSpots = spots => ({
     type: RECEIVE_ALL_SPOTS,
@@ -19,6 +21,17 @@ const receiveSpot = spot => ({
     type: RECEIVE_SPOT,
     spot
 })
+
+export const receiveReviewErrors = errors => ({
+    type: RECEIVE_REVIEW_ERRORS,
+    errors
+});
+
+export const clearErrors = () => ({
+    type: CLEAR_REVIEW_ERRORS
+});
+
+
 
 export const receiveReview = ({ review, average_rating, guest }) => ({
     type: RECEIVE_REVIEW,
@@ -44,7 +57,9 @@ export const updateSpot = spot => dispatch => (
 )
 
 export const createReview = review => dispatch => (
-    APIUtil.createReview(review).then(review => (dispatch(receiveReview(review))))
+    APIUtil.createReview(review).then(review => (dispatch(receiveReview(review))),
+    err => (dispatch(receiveReviewErrors(err.responseJSON)))
+    )
 );
 
 export const fetchSearch = query => dispatch => {

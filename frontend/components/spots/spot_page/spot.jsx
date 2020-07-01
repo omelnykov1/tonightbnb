@@ -138,9 +138,12 @@ class Spot extends React.Component {
                                 </div>
                             </div>
                             <div className="spot-right-side">
-                                <div className="booking-form-container">
-                                    < NewBookingContainer spot={this.props.spot} rating={rating} photos={this.props.spot.photoUrls} scroll={someClass} />
-                                </div>
+                                    < NewBookingContainer 
+                                        spot={this.props.spot} 
+                                        rating={rating} 
+                                        photos={this.props.spot.photoUrls} 
+                                        scroll={someClass} 
+                                    />
                             </div>
 
                         </div>
