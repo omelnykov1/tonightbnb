@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>tonightbnb</title>
+    <meta property="og:title" content="Tonightbnb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tonight-bnb-aa.herokuapp.com/" />
+    <meta property="og:image" content="<%= image_url('preview.png') %>?" />
+    <meta property="og:description" content="An Airbnb inspired site called Tonightbnb, built with React/Redux, Ruby on Rails " />
     
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,6 +14,7 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= favicon_link_tag asset_path('favicon.ico') %>
+
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['REACT_APP_GOOGLE_KEY']}" %>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/react-day-picker/lib/style.css">
@@ -19,6 +25,7 @@
   <script type="text/javascript">
     
     window.logo = "<%= image_url('airbnb.png')%>"
+    window.marker = "<%= image_url('comments-64.png') %>"
     window.profile_pic = "<%=image_url('empty-profile.png')%>"
     window.splash = "<%=image_url('white.jpg')%>"
     window.left = "<%=image_url('left.jpg')%>"

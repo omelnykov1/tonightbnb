@@ -6,37 +6,32 @@ class Map extends React.Component {
     }
     
     render() {
+        const marker = window.marker;
         const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
+        let iconMarker = new window.google.maps.MarkerImage(
+            marker,
+            null, /* size is determined at runtime */
+            null, /* origin is 0,0 */
+            null, /* anchor is bottom center of the scaled image */
+            new window.google.maps.Size(32, 32)
+        );
+
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
                 defaultCenter={{ lat: 40.74, lng: -73.934298 }}
                 defaultZoom={12}
-                
             >
+                
                 {this.props.spots.map(spot => (
                     <Marker 
                         key={spot.id} 
+                        label={ spot.price }
                         position={{ lat: spot.lat, lng: spot.lng }} 
                         defaultAnimation={google.maps.Animation.DROP}
-                        // icon={spot.price}
-                        // onClick={() => {
-                        //     setSelectedSpot(spot)
-                        // }}
-                        />
+                        // icon={iconMarker}
+                        onClick={() => props.onMarkerClick(spot)}
+                    />
                 ))}
-                {/* {selectedSpot && (
-                    <InfoWindow
-                        position={{
-                            lat: selectedSpot.lat,
-                            lng: selectedSpot.lng
-                        }}
-                        onCloseClick={() => {
-                            setSelectedSpot(null)
-                        }}
-                    >
-                    <div>${selectedSpot.price}</div>
-                    </InfoWindow>
-                )} */}
             </GoogleMap>
         ));
         return (
