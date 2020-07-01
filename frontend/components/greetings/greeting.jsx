@@ -22,20 +22,7 @@ class Greeting extends React.Component {
         let { currentUser, logout, openModal } = this.props
         const logo = window.newlogo
         const display = currentUser ? (
-            <nav className="navbar">
-                <div className="social-media">
-                    <a className="git" href="https://github.com/omelnykov1">
-                        <i className="fab fa-github"></i>
-                    </a>
-                    <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
-                        <i className="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
-                <div className="nav-signin" onClick={this.handleTripsClick}>Trips</div>
-            </nav>
-        ) : (
-                <nav className="navbar">
+                <div className="nav-right">   
                     <div className="social-media">
                         <a className="git" href="https://github.com/omelnykov1">
                             <i className="fab fa-github"></i>
@@ -44,9 +31,25 @@ class Greeting extends React.Component {
                             <i className="fab fa-linkedin"></i>
                         </a>
                     </div>
-                    <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
-                    <div className="nav-signin"onClick={() => openModal('login')}>Log In</div>
-                </nav>
+                    <div className="nav-2-right">
+                        <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
+                        <div className="nav-signin" onClick={this.handleTripsClick}>Trips</div>
+                    </div>
+                </div>  
+        ) : (<div className="nav-right">
+                    <div className="social-media">
+                        <a className="git" href="https://github.com/omelnykov1">
+                            <i className="fab fa-github"></i>
+                        </a>
+                        <a className="personal-social" href="https://www.linkedin.com/in/oleksandr-melnykov-347b811a8/">
+                            <i className="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                    <div className="nav-2-right">
+                        <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
+                        <div className="nav-signin"onClick={() => openModal('login')}>Log In</div>
+                    </div>
+                 </div>
             );
 
         return (

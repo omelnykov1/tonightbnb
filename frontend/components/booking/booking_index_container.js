@@ -5,7 +5,7 @@ import BookingIndex from './booking_index';
 import { openModal, closeModal } from "../../actions/modal_actions";
 
 
-const mSTP = (state) => ({
+const mSTP = state => ({
     user: state.entities.users[state.session.id],
     spots: state.entities.spots,
     bookings: Object.values(state.entities.bookings),

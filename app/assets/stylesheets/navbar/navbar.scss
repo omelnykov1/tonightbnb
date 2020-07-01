@@ -1,28 +1,9 @@
 .nav, .nav-1, .nav-2 {
-  height: 77px;
-}
-
-.nav-1 {
-  width: 100%;
-  display: flex;
-  margin-top: 0px;
-  z-index: 1;
-}
-.nav-2 {
-  width: 500px;
-  padding-top: -14px;
-  margin-top: -10px;
-}
-
-.logo5 {
-  font-size: 50px;
-  font-family: 'Montserrat';
-  margin-top: 5px;
-  margin-left: -2px;
+  height: 8vh;
 }
 
 .nav {
-  width: 100%;
+  width: 100vw;
   display: flex;
   position: fixed;
   flex-direction: row;
@@ -32,6 +13,50 @@
   border-bottom: 1px solid rgba(0,0,0,0.08);
   z-index: 100;
 }
+
+.nav-1 {
+  width: 50%;
+  display: flex;
+  margin-top: 0px;
+  z-index: 1;
+}
+
+.nav-2 {
+  width: 50%;
+  display: flex;
+  margin-top: 0px;
+  z-index: 1;
+}
+
+.nav-2-right {
+  margin-top: 1.6%;
+  display: flex;
+  flex-direction: row;
+  right: 0;
+  margin-left: 2%;
+  width: 22vw;
+}
+
+.social-media {
+  display: flex;
+  margin-left: 63%;
+  margin-right: 4%;
+  margin-top: 1%;
+  width: 22vw;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: row;
+}
+
+.logo5 {
+  font-size: 50px;
+  font-family: 'Montserrat';
+  margin-top: 5px;
+  margin-left: -2px;
+}
+
 
 
 .nav-btn {
@@ -106,6 +131,7 @@
   overflow: hidden;
   position: relative;
 }
+
 
 
 
