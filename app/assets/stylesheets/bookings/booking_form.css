@@ -1,6 +1,6 @@
 .booking-container {
     width: 350px;
-    height: 50vh;
+    height: 45vh;
     box-shadow: 0 5px 15px -5px #00000070;
     margin-left: 2.5vw;
     border-radius: 20px;
@@ -11,7 +11,7 @@
 
 .booking-container-fixed {
     width: 350px;
-    height: 50vh;
+    height: 45vh;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 20px;
     margin-top: -540px;
@@ -24,7 +24,7 @@
 
 .booking-container-absolute {
     width: 350px;
-    height: 50vh;
+    height: 45vh;
     box-shadow: 0 5px 15px -5px #00000070;
     border-radius: 20px;
     margin-left: 2.5vw;
