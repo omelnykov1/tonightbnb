@@ -2,12 +2,12 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 0.5vh;
     padding: 6px;
 }
+
 .main-spot {
     width: 80%;
-    margin-bottom: 15px;
     padding: 6px;
 }
 
@@ -38,10 +38,11 @@
 }
 
 .slider-control-centerleft button, .slider-control-centerright button {
-    width: 3vw;
+    width: 3.3vw;
     height: 4vh;
-    font-size: 15px;
-    opacity: 0.7;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.91;
 }
 
 .slider-control-centerleft button, .slider-control-centerright button {
@@ -57,14 +58,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 465px;
+    width: 107%;
 }
 
 .spot-info {
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 17px;
 }
-
 
 .rating-spot {
     text-align: right;
@@ -81,6 +82,7 @@
 .left-side {
     width: 60%;
 }
+
 .right-side {
     width: 40%;
     position: fixed;

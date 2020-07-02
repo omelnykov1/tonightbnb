@@ -45,7 +45,7 @@ class SpotIndexItem extends React.Component {
                                         <div className="star"><i className="fas fa-star"></i></div>{rating1}
                                     </li>
                                 </ul>
-                            </div>
+                        </div>
                             <div className="spot-title" onClick={this.handleClick}><h3>{title}</h3></div>
                                 <div className="spot-info">
                                     <div className="spot-basic-info">2 guests • 1 bedroom•2 beds • 1 bath</div>

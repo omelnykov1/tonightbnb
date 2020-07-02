@@ -123,7 +123,7 @@ class NewBookingForm extends React.Component {
                                 placeholder="MM/DD/YYYY"
                                 required
                                 onClick={() => {
-                                    bookingShadow.setAttribute('style','height: 660px');
+                                    bookingShadow.setAttribute('style','height: 84vh');
                                     this.setState({condition: true})
                                 }}
                             />
@@ -137,7 +137,7 @@ class NewBookingForm extends React.Component {
                                 placeholder="MM/DD/YYYY"
                                 required
                                 onClick={() => {
-                                    bookingShadow.removeAttribute('style', 'height: 660px');
+                                    bookingShadow.removeAttribute('style', 'height: 84vh');
                                     this.setState({ condition: false })
                                 }}
                             />

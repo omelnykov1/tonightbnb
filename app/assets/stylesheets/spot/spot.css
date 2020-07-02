@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    margin: 100px;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
     padding-left: 35px;
     padding-right: 35px;
     font-family:'Montserrat';
@@ -67,6 +69,7 @@
 }
 
 .main-photo {
+    height: 25% !important;
     width: 93% !important;
 }
 
@@ -166,7 +169,7 @@
 }
 
 .spot-details {
-    width: 50%;
+    width: 55%;
     padding-left: 1vw;
 }
 
@@ -278,7 +281,8 @@
 
 .spot-title {
     cursor: pointer;
-    font-weight: 1000;
+    font-weight: 900;
+    font-size: 15px;
 }
 
 .date-input {
