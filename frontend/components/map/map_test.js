@@ -10,9 +10,9 @@ class Map extends React.Component {
         const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
         let iconMarker = new window.google.maps.MarkerImage(
             marker,
-            null, /* size is determined at runtime */
-            null, /* origin is 0,0 */
-            null, /* anchor is bottom center of the scaled image */
+            null,
+            null,
+            null,
             new window.google.maps.Size(32, 32)
         );
 

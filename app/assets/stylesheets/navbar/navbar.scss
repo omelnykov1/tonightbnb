@@ -25,6 +25,7 @@
   width: 50%;
   display: flex;
   margin-top: 0px;
+  justify-content: space-between;
   z-index: 1;
 }
 
@@ -33,13 +34,12 @@
   display: flex;
   flex-direction: row;
   right: 0;
-  margin-left: 2%;
   width: 22vw;
 }
 
 .social-media {
   display: flex;
-  margin-left: 63%;
+  margin-left: 48%;
   margin-right: 4%;
   margin-top: 1%;
   width: 22vw;

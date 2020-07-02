@@ -8,7 +8,6 @@ class ReviewForm extends React.Component {
         this.state = this.props.review;
         this.state.spot_id = this.props.spot.id;
         this.handleRating = this.handleRating.bind(this);
-        debugger
     }
 
     clearReview() {
@@ -18,7 +17,6 @@ class ReviewForm extends React.Component {
 
         this.setState(this.props.review)
         this.state.spot_id = this.props.spot.id
-        debugger
     }
 
     renderErrors() {
@@ -40,7 +38,6 @@ class ReviewForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault(); 
         if (this.props.review.guest_id) {
             this.props.createReview(this.state)
