@@ -33,7 +33,6 @@
     padding-right: 3px;
     bottom: 165px;
 }
-    
 
 
 .booking-header {
@@ -104,6 +103,7 @@
 .des span{
     font-weight: 600;
 }
+
 .gem {
     margin-top: 10px;
     margin-right: 10px;
@@ -111,6 +111,7 @@
     color:#20B2AA;
     padding-left: 7px;
 }
+
 .booking-add {
     text-align: center;
     font-size: 14px;
