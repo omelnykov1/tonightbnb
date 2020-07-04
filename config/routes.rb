@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :spots, only: [:index, :show, :create, :update]
     resources :bookings, only: [:create, :show, :update, :destroy]
-    resource :reviews, only: [:create]
+    resources :reviews, only: [:create, :index]
     get '/search', to: 'spots#search'
   end
 end

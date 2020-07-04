@@ -2,8 +2,9 @@ import * as APIUtil from '../util/spot_api_util'
 
 export const RECEIVE_ALL_SPOTS = 'RECEIVE_ALL_SPOTS';
 export const RECEIVE_SPOT = 'RECEIVE_SPOT';
-export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_REVIEWS = "RECEIVE_REVIEWS";
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 export const CLEAR_REVIEW_ERRORS = 'CLEAR_REVIEW_ERRORS';
 
@@ -22,6 +23,7 @@ const receiveSpot = spot => ({
     spot
 })
 
+
 export const receiveReviewErrors = errors => ({
     type: RECEIVE_REVIEW_ERRORS,
     errors
@@ -31,7 +33,10 @@ export const clearErrors = () => ({
     type: CLEAR_REVIEW_ERRORS
 });
 
-
+export const receiveReviews = reviews => ({
+    type: RECEIVE_REVIEWS,
+    reviews
+})
 
 export const receiveReview = ({ review, average_rating, guest }) => ({
     type: RECEIVE_REVIEW,
@@ -60,6 +65,10 @@ export const createReview = review => dispatch => (
     APIUtil.createReview(review).then(review => (dispatch(receiveReview(review))),
     err => (dispatch(receiveReviewErrors(err.responseJSON)))
     )
+);
+
+export const fetchReviews = spotId => dispatch => (
+    APIUtil.fetchReviews(spotId).then(reviews => dispatch(receiveReviews(reviews)))
 );
 
 export const fetchSearch = query => dispatch => {

@@ -14,7 +14,7 @@ export const updateSpot = spot => (
     $.ajax({
         method: 'patch',
         url: `/api/spots/${spot.id}`,
-        data: {spot}
+        data: { spot }
     })
 )
 
@@ -22,7 +22,14 @@ export const createSpot = spot => (
     $.ajax({
         method: 'post',
         url: '/api/spots',
-        data: {spot}
+        data: { spot }
+    })
+)
+
+export const fetchReviews = spotId => (
+    $.ajax({
+        url: '/api/reviews',
+        data: { spotId }
     })
 )
 

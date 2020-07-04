@@ -6,17 +6,15 @@ class ReviewForm extends React.Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.state = this.props.review;
-        this.state.spot_id = this.props.spot.id;
         this.handleRating = this.handleRating.bind(this);
     }
 
     clearReview() {
         let start = Array.from(document.getElementsByClassName('start-reviews'));
 
-        start.forEach(star => star.checked = false  )
+        start.forEach(star => star.checked = false );
 
         this.setState(this.props.review)
-        this.state.spot_id = this.props.spot.id
     }
 
     renderErrors() {
@@ -42,6 +40,7 @@ class ReviewForm extends React.Component {
         if (this.props.review.guest_id) {
             this.props.createReview(this.state)
                     .then(this.props.fetchSpot(this.state.spot_id))
+                    .then(this.props.clearErrors())
                     .then(this.clearReview())
         } else {
             this.props.openModal('login')
@@ -53,8 +52,7 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        let textArea = document.getElementById('review-text');
-        textArea.className = "review-body-no-error"
+        this.props.fetchReviews(this.props.spot.id);
         this.props.clearErrors();
     }
 

@@ -16,14 +16,16 @@ class Spot extends React.Component {
 
     componentDidMount() {
         this.props.fetchSpot(this.props.match.params.spotId);
+        this.props.fetchReviews(this.props.match.params.spotId);
         document.addEventListener('scroll', () => {
             const belowPictures = window.scrollY < 550;
             if (belowPictures !== this.state.scrollFixedUp) {
                 this.setState({ scrollFixedUp: belowPictures });
             }
         });
+
         document.addEventListener('scroll', () => {
-            const topPictures = window.scrollY > (document.body.scrollHeight - window.innerHeight - 525);
+            const topPictures = window.scrollY > (document.body.scrollHeight - window.innerHeight - 345);
             if (topPictures !== this.state.scrollFixedB) {
                 this.setState({ scrollFixedB: topPictures });
             }
