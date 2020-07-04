@@ -1,7 +1,7 @@
 # tonightbnb
 [Tonightbnb](https://tonight-bnb-aa.herokuapp.com/) is an [Airbnb](https://www.airbnb.com/) clone. It is an online platform that connects hosts renting out space in their homes with guests seeking lodging generally for a short period of time.
 
-<img src="https://i.imgur.com/C0trD6Um.gif" width="800" >
+<img src="https://i.imgur.com/C0trD6U.gif" width="800" >
 
 <hr/>
 
