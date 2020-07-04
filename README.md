@@ -37,7 +37,7 @@
 
 * Spot show page, with booking form, unique reviews, photos and amenities 
 
-<img src="https://i.imgur.com/86sbahk.gif" width="800" >
+<img src="https://i.imgur.com/g5zKjoK.gif" width="800" >
 
 
 <hr/>
