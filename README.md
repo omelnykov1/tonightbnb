@@ -25,7 +25,7 @@
 * Users can log-in and log out(if they already have an account)
 * Demo account feature implementented 
 
-<img src="https://i.imgur.com/ZZaDm5J.gif" width="800" >
+<img src="https://i.imgur.com/XG7rXSa.gif" width="800" >
 
 <hr/>
 
