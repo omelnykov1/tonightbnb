@@ -24,6 +24,9 @@ class Greeting extends React.Component {
         const display = currentUser ? (
                 <div className="nav-right">   
                     <div className="social-media">
+                        <a className="angel-list" href="https://angel.co/u/dev-melnikov">
+                            <i className="fab fa-angellist"></i>
+                        </a>
                         <a className="git" href="https://github.com/omelnykov1">
                             <i className="fab fa-github"></i>
                         </a>
@@ -38,6 +41,9 @@ class Greeting extends React.Component {
                 </div>  
         ) : (<div className="nav-right">
                     <div className="social-media">
+                        <a className="angel-list" href="https://angel.co/u/dev-melnikov">
+                            <i class="fab fa-angellist"></i>
+                        </a>
                         <a className="git" href="https://github.com/omelnykov1">
                             <i className="fab fa-github"></i>
                         </a>

@@ -65,7 +65,7 @@ const Splash = props => {
                     <span className="top">Monthly stays</span>
                     <br/>
                     <div className="parent">
-                        <span className="bottom">Make Tonight Bnb your home, for stays of a month or longer.</span>
+                        <span className="bottom">Make Tonightbnb your home, for stays of a month or longer.</span>
                     </div>
                 </div>
             </div>
