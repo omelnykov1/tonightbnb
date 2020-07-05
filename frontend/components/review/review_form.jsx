@@ -14,6 +14,9 @@ class ReviewForm extends React.Component {
 
         start.forEach(star => star.checked = false );
 
+        let textArea = document.getElementById('review-text');
+        textArea.className = "review-body-no-error"
+
         this.setState(this.props.review)
     }
 
@@ -53,7 +56,6 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchReviews(this.props.spot.id)
         this.props.clearErrors();
     }
 
