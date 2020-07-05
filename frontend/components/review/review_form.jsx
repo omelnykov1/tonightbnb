@@ -40,6 +40,7 @@ class ReviewForm extends React.Component {
         if (this.props.review.guest_id) {
             this.props.createReview(this.state)
                     .then(this.props.fetchSpot(this.state.spot_id))
+                    .then(this.props.fetchReviews(this.state.spot_id))
                     .then(this.props.clearErrors())
                     .then(this.clearReview())
         } else {
@@ -52,7 +53,7 @@ class ReviewForm extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchReviews(this.props.spot.id);
+        this.props.fetchReviews(this.props.spot.id)
         this.props.clearErrors();
     }
 
