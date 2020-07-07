@@ -33,6 +33,7 @@ class NewBookingForm extends React.Component {
         e.preventDefault();
         if (this.props.booking.guest_id) {
             const { startDate, endDate, num_guests, guest_id } = this.state;
+            
             this.props.action({
                 spot_id: this.props.spot.id,
                 guest_id: guest_id,
