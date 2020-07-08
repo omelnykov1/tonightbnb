@@ -35,7 +35,9 @@ class Greeting extends React.Component {
                         </a>
                     </div>
                     <div className="nav-2-right">
-                        <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
+                        <div onClick={() => $(window).scrollTop(0)}>
+                            <div className="nav-signin" onClick={this.handleClick}>Log Out</div>
+                        </div>  
                         <div className="nav-signin" onClick={this.handleTripsClick}>Trips</div>
                     </div>
                 </div>  
