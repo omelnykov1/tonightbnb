@@ -62,6 +62,7 @@
 }
 
 .footer-btn {
+  margin-left: 5px;
  padding: 0.01px;
  text-decoration: underline;
 }
