@@ -52,7 +52,7 @@ class LoginForm extends React.Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <header className="modal-header">
-                        <div>Log in</div>
+                        <div className="login-header">Log in</div>
                         <div className="modal-close" onClick={this.props.closeModal} >X</div> 
                     </header>
                     <div className="modal-content">

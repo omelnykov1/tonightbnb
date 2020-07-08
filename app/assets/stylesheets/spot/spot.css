@@ -68,11 +68,6 @@
     width: 100% !important;
 }
 
-.main-photo {
-    height: 25% !important;
-    width: 93% !important;
-}
-
 .reviews-container {
     width: 50%;
     height: 40%;
@@ -129,8 +124,6 @@
 }
 
 .spot-side-photos {
-    width: 95%;
-    max-width: 95%;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -168,7 +161,7 @@
 
 .spot-details {
     width: 55%;
-    padding-left: 1vw;
+    /* padding-left: 1vw; */
 }
 
 .spot-description {
