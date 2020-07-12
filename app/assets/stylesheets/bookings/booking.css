@@ -8,7 +8,7 @@
 
 .booking-picture {
     width: 90%;
-    height: 320px;
+    height: 100%;
     z-index: 0;
     margin-top: 100px;
 }
@@ -45,19 +45,6 @@
 
 .upcoming-booking {
     padding-right: 22px;
-    cursor: pointer;
-}
-
-.past-booking{
-    cursor: pointer;
-}
-
-.past-booking:hover {
-    border-bottom: 1.5px solid black;
-}
-
-.upcoming-booking:hover {
-    border-bottom: 1.5px solid black;
 }
 
 .booking-index-button {
@@ -75,7 +62,6 @@
     padding-left: 15px !important;
     padding-right: 15px !important;
     color: rgb(255, 255, 255) !important;
-    margin-bottom: 50px;
     height: 55px;
     width: 166px;
     text-decoration: none !important;
@@ -87,7 +73,8 @@
     border-color: rgb(255, 255, 255);
     background: black;
     z-index: 3;
-    margin-top: 50px;
+    margin-bottom: 1%;
+    margin-top: 2%;
 }
 
 

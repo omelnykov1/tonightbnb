@@ -52,7 +52,6 @@
 
 
 <img src="https://i.imgur.com/8GEC3eZ.gif" width="800" >
-<!-- <img src="https://media.giphy.com/media/J4CCsxi3gh2AZ1JOjt/giphy.gif" width="800" > -->
 
 <hr/>
 

@@ -57,14 +57,6 @@ class BookingIndex extends React.Component {
         return (
             <div className="booking-index-container">
                 <h1>Trips</h1>
-                <div className="booking-index-header">
-                    <div className="upcoming-booking">
-                        Upcoming
-                    </div>
-                    <div className="past-booking">
-                        Past    
-                    </div>
-                </div>
                     <hr className="underline"/>
                 {upcomingBookings}
                 <button className="booking-index-button" onClick={this.handleClick}>Explore Tonightbnb</button>
