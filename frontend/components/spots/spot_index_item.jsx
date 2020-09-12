@@ -16,7 +16,6 @@ class SpotIndexItem extends React.Component {
 
     render() {
         let { title, price, spot_type, photoUrls} = this.props.spot;
-        const rating = window.star;
         const rating1 = [4.7, 4.54, 5.0, 4.67, 4.85, 4.71, 4.45, 4.68, 4.75][Math.floor(Math.random() * 9)];
         
         return (
@@ -46,17 +45,17 @@ class SpotIndexItem extends React.Component {
                                         <div className="star"><i className="fas fa-star"></i></div>{rating1}
                                     </li>
                                 </ul>
-                        </div>
+                            </div>
                             <div className="spot-title" onClick={this.handleClick}><h3>{title}</h3></div>
-                                <div className="spot-info">
-                                    <div className="spot-basic-info">2 guests • 1 bedroom•2 beds • 1 bath</div>
-                                    <div className="spot-basic-amenities">Wifi • Air conditioning • Kitchen • Washer</div>
-                                </div>
+                            <div className="spot-info">
+                                <div className="spot-basic-info">2 guests • 1 bedroom•2 beds • 1 bath</div>
+                                <div className="spot-basic-amenities">Wifi • Air conditioning • Kitchen • Washer</div>
+                            </div>
                         </div>
                     </div>
-                        <div className="spot-price">
-                            <span>${price}</span>/night
-                        </div>
+                    <div className="spot-price">
+                        <span>${price}</span>/night
+                    </div>
             </div>
         )
     }
