@@ -2,18 +2,20 @@
 <html>
   <head>
     <title>tonightbnb</title>
-    <meta property="og:title" content="tonightbnb" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tonight-bnb-aa.herokuapp.com/" />
-    <meta property="image:alt" content="<%= image_url('preview.png') %>" />
-    <meta property="og:description" content="An Airbnb inspired site called Tonightbnb, built with React, Redux, Ruby on Rails, AWS S3 " />
-    
+
+    <%= favicon_link_tag asset_path('favicon.ico') %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <meta property="og:title" content="tonightbnb" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tonight-bnb-aa.herokuapp.com/" />
+    <meta property="og:image" content="<%= image_url('preview.png') %>" />
+    <meta property="og:description" content="An Airbnb inspired site called Tonightbnb, built with React, Redux, Ruby on Rails, AWS S3 " />
+    
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <%= favicon_link_tag asset_path('favicon.ico') %>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['REACT_APP_GOOGLE_KEY']}" %>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
