@@ -75,11 +75,11 @@ class NewBookingForm extends React.Component {
 
   render() {
     const guests = this.state.num_guests > 1 ? 'guests' : 'guest';
-    const toggleClass = this.props.scroll;
+    const { scroll } = this.props;
     const bookingShadow = document.getElementById('shadow');
     if (!this.props.spot) return null;
     return (
-      <div className={toggleClass} id="shadow">   
+      <div className={scroll} id="shadow">   
         <div className="booking-header">
           <div className="spot-price-booking">
             <span>{this.props.spot.price}</span>/night

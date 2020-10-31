@@ -4,16 +4,12 @@ import { useHistory } from 'react-router-dom';
 const Search = ({ doSearch }) => {
   const history = useHistory();
   const [query, setQuery] = useState('');
-  console.log(query)
   const update = (e) => setQuery(e.target.value);
     
   const handleClick = (e) => {
     e.preventDefault();
     const newSearch = query.split(' ');
-    let fixedSearch = [];
-    newSearch.forEach(ele => {
-      fixedSearch.push(ele[0].toUpperCase() + ele.slice(1).toLowerCase())
-    })
+    const fixedSearch = newSearch.map(ele => ele[0].toUpperCase() + ele.slice(1).toLowerCase());
     const newQuery = fixedSearch.join(' ');
     doSearch({query: newQuery});
     history.push('/search');

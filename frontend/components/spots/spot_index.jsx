@@ -19,7 +19,7 @@ const SpotIndex = ({ spots, fetchSpots }) => {
       </div>
       <div className='right-side'>
         <div className="google-map">
-          < Map spots={spots} />
+          <Map spots={spots} />
         </div>
       </div>
     </div>
