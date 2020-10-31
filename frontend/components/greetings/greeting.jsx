@@ -19,7 +19,7 @@ class Greeting extends React.Component {
     }
 
     render() {
-        let { currentUser, logout, openModal } = this.props
+        let { currentUser,  openModal } = this.props
         const logo = window.newlogo
         const display = currentUser ? (
                 <div className="nav-right">   
@@ -44,7 +44,7 @@ class Greeting extends React.Component {
         ) : (<div className="nav-right">
                     <div className="social-media">
                         <a className="angel-list" href="https://angel.co/u/dev-melnikov">
-                            <i class="fab fa-angellist"></i>
+                            <i className="fab fa-angellist"></i>
                         </a>
                         <a className="git" href="https://github.com/omelnykov1">
                             <i className="fab fa-github"></i>
