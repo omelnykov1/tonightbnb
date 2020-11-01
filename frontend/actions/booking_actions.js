@@ -5,38 +5,38 @@ export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
 export const REMOVE_BOOKING = 'REMOVE_BOOKING';
 
 const receiveAllBookings = bookings => ({
-    type: RECEIVE_ALL_BOOKINGS,
-    bookings: bookings.bookings,
-    spots: bookings.spots
+  type: RECEIVE_ALL_BOOKINGS,
+  bookings: bookings.bookings,
+  spots: bookings.spots
 });
 
 const receiveBooking = booking => ({
-        type: RECEIVE_BOOKING,
-        booking
-    })
+  type: RECEIVE_BOOKING,
+  booking
+})
 
 const removeBooking = bookingId => ({
-    type: REMOVE_BOOKING,
-    bookingId
+  type: REMOVE_BOOKING,
+  bookingId
 });
 
 
 export const fetchBookings = (userId) => dispatch => (
-    BookingAPI.fetchBookings(userId).then(bookings => dispatch(receiveAllBookings(bookings)))
+  BookingAPI.fetchBookings(userId).then(bookings => dispatch(receiveAllBookings(bookings)))
 );
 
 export const fetchBooking = bookingId => dispatch => (
-    BookingAPI.fetchBooking(bookingId).then(booking => dispatch(receiveBooking(booking)))
+  BookingAPI.fetchBooking(bookingId).then(booking => dispatch(receiveBooking(booking)))
 );
 
 export const createBooking = booking => dispatch => (
-    BookingAPI.createBooking(booking).then(booking => dispatch(receiveBooking(booking)))
+  BookingAPI.createBooking(booking).then(booking => dispatch(receiveBooking(booking)))
 );
 
 export const updateBooking = booking => dispatch => (
-    BookingAPI.updateBooking(booking).then(booking => dispatch(receiveBooking(booking)))
+  BookingAPI.updateBooking(booking).then(booking => dispatch(receiveBooking(booking)))
 );
 
 export const destroyBooking = bookingId => dispatch => (
-    BookingAPI.destroyBooking(bookingId).then(() => dispatch(removeBooking(bookingId)))
+  BookingAPI.destroyBooking(bookingId).then(() => dispatch(removeBooking(bookingId)))
 );

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import SearchContainer from '../search/search_container'
 
-export const Greeting = ({ logout, currentUser, openModal }) => {
+const Greeting = ({ logout, currentUser, openModal }) => {
   const history = useHistory();
   const handleClick = () => logout().then(history.push('/'));
   const handleTripsClick = () => history.push(`/${currentUser.id}/bookings`);
@@ -63,3 +63,5 @@ export const Greeting = ({ logout, currentUser, openModal }) => {
     </header>
   );
 };
+
+export default Greeting;

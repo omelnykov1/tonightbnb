@@ -9,7 +9,7 @@ const Search = ({ doSearch }) => {
   const handleClick = (e) => {
     e.preventDefault();
     const newSearch = query.split(' ');
-    const fixedSearch = newSearch.map(ele => ele[0].toUpperCase() + ele.slice(1).toLowerCase());
+    const fixedSearch = newSearch.length ? newSearch.map(ele => ele[0].toUpperCase() + ele.slice(1).toLowerCase()) : [];
     const newQuery = fixedSearch.join(' ');
     doSearch({query: newQuery});
     history.push('/search');

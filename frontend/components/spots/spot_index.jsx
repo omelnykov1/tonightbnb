@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import SpotIndexItem from './spot_index_item'
-import Map from '../map/map_test'
+import Map from '../map/map'
 
 
 const SpotIndex = ({ spots, fetchSpots }) => {

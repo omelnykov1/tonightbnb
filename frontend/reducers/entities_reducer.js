@@ -6,11 +6,11 @@ import reviewsReducer from './review_reducer'; import searchReducer from './sear
 
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
-    spots: spotsReducer,
-    bookings: bookingsReducer,
-    reviews: reviewsReducer,
-    search: searchReducer
+  users: usersReducer,
+  spots: spotsReducer,
+  bookings: bookingsReducer,
+  reviews: reviewsReducer,
+  search: searchReducer
 })
 
 export default entitiesReducer;
