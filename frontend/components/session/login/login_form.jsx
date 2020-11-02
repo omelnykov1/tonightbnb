@@ -15,12 +15,12 @@ const LoginForm = ({
     clearErrors();
   }, [clearErrors])
 
-  const handleSubmit = ({ email, password }) => {
+  const handleSubmit = () => {
     const user = { email, password };
-    processForm(user).then(closeModal)
+    processForm(user).then(() => closeModal())
   };
 
-  const demoLogin = () => handleSubmit(demo);
+  const demoLogin = () => processForm(demo).then(() => closeModal());
 
   const renderErrors = () => {
     if (!errors.length) return null;

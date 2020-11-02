@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router';
 
 const SignupForm = ({ 
   closeModal, 
@@ -14,7 +13,7 @@ const SignupForm = ({
 
   const handleSubmit = () => {
     const newUser = { email, name , password};
-    processForm(newUser).then(closeModal);
+    processForm(newUser).then(() => closeModal());
   }
 
   useEffect(() => {
@@ -68,4 +67,4 @@ const SignupForm = ({
   )
 }
 
-export default withRouter(SignupForm);
+export default SignupForm;

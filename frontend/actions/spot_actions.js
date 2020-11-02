@@ -61,10 +61,11 @@ export const updateSpot = spot => dispatch => (
 )
 
 export const createReview = review => dispatch => (
-  APIUtil.createReview(review)
-    .then(review => (dispatch(receiveReview(review))))
-    .catch(err => (dispatch(receiveReviewErrors(err.responseJSON))))
-);
+  APIUtil.createReview(review).then(
+    review => dispatch(receiveReview(review)),
+    err => dispatch(receiveReviewErrors(err.responseJSON))
+));
+
 
 export const fetchReviews = spotId => dispatch => (
   APIUtil.fetchReviews(spotId).then(reviews => dispatch(receiveReviews(reviews)))

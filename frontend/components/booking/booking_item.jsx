@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 const BookingListItem = ({ booking, destroyBooking }) => {
   const history = useHistory();
   const handleShow = () => history.push(`/spots/${booking.spot.id}`);
-  const handleDelete = () => destroyBooking(this.props.booking.id);
+  const handleDelete = () => destroyBooking(booking.id);
 
   const handleDate = (date) => {
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
