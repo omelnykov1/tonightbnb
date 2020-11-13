@@ -1,26 +1,30 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { login, clearErrors } from "../../actions/session_actions";
+import { openModal, closeModal } from "../../actions/modal_actions";
 
-const LoginForm = ({ 
-  processForm, 
-  closeModal, 
-  demo, 
-  clearErrors, 
-  errors, 
-  redirect 
-}) => {
+const LoginForm = () => {
+  const errors = useSelector(state => state.errors.session);
+  const demo = {
+    email: "tonightbnb@admin.com",
+    password: "welcometomyapp"
+  };
+  const dispatch = useDispatch();
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    clearErrors();
+    dispatch(clearErrors());
   }, [clearErrors])
 
   const handleSubmit = () => {
     const user = { email, password };
-    processForm(user).then(() => closeModal())
+    dispatch(login(user)).then(() => dispatch(closeModal()));
   };
 
-  const demoLogin = () => processForm(demo).then(() => closeModal());
+  const demoLogin = () => dispatch(login(demo)).then(() => dispatch(closeModal()));
 
   const renderErrors = () => {
     if (!errors.length) return null;
@@ -39,7 +43,7 @@ const LoginForm = ({
       <form onSubmit={handleSubmit}>
         <header className="modal-header">
           <div className="login-header">Log in</div>
-          <div className="modal-close" onClick={closeModal} >X</div> 
+          <div className="modal-close" onClick={() => dispatch(closeModal())} >X</div> 
         </header>
         <div className="modal-content">
           <div className="input-container" data-error={errors.length ? errors : null}>
@@ -70,7 +74,9 @@ const LoginForm = ({
         </div>
         <button className="nav-btn" type="submit" onClick={() => demoLogin()}>Demo</button>
         <span className="footer-login">Don't have an account?
-          <div className="footer-btn"> {redirect}</div>
+          <div className="footer-btn">
+            <div onClick={() => dispatch(openModal('signup'))}>Sign up</div>
+          </div>
         </span>
       </form>
     </div>

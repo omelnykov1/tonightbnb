@@ -32,7 +32,7 @@ class Spot extends React.Component {
       const { spot } = this.props;
       const reviews = spot.reviews ? Object.values(spot.reviews) : [];
       const { title, description, city, lat, lng, guests, photoUrls } = spot;
-      let totalRating = 0
+      let totalRating = 0;
       reviews.map(review => review.rating).forEach(ele => totalRating += ele)
       const rating = Math.round((totalRating / reviews.length) * 100) / 100;
       const someClass = this.state.scrollFixedUp ? 'booking-container' : (this.state.scrollFixedB ? 'booking-container-absolute' : 'booking-container-fixed')

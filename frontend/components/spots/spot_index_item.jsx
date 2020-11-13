@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router-dom'; 
 import Carousel from 'nuka-carousel';
 
-
 const SpotIndexItem = ({ spot }) => {
   const history = useHistory();
   const handleClick = () => history.push(`/spots/${spot.id}`);
@@ -13,7 +12,7 @@ const SpotIndexItem = ({ spot }) => {
     <div className="main-spot">
       <div className="spot-main-container">
         <div className="main-spot-photo" >
-          < Carousel 
+          <Carousel 
             width={"20vw"} 
             wrapAround={true} 
             heightMode={"first"} 

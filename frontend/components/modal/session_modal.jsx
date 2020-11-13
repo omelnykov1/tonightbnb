@@ -2,8 +2,8 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import LoginFormContainer from '../session/login/login_form_container';
-import SignupFormContainer from '../session/signup/signup_form_container';
+import LoginForm from '../session/login_form';
+import SignupForm from '../session/signup_form';
 import ReviewContainer from '../review/review_container';
 
 const Modal = ({ modal, closeModal }) => {
@@ -11,10 +11,10 @@ const Modal = ({ modal, closeModal }) => {
   let component;
   switch (modal) {
     case 'login':
-      component = <LoginFormContainer />;
+      component = <LoginForm />;
       break;
     case 'signup':
-      component = <SignupFormContainer />;
+      component = <SignupForm />;
       break;
     case 'review':
       component = <ReviewContainer />;

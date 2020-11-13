@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
-import SearchContainer from '../search/search_container'
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../actions/session_actions';
+import { openModal } from "../../actions/modal_actions";
+import Search from '../search/search'
 
-const Greeting = ({ logout, currentUser, openModal }) => {
+const NavBar = () => {
   const history = useHistory();
-  const handleClick = () => logout().then(history.push('/'));
+  const dispatch = useDispatch();
+  const currentUser = useSelector(state => state.entities.users[state.session.id]);
+
+  const handleClick = () => dispatch(logout()).then(history.push('/'));
   const handleTripsClick = () => history.push(`/${currentUser.id}/bookings`);
+
   const logo = window.newlogo
 
   const display = currentUser ? (
@@ -43,8 +50,8 @@ const Greeting = ({ logout, currentUser, openModal }) => {
         </a>
       </div>
       <div className="nav-2-right">
-        <div className="nav-signin"onClick={() => openModal('signup')}>Sign up</div>
-        <div className="nav-signin"onClick={() => openModal('login')}>Log In</div>
+        <div className="nav-signin"onClick={() => dispatch(openModal('signup'))}>Sign up</div>
+        <div className="nav-signin"onClick={() => dispatch(openModal('login'))}>Log In</div>
       </div>
     </div>
   );
@@ -55,7 +62,7 @@ const Greeting = ({ logout, currentUser, openModal }) => {
         <div className="nav">
           <div className="nav-1">
             <Link to="/"><img className="logo" src={logo} /></Link>
-            <SearchContainer/>
+            <Search />
           </div>
           <div className="nav-2">{display}</div>
         </div>
@@ -64,4 +71,4 @@ const Greeting = ({ logout, currentUser, openModal }) => {
   );
 };
 
-export default Greeting;
+export default NavBar;

@@ -1,10 +1,16 @@
 import React, { useEffect } from 'react';
+import { fetchSearch} from '../../actions/spot_actions';
+import { useSelector, useDispatch } from 'react-redux';
 import SearchItem from './search_item';
 import SearchMap from '../map/search_map'
 
-const SearchShow = ({ fetchSearch, search, spots }) => {
+const SearchShow = () => {
+  const spots = useSelector(state => Object.values(state.entities.spots));
+  const search = useSelector(state => state.entities.search);
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    fetchSearch(search.query)
+    dispatch(fetchSearch(search.query));
   }, [fetchSearch, search])
 
   const getTitle = () => {

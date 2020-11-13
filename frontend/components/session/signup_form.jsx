@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { openModal, closeModal } from "../../actions/modal_actions";
+import { signup, clearErrors } from "../../actions/session_actions";
 
-const SignupForm = ({ 
-  closeModal, 
-  processForm, 
-  errors, 
-  clearErrors, 
-  redirect 
-}) => {
+const SignupForm = () => {
+  const dispatch = useDispatch();
+  const errors = useSelector(state => state.errors.session);
   const [email, setEmail] = useState("");
   const [name,setName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    const newUser = { email, name , password};
-    processForm(newUser).then(() => closeModal());
+    const newUser = { email, name , password };
+    dispatch(signup(newUser)).then(() => dispatch(closeModal()));
   }
 
   useEffect(() => {
-    clearErrors();
+    dispatch(clearErrors());
   }, [clearErrors])
 
   const renderErrors = () => {
@@ -38,7 +37,7 @@ const SignupForm = ({
       <form onSubmit={handleSubmit}>
         <header className="modal-header">
           <div className="login-header">Sign up</div>
-          <div className="modal-close" onClick={closeModal} >X</div>
+          <div className="modal-close" onClick={() => dispatch(closeModal())} >X</div>
         </header>
         <div className="modal-content">
           <div className="input-container" data-error={errors.length ? errors : null}>
@@ -60,7 +59,9 @@ const SignupForm = ({
           <button className="nav-btn" type="submit">Sign up</button>
         </div>
         <span className="footer-login">Already have an account?
-          <div className="footer-btn">{redirect}</div>
+          <div className="footer-btn">
+            <div className="session-button" onClick={() => dispatch(openModal('login'))}> Log in </div>
+          </div>
         </span>
       </form>
     </div>

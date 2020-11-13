@@ -31,20 +31,20 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault(); 
+    const { createReview, fetchSpot, fetchReviews, clearErrors, openModal } = this.props;
     if (this.props.review.guest_id) {
-      this.props.createReview(this.state)
-        .then(this.props.fetchSpot(this.state.spot_id))
-        .then(this.props.fetchReviews(this.state.spot_id))
-        .then(this.props.clearErrors())
-        .then(this.clearReview())
-    } else this.props.openModal('login');
+      createReview(this.state).then(clearErrors())
+      fetchSpot(this.state.spot_id)
+      fetchReviews(this.state.spot_id)
+      this.clearReview()
+    } else openModal('login');
   }
 
   update(field) {
     return e => this.setState({ [field]: e.target.value })
   }
 
-  componentDidMount() {
+  componentWillUnmount() {
     this.props.clearErrors();
   }
 

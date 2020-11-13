@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { doSearch } from '../../actions/search_actions';
 
-const Search = ({ doSearch }) => {
+const Search = () => {
+  const dispatch = useDispatch();
   const history = useHistory();
   const [query, setQuery] = useState('');
   const update = (e) => setQuery(e.target.value);
@@ -11,13 +14,13 @@ const Search = ({ doSearch }) => {
     const newSearch = query.split(' ');
     const fixedSearch = newSearch.length ? newSearch.map(ele => ele[0].toUpperCase() + ele.slice(1).toLowerCase()) : [];
     const newQuery = fixedSearch.join(' ');
-    doSearch({query: newQuery});
+    dispatch(doSearch({ query: newQuery }));
     history.push('/search');
     setQuery('');
   }
 
   return (
-    <form className="search-box" onSubmit={(e) => handleClick(e)}>
+    <form className="search-box" onSubmit={handleClick}>
       <div className="nav-search">
         <input 
             type="text" 

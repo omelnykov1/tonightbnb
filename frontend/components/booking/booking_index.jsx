@@ -5,6 +5,7 @@ import BookingItem from './booking_item'
 const BookingIndex = ({ bookings, fetchBookings, user, spots, destroyBooking }) => {
   const match = useRouteMatch();
   const history = useHistory();
+  
   useEffect(() => {
     fetchBookings(match.params.userId)
   }, [fetchBookings])

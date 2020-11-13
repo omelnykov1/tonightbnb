@@ -1,13 +1,17 @@
 import React, { useEffect } from 'react';
-import SpotIndexItem from './spot_index_item'
-import Map from '../map/map'
+import { useSelector, useDispatch } from 'react-redux';
+import SpotIndexItem from './spot_index_item';
+import { fetchSpots} from '../../actions/spot_actions';
+import Map from '../map/map';
 
-
-const SpotIndex = ({ spots, fetchSpots }) => {
+const SpotIndex = () => {
+  const dispatch = useDispatch();
+  const spots = useSelector(state => Object.values(state.entities.spots));
+  
   useEffect(() => {
-    fetchSpots();
+    dispatch(fetchSpots());
   },[fetchSpots]);
-
+  
   return (
     <div className="spots-content">
       <div className="left-side">
